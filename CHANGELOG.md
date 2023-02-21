@@ -21,4 +21,6 @@ Changelog formatting (http://semver.org/):
 
 ### Added
 
-- Add readme and license. (3f4e145) 
+- Create contributors guide and GitHub issue and pull request templates. (68b4dba)
+- Add .gitignore and .editorconfig files. (68b4dba)
+- Add readme and license. (3f4e145)
