@@ -1,0 +1,15 @@
+# Build/test tool files and directories
+/node_modules
+/phpunit.xml
+/phpcs.xml
+/vendor
+
+# OS generated files
+*~
+.Trash-*
+.DS_Store
+._*
+
+# Just in case
+wp-config.php
+.htaccess
