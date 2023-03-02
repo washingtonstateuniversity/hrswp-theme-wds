@@ -14,5 +14,8 @@
 	"bugs": {
 		"url": "https://github.com/washingtonstateuniversity/hrswp-theme-wds/issues"
 	},
-	"scripts": {}
+	"scripts": {},
+	"devDependencies": {
+		"@wordpress/scripts": "^25.5.0"
+	}
 }
