@@ -22,7 +22,7 @@
 		}
 	},
 	"scripts": {
-		"format": "phpcbf --standard=phpcs.xml.dist --report=summary,source",
+		"format": "phpcbf --standard=phpcs.xml.dist --report=summary,source . ",
 		"lint": "phpcs --colors . "
 	}
 }
