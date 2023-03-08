@@ -15,7 +15,7 @@
 		"url": "https://github.com/washingtonstateuniversity/hrswp-theme-wds/issues"
 	},
 	"scripts": {
-		"build": "wp-scripts build src/index.js",
+		"build": "wp-scripts build",
 		"format": "run-p 'format:*'",
 		"format:js": "wp-scripts format",
 		"format:php": "composer format",
@@ -26,7 +26,7 @@
 		"lint:pkg": "wp-scripts lint-pkg-json",
 		"lint:docs": "wp-scripts lint-md-docs",
 		"export": "wp-scripts plugin-zip",
-		"start": "wp-scripts start src/index.js"
+		"start": "wp-scripts start"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^25.5.0",
