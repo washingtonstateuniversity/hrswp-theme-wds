@@ -17,6 +17,32 @@ Changelog formatting (http://semver.org/):
 ### Security (in case of vulnerabilities.)
 -->
 
+## 0.2.0 (:construction: TBD)
+
+### Added
+
+- Close #5 set up base functions file. (a723afa)
+- Close #10 create GitHub CI actions workflow. (0ba4a06)
+- Add stylelint config. (4382170)
+- Create composer config and install linting packages. (4382170)
+- Create phpcs config file. (4382170, b825494)
+- Add Prettier config with to import the default config file and expose it in the project root for editor integration. (4382170)
+- Create `.gitattributes` file with `export-ignore` rules. (d8678d2, 4382170)
+- Add npm package json lint config to allow GPL 3 license. (d8678d2)
+- Add ignore file for markdownlint. (d8678d2)
+- Add @wordpress/scripts package. (d8678d2)
+- Add npm-run-all package. (4632c57)
+
+### Changed
+ 
+- Add @wordpress/scripts script commands. (d8678d2, 4382170)
+
+### Fixed
+
+-  Fix missing `@Package` declaration, namespace, and WP global var issue in header template part. (b825494)
+- Fix missing `@Package` declaration, namespace, and replace `date()` with `gmdate()` in footer template part. (b825494)
+- Fix package.json formatting. (a69a8ec)
+
 ## 0.1.0 (2023-03-01)
 
 ### Added
