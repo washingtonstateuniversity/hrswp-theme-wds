@@ -1,0 +1,52 @@
+<!-- wp:template-part {"slug":"header","theme":"hrswp-theme-wds","tagName":"header","className":"wsu-header-global"} /-->
+
+<!-- wp:template-part {"slug":"site-navigation-vertical","theme":"hrswp-theme-wds","tagName":"nav"} /-->
+
+<!-- wp:group {"className":"wsu-wrapper-site","layout":{"type":"constrained"}} -->
+<div class="wp-block-group wsu-wrapper-site">
+
+	<!-- wp:template-part {"slug":"site-header","theme":"hrswp-theme-wds","tagName":"header","className":"wsu-header-site"} /-->
+
+	<!-- wp:group {"className":"wsu-wrapper-content","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group wsu-wrapper-content">
+		<!-- wp:group {"tagName":"main","className":"wsu-wrapper-main","layout":{"type":"constrained"}} -->
+		<main class="wp-block-group wsu-wrapper-main">
+			<!-- wp:group {"tagName":"header","className":"wsu-page-header"} -->
+			<header class="wp-block-group wsu-page-header">
+                <!-- wp:site-title {"isLink":false,"className":"wsu-article-header__title"} /-->
+			</header>
+			<!-- /wp:group -->
+			<!-- wp:query {"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"taxQuery":null,"parents":[]},"displayLayout":{"type":"flex","columns":3},"align":"wide","layout":{"type":"default"}} -->
+			<div class="wp-block-query alignwide">
+				<!-- wp:post-template {"align":"wide","className":"wsu-article"} -->
+					<!-- wp:post-featured-image {"isLink":false,"width":"100%","height":"max(15vw, 30vh)","align":"wide"} /-->
+					<!-- wp:post-title {"isLink":true} /-->
+					<!-- wp:post-excerpt /-->
+					<!-- wp:post-date {"isLink":true} /-->
+					<!-- wp:template-part {"slug":"wsu-article-footer","theme":"hrswp-theme-wds"} /-->
+				<!-- /wp:post-template -->
+
+				<!-- wp:query-pagination {"paginationArrow":"arrow","align":"wide","layout":{"type":"flex","justifyContent":"space-between"}} -->
+					<!-- wp:query-pagination-previous /-->
+					<!-- wp:query-pagination-next /-->
+				<!-- /wp:query-pagination -->
+
+			<!-- wp:query-no-results -->
+				<!-- wp:paragraph {"placeholder":"Add text or blocks that will display when a query returns no results."} -->
+					<p>No posts found.</p>
+				<!-- /wp:paragraph -->
+			<!-- /wp:query-no-results -->
+			</div>
+			<!-- /wp:query -->
+		</main>
+		<!-- /wp:group -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:template-part {"slug":"site-footer","theme":"hrswp-theme-wds","tagName":"footer","className":"wsu-footer-site"} /-->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"hrswp-theme-wds","tagName":"footer","className":"wsu-footer-global"} /-->
