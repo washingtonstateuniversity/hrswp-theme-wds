@@ -1,0 +1,35 @@
+<!-- wp:template-part {"slug":"header","theme":"hrswp-theme-wds","tagName":"header","className":"wsu-header-global"} /-->
+
+<!-- wp:template-part {"slug":"site-navigation-vertical","theme":"hrswp-theme-wds","tagName":"nav"} /-->
+
+<!-- wp:group {"className":"wsu-wrapper-site","layout":{"type":"constrained"}} -->
+<div class="wp-block-group wsu-wrapper-site">
+
+	<!-- wp:template-part {"slug":"site-header","theme":"hrswp-theme-wds","tagName":"header","className":"wsu-header-site"} /-->
+
+	<!-- wp:group {"className":"wsu-wrapper-content","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group wsu-wrapper-content">
+		<!-- wp:group {"tagName":"main","className":"wsu-wrapper-main","layout":{"type":"constrained"}} -->
+		<main class="wp-block-group wsu-wrapper-main">
+			<!-- wp:group {"tagName":"article","className":"wsu-article"} -->
+			<article class="wp-block-group wsu-article">
+				<!-- wp:group {"tagName":"header","className":"wsu-page-header"} -->
+				<header class="wp-block-group wsu-page-header">
+					<!-- wp:site-title {"isLink":false,"className":"wsu-article-header__title"} /-->
+				</header>
+				<!-- /wp:group -->
+				<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+				<!-- wp:template-part {"tagName":"footer","slug":"wsu-article-footer","theme":"hrswp-theme-wds","className":"wsu-article-footer"} /-->
+			</article>
+			<!-- /wp:group -->
+		</main>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:template-part {"slug":"site-footer","theme":"hrswp-theme-wds","tagName":"footer","className":"wsu-footer-site"} /-->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"hrswp-theme-wds","tagName":"footer","className":"wsu-footer-global"} /-->
