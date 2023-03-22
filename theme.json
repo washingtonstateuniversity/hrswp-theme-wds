@@ -1,4 +1,38 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 2
+	"version": 2,
+	"customTemplates": [
+		{
+			"name": "blank",
+			"postTypes": [
+				"page",
+				"post"
+			],
+			"title": "Blank"
+		},
+		{
+			"name": "404",
+			"postTypes": [
+				"page"
+			],
+			"title": "404"
+		}
+	],
+	"templateParts": [
+		{
+			"area": "header",
+			"name": "header",
+			"title": "Header"
+		},
+		{
+			"area": "footer",
+			"name": "footer",
+			"title": "Footer"
+		},
+		{
+			"area": "uncategorized",
+			"name": "post-meta",
+			"title": "Post Meta"
+		}
+	]
 }
