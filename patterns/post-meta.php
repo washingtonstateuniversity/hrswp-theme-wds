@@ -32,7 +32,7 @@ namespace HRSWP\Theme\WDS\Patterns\PostMeta;
 	</p>
 	<!-- /wp:paragraph -->
 
-    <!-- wp:post-terms {"term":"category"} /-->
+	<!-- wp:post-terms {"term":"category"} /-->
 </div>
 <!-- /wp:group -->
 
