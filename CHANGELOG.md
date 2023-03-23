@@ -17,7 +17,36 @@ Changelog formatting (http://semver.org/):
 ### Security (in case of vulnerabilities.)
 -->
 
-## 0.2.0 (:construction: TBD)
+## 0.3.0 (2023-03-23)
+
+### Added
+
+- Close #23 create post meta pattern for article footer. (dd7ddcf)
+- Create front page template for home page. (e1fb846)
+- Create single template for displaying individual posts. (4127a55)
+- Create page template. (ff580b7)
+- Create search page template. (5121498)
+- Create home template for "all posts" view. (5fdcddd)
+- Create blank template. (f401f14)
+- Create archive template. (c776e0b)
+- Create 404 template. (ac3ed4c)
+
+### Changed
+
+- Clean up templates and remove layouts for now. (3a14e97)
+- Register custom templates and parts. (a75f429)
+- Close #24 convert query block "no posts found" message to pattern. (a8670fc)
+- Add page title to index template. (cca329e)
+- Close #11 finish site footer with nav menus, not using sidebars. (76c9216)
+
+### Fixed
+
+- Fix #25 standardize post date placement after title. (d456635)
+- Fix #22 reduce divs in article footer template part. (5c4cfbc)
+- Remove index template query ID. (c776e0b)
+- Move body content out of header and add missing class in templates. (1eb9bf1)
+
+## 0.2.0 (2023-03-10)
 
 ### Added
 
