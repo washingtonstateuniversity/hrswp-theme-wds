@@ -10,6 +10,8 @@
 
 namespace HRSWP\Theme\WDS\Patterns\GlobalHeaderTitle;
 
+use HRSWP\Theme\WDS\Inc\Classes\Class_SVG_Icons;
+
 $header_title = 'Washington State University';
 ?>
 

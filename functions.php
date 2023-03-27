@@ -11,3 +11,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Silence is golden.' );
 }
 
+// Include classes.
+require_once dirname( __FILE__ ) . '/inc/classes/class-svg-icons.php';
