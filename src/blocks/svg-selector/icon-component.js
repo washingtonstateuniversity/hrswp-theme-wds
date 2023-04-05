@@ -20,19 +20,20 @@ export const IconComponent = ( props ) => {
 		'screen-reader-text': ! showLabel,
 	} );
 
-	if ( url ) {
-		return (
-			<a href={ url } onClick={ preventDefault }>
-				<Icon />
-				<span className={ labelClassName }>{ iconLabel }</span>
-			</a>
-		);
-	}
-
-	return (
+	const element = (
 		<>
 			<Icon />
 			<span className={ labelClassName }>{ iconLabel }</span>
 		</>
 	);
+
+	if ( url ) {
+		return (
+			<a href={ url } onClick={ preventDefault }>
+				{ element }
+			</a>
+		);
+	}
+
+	return element;
 };
