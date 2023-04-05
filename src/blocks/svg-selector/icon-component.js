@@ -8,6 +8,8 @@ import classNames from 'classnames';
  */
 import { getIconBySlug, getTitleBySlug } from './utils';
 
+const preventDefault = ( event ) => event.preventDefault();
+
 export const IconComponent = ( props ) => {
 	const { slug, url, showLabel, label } = props;
 
@@ -20,7 +22,7 @@ export const IconComponent = ( props ) => {
 
 	if ( url ) {
 		return (
-			<a href={ url }>
+			<a href={ url } onClick={ preventDefault }>
 				<Icon />
 				<span className={ labelClassName }>{ iconLabel }</span>
 			</a>
