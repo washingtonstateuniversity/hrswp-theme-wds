@@ -49,7 +49,7 @@ class SVG_Icons {
 		$svg = '';
 		if ( array_key_exists( $icon, self::$icons ) ) {
 			$class = 'svg-icon ' . (string) $classname;
-			$repl = sprintf(
+			$repl  = sprintf(
 				'<svg class="%2$s" width="%1$d" height="%1$d" aria-hidden="true" role="img" focusable="false" ',
 				esc_attr( $size ),
 				esc_attr( $class )
