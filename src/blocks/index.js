@@ -6,9 +6,9 @@ import { registerBlockType } from '@wordpress/blocks';
 /**
  * Internal dependencies
  */
-import * as siteNavigationVertical from './site-navigation-vertical';
+import * as svgSelector from './svg-selector';
 
-const hrsBlocks = [ siteNavigationVertical ];
+const blocks = [ svgSelector ];
 
 /**
  * Function to register an individual block.
@@ -32,5 +32,5 @@ const registerBlock = ( block ) => {
  *
  */
 export const registerBlocks = () => {
-	hrsBlocks.forEach( registerBlock );
+	blocks.forEach( registerBlock );
 };
