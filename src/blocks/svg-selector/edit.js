@@ -19,6 +19,8 @@ import { useState } from '@wordpress/element';
 import {
 	Button,
 	PanelBody,
+	PanelRow,
+	TextControl,
 	ToolbarButton,
 	ToggleControl,
 } from '@wordpress/components';
@@ -89,6 +91,19 @@ const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
 			</BlockControls>
 			<InspectorControls>
 				<PanelBody title={ __( 'Label settings' ) }>
+					<PanelRow>
+						<TextControl
+							__nextHasNoMarginBottom
+							label={ __( 'Icon label' ) }
+							help={ __(
+								'Add accompanying text or briefly describe the icon to help screen reader users.'
+							) }
+							value={ label || '' }
+							onChange={ ( value ) =>
+								setAttributes( { label: value } )
+							}
+						/>
+					</PanelRow>
 					<ToggleControl
 						__nextHasNoMarginBottom
 						label={ __( 'Show label' ) }
