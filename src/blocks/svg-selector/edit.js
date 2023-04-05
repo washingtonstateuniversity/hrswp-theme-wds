@@ -93,7 +93,6 @@ const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
 				<PanelBody title={ __( 'Label settings' ) }>
 					<PanelRow>
 						<TextControl
-							__nextHasNoMarginBottom
 							label={ __( 'Icon label' ) }
 							help={ __(
 								'Add accompanying text or briefly describe the icon to help screen reader users.'
