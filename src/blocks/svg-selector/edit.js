@@ -89,6 +89,11 @@ const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
 					ref={ setPopoverAnchor }
 					onClick={ () => setPopover( true ) }
 				/>
+				<ToolbarButton
+					title={ __( 'Replace SVG icon' ) }
+					text={ __( 'Replace' ) }
+					onClick={ () => setAttributes( { slug: '' } ) }
+				/>
 			</BlockControls>
 			<InspectorControls>
 				<PanelBody title={ __( 'Icon settings' ) }>
