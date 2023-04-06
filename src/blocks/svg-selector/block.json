@@ -28,7 +28,12 @@
 	},
 	"supports": {
 		"reusable": false,
-		"html": false
+		"html": false,
+		"color": {
+			"text": true,
+			"background": true,
+			"link": false
+		}
 	},
 	"editorScript": "hrswds-blocks-script",
 	"style": "hrswds-blocks-style"
