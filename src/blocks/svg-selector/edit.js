@@ -20,6 +20,7 @@ import {
 	Button,
 	PanelBody,
 	PanelRow,
+	RangeControl,
 	TextControl,
 	ToolbarButton,
 	ToggleControl,
@@ -69,7 +70,7 @@ const LinkURLPopover = ( {
 );
 
 const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
-	const { slug, url, showLabel, label } = attributes;
+	const { slug, url, showLabel, label, size } = attributes;
 	const [ showURLPopover, setPopover ] = useState( false );
 	const [ popoverAnchor, setPopoverAnchor ] = useState( null );
 
@@ -90,6 +91,20 @@ const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
 				/>
 			</BlockControls>
 			<InspectorControls>
+				<PanelBody title={ __( 'Icon settings' ) }>
+					<RangeControl
+						__nextHasNoMarginBottom
+						label={ __( 'Size' ) }
+						onChange={ ( newSize ) =>
+							setAttributes( { size: newSize } )
+						}
+						min={ 16 }
+						max={ 1104 }
+						step={ 16 }
+						initialPosition={ size }
+						value={ size || 48 }
+					/>
+				</PanelBody>
 				<PanelBody title={ __( 'Label settings' ) }>
 					<PanelRow>
 						<TextControl
@@ -118,6 +133,7 @@ const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
 				url={ url }
 				showLabel={ showLabel }
 				label={ label }
+				size={ size }
 			/>
 			{ isSelected && showURLPopover && (
 				<LinkURLPopover

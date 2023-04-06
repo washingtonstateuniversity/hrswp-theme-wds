@@ -11,7 +11,7 @@ import { getIconBySlug, getTitleBySlug } from './utils';
 const preventDefault = ( event ) => event.preventDefault();
 
 export const IconComponent = ( props ) => {
-	const { slug, url, showLabel, label } = props;
+	const { slug, url, showLabel, label, size } = props;
 
 	const Icon = getIconBySlug( slug );
 	const iconTitle = getTitleBySlug( slug );
@@ -22,7 +22,7 @@ export const IconComponent = ( props ) => {
 
 	const element = (
 		<>
-			<Icon />
+			<Icon size={ size } />
 			<span className={ labelClassName }>{ iconLabel }</span>
 		</>
 	);

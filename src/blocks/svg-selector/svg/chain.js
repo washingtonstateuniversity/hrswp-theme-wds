@@ -3,10 +3,10 @@
  */
 import { Path, SVG } from '@wordpress/primitives';
 
-export const ChainIcon = () => (
+export const ChainIcon = ( { size } ) => (
 	<SVG
-		width="48"
-		height="48"
+		width={ size }
+		height={ size }
 		viewBox="0 0 24 24"
 		xmlns="http://www.w3.org/2000/svg"
 		version="1.1"

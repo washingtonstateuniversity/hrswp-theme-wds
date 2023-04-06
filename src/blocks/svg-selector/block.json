@@ -11,8 +11,9 @@
 		"slug": {
 			"type": "string"
 		},
-		"width": {
-			"type": "number"
+		"size": {
+			"type": "number",
+			"default": 48
 		},
 		"url": {
 			"type": "string"

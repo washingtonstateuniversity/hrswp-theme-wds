@@ -3,10 +3,10 @@
  */
 import { Path, SVG } from '@wordpress/primitives';
 
-export const CougarIcon = () => (
+export const CougarIcon = ( { size } ) => (
 	<SVG
-		width="48"
-		height="48"
+		width={ size }
+		height={ size }
 		viewBox="0 0 70.2 69.6"
 		xmlns="http://www.w3.org/2000/svg"
 		version="1.1"

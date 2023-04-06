@@ -14,7 +14,7 @@ import { useBlockProps } from '@wordpress/block-editor';
 import { IconComponent } from './icon-component';
 
 export default function save( { attributes } ) {
-	const { slug, url, showLabel, label } = attributes;
+	const { slug, url, showLabel, label, size } = attributes;
 
 	const classes = classNames( 'hrswds-svg-icon', 'hrswds-svg-icon-' + slug, {
 		'has-visible-label': showLabel,
@@ -29,6 +29,7 @@ export default function save( { attributes } ) {
 				url={ url }
 				showLabel={ showLabel }
 				label={ label }
+				size={ size }
 			/>
 		</div>
 	);
