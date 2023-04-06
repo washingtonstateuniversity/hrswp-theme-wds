@@ -29,6 +29,7 @@
 	"supports": {
 		"reusable": false,
 		"html": false,
+		"align": true,
 		"color": {
 			"text": true,
 			"background": true,
