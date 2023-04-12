@@ -17,6 +17,10 @@
 	"bugs": {
 		"url": "https://github.com/washingtonstateuniversity/hrswp-theme-wds/issues"
 	},
+	"engines": {
+		"node": ">=14.0.0",
+		"npm": ">=6.9.0 <7"
+	},
 	"main": "build/index.js",
 	"devDependencies": {
 		"@wordpress/icons": "^9.21.0",
@@ -37,6 +41,7 @@
 		"lint:pkg": "wp-scripts lint-pkg-json",
 		"lint:docs": "wp-scripts lint-md-docs",
 		"export": "wp-scripts plugin-zip",
+		"check-engines": "wp-scripts check-engines",
 		"start": "wp-scripts start"
 	}
 }
