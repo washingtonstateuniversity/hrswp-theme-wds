@@ -17,21 +17,14 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v3
-            - name: Log debug information
-              run: |
-                  npm --version
-                  node --version
-                  git --version
-            - name: Install NodeJS v14
+            - name: Install NodeJS
               uses: actions/setup-node@v3
               with:
-                  node-version: 14
-            - name: Log debug information
-              run: |
-                  npm --version
-                  node --version
-            - name: Install npm dependencies
+                  node-version-file: '.nvmrc'
+                  cache: npm
+            - name: NPM install
               run: npm install
+
             - name: Run eslint
               run: npm run lint:js
             - name: Run stylelint
@@ -45,7 +38,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
             - name: Set up PHP version
               uses: shivammathur/setup-php@v2
               with:
