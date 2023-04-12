@@ -24,7 +24,11 @@
 		},
 		"label": {
 			"type": "string"
-		}
+		},
+        "labelPosition": {
+            "type": "string",
+            "default": "right"
+        }
 	},
 	"supports": {
 		"reusable": false,

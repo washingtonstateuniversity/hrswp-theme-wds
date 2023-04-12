@@ -21,6 +21,7 @@ import {
 	PanelBody,
 	PanelRow,
 	RangeControl,
+	SelectControl,
 	TextControl,
 	ToolbarButton,
 	ToggleControl,
@@ -70,13 +71,18 @@ const LinkURLPopover = ( {
 );
 
 const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
-	const { slug, url, showLabel, label, size } = attributes;
+	const { slug, url, showLabel, label, labelPosition, size } = attributes;
 	const [ showURLPopover, setPopover ] = useState( false );
 	const [ popoverAnchor, setPopoverAnchor ] = useState( null );
 
-	const classes = classNames( 'hrswds-svg-icon', 'hrswds-svg-icon-' + slug, {
-		'has-visible-label': showLabel,
-	} );
+	const classes = classNames(
+		{
+			'has-visible-label': showLabel,
+			[ `is-label-position-${ labelPosition }` ]: showLabel,
+		},
+		'hrswds-svg-icon',
+		'hrswds-svg-icon-' + slug
+	);
 
 	const blockProps = useBlockProps( { className: classes } );
 
@@ -131,6 +137,22 @@ const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
 							setAttributes( { showLabel: ! showLabel } )
 						}
 					/>
+					{ showLabel && (
+						<SelectControl
+							__nextHasNoMarginBottom
+							label={ __( 'Label position' ) }
+							value={ labelPosition }
+							options={ [
+								{ label: 'Top', value: 'top' },
+								{ label: 'Right', value: 'right' },
+								{ label: 'Bottom', value: 'bottom' },
+								{ label: 'Left', value: 'left' },
+							] }
+							onChange={ ( newPosition ) =>
+								setAttributes( { labelPosition: newPosition } )
+							}
+						/>
+					) }
 				</PanelBody>
 			</InspectorControls>
 			<IconComponent

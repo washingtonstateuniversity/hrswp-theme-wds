@@ -14,11 +14,16 @@ import { useBlockProps } from '@wordpress/block-editor';
 import { IconComponent } from './icon-component';
 
 export default function save( { attributes } ) {
-	const { slug, url, showLabel, label, size } = attributes;
+	const { slug, url, showLabel, label, labelPosition, size } = attributes;
 
-	const classes = classNames( 'hrswds-svg-icon', 'hrswds-svg-icon-' + slug, {
-		'has-visible-label': showLabel,
-	} );
+	const classes = classNames(
+		{
+			'has-visible-label': showLabel,
+			[ `is-label-position-${ labelPosition }` ]: showLabel,
+		},
+		'hrswds-svg-icon',
+		'hrswds-svg-icon-' + slug
+	);
 
 	const blockProps = useBlockProps.save( { className: classes } );
 
