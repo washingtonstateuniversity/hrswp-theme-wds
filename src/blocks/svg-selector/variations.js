@@ -61,7 +61,9 @@ const variations = [
 ];
 
 variations.forEach( ( variation ) => {
-	if ( variation.isActive ) return;
+	if ( variation.isActive ) {
+		return;
+	}
 	variation.isActive = ( blockAttributes, variationAttributes ) =>
 		blockAttributes.slug === variationAttributes.slug;
 } );
