@@ -71,7 +71,8 @@ const LinkURLPopover = ( {
 );
 
 const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
-	const { slug, url, showLabel, label, labelPosition, size } = attributes;
+	const { slug, url, showLabel, label, labelCondensed, labelPosition, size } =
+		attributes;
 	const [ showURLPopover, setPopover ] = useState( false );
 	const [ popoverAnchor, setPopoverAnchor ] = useState( null );
 
@@ -109,9 +110,8 @@ const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
 						onChange={ ( newSize ) =>
 							setAttributes( { size: newSize } )
 						}
-						min={ 16 }
-						max={ 1104 }
-						step={ 16 }
+						min={ 8 }
+						max={ 1000 }
 						initialPosition={ size }
 						value={ size || 48 }
 					/>
@@ -119,6 +119,7 @@ const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
 				<PanelBody title={ __( 'Label settings' ) }>
 					<PanelRow>
 						<TextControl
+							__nextHasNoMarginBottom
 							label={ __( 'Icon label' ) }
 							help={ __(
 								'Add accompanying text or briefly describe the icon to help screen reader users.'
@@ -155,11 +156,25 @@ const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
 					) }
 				</PanelBody>
 			</InspectorControls>
+			<InspectorControls group="advanced">
+				<TextControl
+					__nextHasNoMarginBottom
+					label={ __( 'Icon label (short version)' ) }
+					help={ __(
+						'Add accompanying text that will replace the label on small screens.'
+					) }
+					value={ labelCondensed || '' }
+					onChange={ ( value ) =>
+						setAttributes( { labelCondensed: value } )
+					}
+				/>
+			</InspectorControls>
 			<IconComponent
 				slug={ slug }
 				url={ url }
 				showLabel={ showLabel }
 				label={ label }
+				labelCondensed={ labelCondensed }
 				size={ size }
 			/>
 			{ isSelected && showURLPopover && (
