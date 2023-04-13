@@ -1,6 +1,6 @@
 {
 	"name": "@washingtonstateuniversity/hrswp-theme-wds",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"private": true,
 	"description": "A block-based theme for WSU Human Resource Services built on design tools introduced in WordPress 6.1 and using the WSU Web Design System.",
 	"author": "Washington State University, Adam Turner",
@@ -17,9 +17,16 @@
 	"bugs": {
 		"url": "https://github.com/washingtonstateuniversity/hrswp-theme-wds/issues"
 	},
+	"engines": {
+		"node": ">=14.0.0",
+		"npm": ">=6.9.0 <7"
+	},
 	"main": "build/index.js",
 	"devDependencies": {
+		"@wordpress/icons": "^9.21.0",
 		"@wordpress/scripts": "^25.5.0",
+		"classnames": "^2.3.2",
+		"lodash": "^4.17.21",
 		"npm-run-all": "^4.1.5"
 	},
 	"scripts": {
@@ -34,6 +41,7 @@
 		"lint:pkg": "wp-scripts lint-pkg-json",
 		"lint:docs": "wp-scripts lint-md-docs",
 		"export": "wp-scripts plugin-zip",
+		"check-engines": "wp-scripts check-engines",
 		"start": "wp-scripts start"
 	}
 }
