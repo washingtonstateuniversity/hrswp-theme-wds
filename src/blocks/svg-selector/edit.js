@@ -71,7 +71,8 @@ const LinkURLPopover = ( {
 );
 
 const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
-	const { slug, url, showLabel, label, labelPosition, size } = attributes;
+	const { slug, url, showLabel, label, labelCondensed, labelPosition, size } =
+		attributes;
 	const [ showURLPopover, setPopover ] = useState( false );
 	const [ popoverAnchor, setPopoverAnchor ] = useState( null );
 
@@ -155,11 +156,24 @@ const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
 					) }
 				</PanelBody>
 			</InspectorControls>
+			<InspectorControls group="advanced">
+				<TextControl
+					label={ __( 'Icon label (short version)' ) }
+					help={ __(
+						'Add accompanying text that will replace the label on small screens.'
+					) }
+					value={ labelCondensed || '' }
+					onChange={ ( value ) =>
+						setAttributes( { labelCondensed: value } )
+					}
+				/>
+			</InspectorControls>
 			<IconComponent
 				slug={ slug }
 				url={ url }
 				showLabel={ showLabel }
 				label={ label }
+				labelCondensed={ labelCondensed }
 				size={ size }
 			/>
 			{ isSelected && showURLPopover && (
