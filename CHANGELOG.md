@@ -17,6 +17,32 @@ Changelog formatting (http://semver.org/):
 ### Security (in case of vulnerabilities.)
 -->
 
+## :construction:
+
+### Added
+
+- Create SVG icon selector block to handling inserting SVG icons into block content, close #26. (6233fe8, ab7cc50)
+- Create SVG helper class. (5f73216)
+- Create base version of vertical site nav. (911aea5)
+- Create asset loader and block registration functions for scripts and styles. (445a7f5)
+- Create javascript build pipeline. (445a7f5)
+- Create eslint config extending WP default rules. (fc35c34)
+- Add classnames package. (81f6ca7)
+- Add @wordpress/icons package. (dadd554)
+- Add lodash package. (85b50bf)
+
+### Changed
+
+- Replace hardcoded header logo with svg icon block. (f8d78e7)
+- Replace footer svg in pattern with svg icon block. (f8d78e7)
+- Update GitHub actions to use specified Node versions and upgraded actions. (752b55c)
+- Specify Node and npm versions in `package.json` and use WP Scripts `check engines` to manage. (752b55c)
+
+### Fixed
+
+- Upgrade to ramsey/composer-install v2 to resolve deprecation warnings. (caeb8af)
+- Fix #28 require npm v6 to correct GitHub actions error: `fsevents not accessible from jest-haste-map`. (752b55c)
+
 ## 0.3.0 (2023-03-23)
 
 ### Added
