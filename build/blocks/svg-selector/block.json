@@ -29,6 +29,9 @@
     "label": {
       "type": "string"
     },
+    "labelCondensed": {
+      "type": "string"
+    },
     "labelPosition": {
       "type": "string",
       "default": "right"

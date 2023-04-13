@@ -14,7 +14,8 @@ import { useBlockProps } from '@wordpress/block-editor';
 import { IconComponent } from './icon-component';
 
 export default function save( { attributes } ) {
-	const { slug, url, showLabel, label, labelPosition, size } = attributes;
+	const { slug, url, showLabel, label, labelCondensed, labelPosition, size } =
+		attributes;
 
 	const classes = classNames(
 		{
@@ -34,6 +35,7 @@ export default function save( { attributes } ) {
 				url={ url }
 				showLabel={ showLabel }
 				label={ label }
+				labelCondensed={ labelCondensed }
 				size={ size }
 			/>
 		</div>
