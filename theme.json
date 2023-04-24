@@ -15,6 +15,10 @@
 	],
 	"settings": {
 		"appearanceTools": true,
+		"layout": {
+			"contentSize": "650px",
+			"wideSize": "1200px"
+		},
 		"typography": {
 			"customFontSize": false,
 			"dropCap": false,
@@ -22,29 +26,78 @@
 				"minFontSize": "11px"
 			},
 			"fontFamilies": [
-				{
-					"fontFamily": "\"Montserrat\",sans-serif",
-					"name": "Montserrat",
-					"slug": "montserrat",
-					"fontFace": [
-						{
-							"fontFamily": "Montserrat",
-							"fontWeight": "400 500 600 700 800 900",
-							"fontStyle": "normal",
-							"fontStretch": "normal",
-							"src": [ "file:./assets/fonts/montserrat.woff2" ]
-						},
-						{
-							"fontFamily": "Montserrat",
-							"fontWeight": "400 500 600 700 800 900",
-							"fontStyle": "italic",
-							"fontStretch": "normal",
-							"src": [
-								"file:./assets/fonts/montserrat-italic.woff2"
-							]
-						}
-					]
-				}
+                {
+                    "fontFace": [
+                        {
+                            "fontDisplay": "block",
+                            "fontFamily": "IBM Plex Mono",
+                            "fontStretch": "normal",
+                            "fontStyle": "normal",
+                            "fontWeight": "300",
+                            "src": [
+                                "file:./assets/fonts/ibm-plex-mono/IBMPlexMono-Light.woff2"
+                            ]
+                        },
+                        {
+                            "fontDisplay": "block",
+                            "fontFamily": "IBM Plex Mono",
+                            "fontStretch": "normal",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/ibm-plex-mono/IBMPlexMono-Regular.woff2"
+                            ]
+                        },
+                        {
+                            "fontDisplay": "block",
+                            "fontFamily": "IBM Plex Mono",
+                            "fontStretch": "normal",
+                            "fontStyle": "italic",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/ibm-plex-mono/IBMPlexMono-Italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontDisplay": "block",
+                            "fontFamily": "IBM Plex Mono",
+                            "fontStretch": "normal",
+                            "fontStyle": "normal",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./assets/fonts/ibm-plex-mono/IBMPlexMono-Bold.woff2"
+                            ]
+                        }
+                    ],
+                    "fontFamily": "'IBM Plex Mono', monospace",
+                    "name": "IBM Plex Mono",
+                    "slug": "ibm-plex-mono"
+                },
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "Montserrat",
+                            "fontStretch": "normal",
+                            "fontStyle": "normal",
+                            "fontWeight": "200 900",
+                            "src": [
+                                "file:./assets/fonts/montserrat/Montserrat-VariableFont_wght.ttf.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Montserrat",
+                            "fontStretch": "normal",
+                            "fontStyle": "italic",
+                            "fontWeight": "200 900",
+                            "src": [
+                                "file:./assets/fonts/montserrat/Montserrat-Italic-VariableFont_wght.ttf.woff2"
+                            ]
+                        }
+                    ],
+                    "fontFamily": "Montserrat, serif",
+                    "name": "Montserrat",
+                    "slug": "montserrat"
+                }
 			],
 			"fontSizes": [
 				{
@@ -88,10 +141,10 @@
 					"slug": "xx-large"
 				}
 			]
-		}
+		},
+        "useRootPaddingAwareAlignments": true
 	},
 	"styles": {
-		"blocks": {},
 		"color": {
 			"background": "",
 			"text": ""
