@@ -15,6 +15,121 @@
 	],
 	"settings": {
 		"appearanceTools": true,
+		"border": {
+			"color": true
+		},
+		"color": {
+			"custom": false,
+			"customDuotone": false,
+			"customGradient": false,
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"duotone": [],
+			"link": false,
+			"gradients": [
+				{
+					"slug": "crimson-light-to-crimson",
+					"gradient": "radial-gradient(rgb(202, 18, 55) 17%, rgb(166, 15, 45) 85%)",
+					"name": "Radial light crimson to crimson"
+				},
+				{
+					"slug": "crimson-light-to-crimson-dark",
+					"gradient": "radial-gradient(rgb(200, 0, 40) 18%, rgb(120, 0, 30) 81%)",
+					"name": "Radial light crimson to dark crimson"
+				},
+				{
+					"slug": "gray-light-to-gray",
+					"gradient": "radial-gradient(rgb(115, 115, 115) 0%,rgb(77, 77, 77) 85%)",
+					"name": "Radial light gray to gray"
+				},
+				{
+					"slug": "gray-light-to-gray-dark",
+					"gradient": "radial-gradient(rgb(115, 115, 115) 0%, rgb(51, 51, 51) 81%)",
+					"name": "Radial light gray to dark gray"
+				},
+				{
+					"slug": "linear-crimson-light-to-crimson",
+					"gradient": "linear-gradient(119deg, rgb(202, 18, 55) 4%, rgb(120, 0, 30) 100%)",
+					"name": "Light crimson to crimson"
+				},
+				{
+					"slug": "linear-gray-light-to-gray",
+					"gradient": "linear-gradient(128deg, rgb(115, 115, 115) 34%, rgb(77, 77, 77) 85%)",
+					"name": "Light gray to gray"
+				}
+			],
+			"palette": [
+				{
+					"color": "var(--wp--custom--wsu-color-gray--0)",
+					"name": "Base",
+					"slug": "base"
+				},
+				{
+					"color": "var(--wp--custom--wsu-color-gray--85)",
+					"name": "Contrast",
+					"slug": "contrast"
+				},
+				{
+					"color": "var(--wp--custom--wsu-color-crimson--crimson)",
+					"name": "Primary",
+					"slug": "primary"
+				},
+				{
+					"color": "var(--wp--custom--wsu-color-crimson--crimson-light)",
+					"name": "Primary Light",
+					"slug": "primary-light"
+				},
+				{
+					"color": "var(--wp--custom--wsu-color-gray--70)",
+					"name": "Secondary",
+					"slug": "secondary"
+				},
+				{
+					"color": "var(--wp--custom--wsu-color-gray--10)",
+					"name": "Secondary Light",
+					"slug": "secondary-light"
+				}
+			]
+		},
+		"custom": {
+			"wsuColorAccent": {
+				"autumn": "#ff6727",
+				"goldfinch": "#f3e700",
+				"vineyard": ":#aadc24",
+				"pacificsky": "#5bc3f5",
+				"midnight": "#002d61"
+			},
+			"wsuColorCrimson": {
+				"crimson": "#a60f2d",
+				"crimson-light": "#ca1237",
+				"crimson-accent": "#fae6ea",
+				"crimson-dark": "#78001e"
+			},
+			"wsuColorGray": {
+				"0": "hsl(0, 0%, 100%)",
+				"5": "hsl(0, 0%, 95%)",
+				"10": "hsl(0, 0%, 90%)",
+				"15": "hsl(0, 0%, 85%)",
+				"20": "hsl(0, 0%, 80%)",
+				"25": "hsl(0, 0%, 75%)",
+				"30": "hsl(0, 0%, 70%)",
+				"35": "hsl(0, 0%, 65%)",
+				"40": "hsl(0, 0%, 60%)",
+				"45": "hsl(0, 0%, 55%)",
+				"50": "hsl(0, 0%, 50%)",
+				"55": "hsl(0, 0%, 45%)",
+				"60": "hsl(0, 0%, 40%)",
+				"65": "hsl(0, 0%, 35%)",
+				"70": "hsl(0, 0%, 30%)",
+				"75": "hsl(0, 0%, 25%)",
+				"80": "hsl(0, 0%, 20%)",
+				"85": "hsl(0, 0%, 15%)",
+				"90": "hsl(0, 0%, 10%)",
+				"95": "hsl(0, 0%, 3%)",
+				"100": "hsl(0, 0%, 3%)"
+			}
+		},
 		"layout": {
 			"contentSize": "650px",
 			"wideSize": "1200px"
@@ -142,12 +257,36 @@
 				}
 			]
 		},
-        "useRootPaddingAwareAlignments": true
+        "useRootPaddingAwareAlignments": true,
+		"blocks": {
+			"core/heading": {
+				"color": {
+					"gradients": [],
+					"palette": []
+				}
+			},
+			"core/list": {
+				"color": {
+					"gradients": []
+				}
+			},
+			"core/paragraph": {
+				"color": {
+					"gradients": []
+				}
+			},
+			"core/table": {
+				"color": {
+					"gradients": [],
+					"palette": []
+				}
+			}
+		}
 	},
 	"styles": {
 		"color": {
-			"background": "",
-			"text": ""
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--contrast)"
 		},
 		"elements": {
 			"h1": {
