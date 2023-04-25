@@ -26,6 +26,7 @@
 			"defaultGradients": false,
 			"defaultPalette": false,
 			"duotone": [],
+			"link": false,
 			"gradients": [
 				{
 					"slug": "crimson-light-to-crimson",
