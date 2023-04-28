@@ -131,8 +131,50 @@
 			}
 		},
 		"layout": {
-			"contentSize": "650px",
+			"contentSize": "900px",
 			"wideSize": "1200px"
+		},
+		"spacing": {
+			"spacingScale": {
+				"steps": 0
+			},
+			"spacingSizes": [
+				{
+					"size": "clamp(0.5rem, 0.5rem + ((1vw - 0.48rem) * 0.362), 0.6875rem)",
+					"slug": "10",
+					"name": "1"
+				},
+				{
+					"size": "clamp(1rem, 1rem + ((1vw - 0.48rem) * 0.24), 1.125rem)",
+					"slug": "20",
+					"name": "2"
+				},
+				{
+					"size": "clamp(1.5rem, 1.5rem + ((1vw - 0.48rem) * 0.481), 1.75rem)",
+					"slug": "30",
+					"name": "3"
+				},
+				{
+					"size": "clamp(1.75rem, 1.75rem + ((1vw - 0.48rem) * 0.962), 2.25rem)",
+					"slug": "40",
+					"name": "4"
+				},
+				{
+					"size": "clamp(2.275rem, 2.275rem + ((1vw - 0.48rem) * 1.635), 3.125rem)",
+					"slug": "50",
+					"name": "5"
+				},
+				{
+					"size": "clamp(4.125rem, 4.125rem + ((1vw - 0.48rem) * 1.923), 5.125rem)",
+					"slug": "60",
+					"name": "6"
+				},
+				{
+					"size": "clamp(5.125rem, 5.125rem + ((1vw - 0.48rem) * 3.356), 6.87rem)",
+					"slug": "70",
+					"name": "7"
+				}
+			]
 		},
 		"typography": {
 			"customFontSize": false,
