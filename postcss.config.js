@@ -11,7 +11,9 @@ const plugins = [
 			grid: true,
 		},
 		features: {
+			'media-query-ranges': true,
 			'nesting-rules': true,
+			'text-decoration-shorthand': true,
 		},
 	} ),
 ];
