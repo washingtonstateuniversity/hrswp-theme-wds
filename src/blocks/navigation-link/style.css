@@ -1,1 +1,16 @@
+a:where(:not(.wp-element-button)) {
+	overflow-wrap: anywhere;
 
+	&:hover {
+		text-decoration-color: transparent;
+	}
+
+	@media not (prefers-reduced-motion) {
+
+		transition: text-decoration 0.01s linear;
+
+		&:hover {
+			transition: text-decoration 0.1s ease;
+		}
+	}
+}
