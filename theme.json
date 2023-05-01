@@ -426,13 +426,8 @@
                         "textDecoration": "none"
                     }
                 },
-                ":hover": {
-                    "typography": {
-                        "textDecoration": "transparent"
-                    }
-                },
                 "typography": {
-                    "textDecoration": "var(--wp--custom--wsu-color-crimson--crimson-light) underline 0.1em"
+                    "textDecoration": "var(--wp--custom--wsu-color-crimson--crimson-light) solid underline 0.1em"
                 }
             }
 		},
