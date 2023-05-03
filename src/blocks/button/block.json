@@ -1,0 +1,6 @@
+{
+	"name": "core/button",
+	"styles": [
+		{ "name": "small", "label": "Small" }
+    ]
+}
