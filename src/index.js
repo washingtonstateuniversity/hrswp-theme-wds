@@ -1,7 +1,8 @@
 /**
  * Internal dependencies
  */
-import { registerBlocks } from './blocks';
+import { registerBlocks, registerStyles } from './blocks';
 import './style.css';
 
 registerBlocks();
+registerStyles();
