@@ -1,6 +1,8 @@
 {
 	"name": "core/button",
 	"styles": [
-		{ "name": "small", "label": "Small" }
+		{ "name": "round", "label": "Round"},
+		{ "name": "small", "label": "Small" },
+		{ "name": "large", "label": "Large" }
     ]
 }
