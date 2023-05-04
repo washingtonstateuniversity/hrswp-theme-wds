@@ -419,6 +419,14 @@
 						"border": {
 							"color": "var(--wp--custom--wsu-color-gray--30)",
 							"width": "1px"
+						},
+						"spacing": {
+							"padding": {
+								"top": "1em",
+								"right": "2.5rem",
+								"bottom": "1em",
+								"left": "2.5rem"
+							}
 						}
 					}
 				}
@@ -451,10 +459,10 @@
 				},
 				"spacing": {
 					"padding": {
-						"top": "1rem",
-						"right": "2.5rem",
-						"bottom": "1rem",
-						"left": "2.5rem"
+						"top": "1em",
+						"right": "2.5em",
+						"bottom": "1em",
+						"left": "2.5em"
 					}
 				},
 				"typography": {
