@@ -464,6 +464,21 @@
 					"textDecoration": "none"
 				}
 			},
+			"caption": {
+				"color": {
+					"text": "var(--wp--custom--wsu-color-gray--70)"
+				},
+				"spacing": {
+					"padding": {
+						"top": "0.2rem"
+					}
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"fontWeight": "500"
+				},
+				"css": "position: relative"
+			},
 			"h1": {
 				"spacing": {
 					"margin": {
