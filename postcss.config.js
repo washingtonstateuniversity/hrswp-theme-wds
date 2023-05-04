@@ -23,18 +23,18 @@ module.exports = {
 	sourceMap: ! isProduction,
 	plugins: isProduction
 		? [
-			...plugins,
-			// eslint-disable-next-line import/no-extraneous-dependencies
-			require( 'cssnano' )( {
-				preset: [
-					'default',
-					{
-						discardComments: {
-							removeAll: true,
+				...plugins,
+				// eslint-disable-next-line import/no-extraneous-dependencies
+				require( 'cssnano' )( {
+					preset: [
+						'default',
+						{
+							discardComments: {
+								removeAll: true,
+							},
 						},
-					},
-				],
-			} ),
-		]
+					],
+				} ),
+		  ]
 		: plugins,
 };
