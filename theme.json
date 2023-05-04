@@ -476,8 +476,14 @@
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--small)",
 					"fontWeight": "500"
-				},
-				"css": "position: relative"
+				}
+			},
+			"cite": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"fontWeight": "600",
+					"fontStyle": "normal"
+				}
 			},
 			"h1": {
 				"spacing": {
