@@ -1,0 +1,26 @@
+.wp-block-button .wp-block-button__link {
+	transition: box-shadow 0.2s cubic-bezier(0, 0, 0.03, 1);
+
+	.is-style-outline.is-style-outline& {
+
+		&:hover,
+		&:focus {
+			color: var(--wp--custom--wsu-color-crimson--crimson-light);
+			border-color: var(--wp--custom--wsu-color-crimson--crimson-light);
+		}
+
+	}
+
+	.is-style-round.is-style-round& {
+		border-radius: 2em;
+	}
+
+	.is-style-small.is-style-small& {
+		font-size: var(--wp--preset--font-size--small);
+	}
+
+	.is-style-large.is-style-large& {
+		font-size: 1.25rem;
+	}
+
+}
