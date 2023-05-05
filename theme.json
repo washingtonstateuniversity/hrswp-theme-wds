@@ -393,7 +393,7 @@
 					"gradients": []
 				}
 			},
-			"core/table": {
+            "core/table": {
 				"color": {
 					"gradients": [],
 					"palette": []
@@ -423,7 +423,16 @@
 						}
 					}
 				}
-			}
+			},
+			"core/quote": {
+                "spacing": {
+                    "margin": {
+                        "right": "4%",
+                        "bottom": "2rem",
+                        "left": "4%"
+                    }
+                }
+            }
 		},
 		"color": {
 			"background": "var(--wp--preset--color--base)",
