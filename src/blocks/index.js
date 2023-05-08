@@ -7,6 +7,7 @@ import { registerBlockStyle, registerBlockType } from '@wordpress/blocks';
  * Internal dependencies
  */
 import * as button from './button';
+import * as image from './image';
 import * as svgSelector from './svg-selector';
 
 /**
@@ -17,7 +18,7 @@ const blocks = [ svgSelector ];
 /**
  * Blocks to register styles for
  */
-const blockStyles = [ button ];
+const blockStyles = [ button, image ];
 
 /**
  * Function to register an individual block.

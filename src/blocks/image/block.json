@@ -1,0 +1,6 @@
+{
+	"name": "core/image",
+	"styles": [
+		{ "name": "framed", "label": "Framed" }
+	]
+}
