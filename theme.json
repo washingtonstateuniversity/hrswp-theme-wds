@@ -424,7 +424,7 @@
 					}
 				}
 			},
-			"core/quote": {
+            "core/quote": {
                 "spacing": {
                     "margin": {
                         "right": "4%",
