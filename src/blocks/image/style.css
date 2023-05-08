@@ -2,9 +2,9 @@
 
 	&.is-style-framed img {
 		outline-style: solid;
-    	outline-width: 1px;
-    	outline-offset: calc( var(--wp--preset--spacing--40) * -1 );
-    	outline-color: #fff;
+		outline-width: 1px;
+		outline-offset: calc((var(--wp--preset--spacing--40) * -1) + 0.75vw);
+		outline-color: #fff;
 	}
 
 }
