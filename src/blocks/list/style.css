@@ -1,0 +1,106 @@
+ol,
+ul {
+	padding-left: 1.5em;
+
+	& li {
+
+		margin-bottom: 0.875em;
+
+		&::marker {
+			color: var(--wp--custom--wsu-color-crimson--crimson-light);
+		}
+	}
+
+	& ol,
+	& ul {
+		margin-bottom: 1.125em;
+		margin-top: 0.875em;
+		padding-left: 2em;
+	}
+
+}
+
+ul {
+
+	& li li li {
+		list-style-type: circle;
+	}
+
+	& ul ul li {
+		list-style-type: square;
+	}
+
+	& ul ul ul li {
+		list-style-type: disc;
+	}
+
+	& ul ul ul ul li {
+		list-style-type: circle;
+	}
+
+	& ul ul ul ul ul li {
+		list-style-type: square;
+	}
+
+}
+
+ol {
+
+	& li {
+		list-style-type: decimal;
+
+		& li {
+			list-style-type: lower-alpha;
+		}
+
+	}
+
+	& ol ol li {
+		list-style-type: lower-roman;
+	}
+
+
+	& ol ol ol li {
+		list-style-type: decimal;
+	}
+
+
+	& ol ol ol ol li {
+		list-style-type: lower-alpha;
+	}
+
+
+	& ol ol ol ol ol li {
+		list-style-type: lower-roman;
+	}
+
+	& ul {
+
+		& li {
+			list-style-type: disc;
+		}
+
+		& ul li {
+			list-style-type: circle;
+		}
+
+		& ul ul li {
+			list-style-type: square;
+		}
+
+		& ul ul ul li {
+			list-style-type: disc;
+		}
+
+		& ul ul ul ul li {
+			list-style-type: circle;
+		}
+
+	}
+
+}
+
+ul ul ol li,
+ol ul ol li {
+	list-style-type: lower-roman;
+}
