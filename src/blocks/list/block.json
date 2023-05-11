@@ -1,0 +1,10 @@
+{
+	"name": "core/list",
+	"styles": [
+		{ "name": "boxed", "label": "Rectangle" },
+		{ "name": "arrow", "label": "Arrow" },
+		{ "name": "checkbox", "label": "Checkbox" },
+		{ "name": "checkmark", "label": "Checkmark" },
+		{ "name": "lined", "label": "Lined" }
+	]
+}
