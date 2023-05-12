@@ -424,6 +424,22 @@
 					}
 				}
 			},
+            "core/separator": {
+                "border": {
+                    "width": "0",
+                    "top": {
+                        "color": "var(--wp--custom--wsu-color-gray--15)",
+                        "style": "solid",
+                        "width": "8px"
+                    }
+                },
+                "spacing": {
+                    "margin": {
+                        "top": "var(--wp--preset--spacing--50)",
+                        "bottom": "var(--wp--preset--spacing--50)"
+                    }
+                }
+            },
             "core/quote": {
                 "spacing": {
                     "margin": {
