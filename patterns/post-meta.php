@@ -12,17 +12,7 @@
 namespace HRSWP\Theme\WDS\Patterns\PostMeta;
 
 ?>
-<!-- wp:group {"className":"wsu-meta-byline","layout":{"type":"flex"}} -->
-<div class="wsu-meta-byline wp-block-group">
-	<!-- wp:paragraph {"className":"wsu-meta-byline"} -->
-	<p class="wsu-meta-byline__text">
-		<?php echo esc_html_x( 'By', 'Verb to explain the publication status of a post', 'hrswp-theme-wds' ); ?>
-	</p>
-	<!-- /wp:paragraph -->
-
-	<!-- wp:post-author {"showAvatar":false} /-->
-</div>
-<!-- /wp:group -->
+<!-- wp:post-author {"showAvatar":false,"showBio":false,"byline":"By","fontSize":"small","className":"wsu-meta-byline"} /-->
 
 <!-- wp:group {"className":"wsu-meta-categories","layout":{"type":"flex"}} -->
 <div class="wsu-meta-categories wp-block-group">
