@@ -14,17 +14,7 @@ namespace HRSWP\Theme\WDS\Patterns\PostMeta;
 ?>
 <!-- wp:post-author {"showAvatar":false,"showBio":false,"byline":"By","fontSize":"small","className":"wsu-meta-byline"} /-->
 
-<!-- wp:group {"className":"wsu-meta-categories","layout":{"type":"flex"}} -->
-<div class="wsu-meta-categories wp-block-group">
-	<!-- wp:paragraph -->
-	<p>
-		<?php echo esc_html_x( 'Categories:', 'Label for a list of post categories', 'hrswp-theme-wds' ); ?>
-	</p>
-	<!-- /wp:paragraph -->
-
-	<!-- wp:post-terms {"term":"category"} /-->
-</div>
-<!-- /wp:group -->
+<!-- wp:post-terms {"term":"category","prefix":"Categories: ","fontSize":"small","className":"wsu-meta-categories"} /-->
 
 <!-- wp:group {"className":"wsu-meta-tags","layout":{"type":"flex"}} -->
 <div class="wsu-meta-tags wp-block-group">
