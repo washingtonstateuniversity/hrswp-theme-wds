@@ -424,6 +424,12 @@
 					}
 				}
 			},
+			"core/post-date": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"fontWeight": "500"
+				}
+			},
             "core/post-terms": {
 				"typography": {
 					"fontWeight": "600"
