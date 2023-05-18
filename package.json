@@ -36,7 +36,9 @@
 		"prettier": "npm:wp-prettier@2.8.5"
 	},
 	"scripts": {
-		"build": "wp-scripts build",
+		"build": "run-s lint build:wp build:alt",
+		"build:wp": "wp-scripts build",
+		"build:alt": "postcss 'src/blocks/*/block.css' --base src --dir build --env production",
 		"format": "run-p 'format:*'",
 		"format:js": "wp-scripts format",
 		"format:php": "composer format",
@@ -48,6 +50,7 @@
 		"lint:docs": "wp-scripts lint-md-docs",
 		"export": "wp-scripts plugin-zip",
 		"check-engines": "wp-scripts check-engines",
-		"start": "wp-scripts start"
+		"start": "wp-scripts start",
+		"start:alt": "postcss 'src/blocks/*/block.css' --base src --dir build --env development --watch"
 	}
 }
