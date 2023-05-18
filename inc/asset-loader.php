@@ -76,11 +76,6 @@ add_action(
 	'after_setup_theme',
 	function(): void {
 		$blocks = array(
-			array(
-				'namespace' => 'core',
-				'name'      => 'paragraph',
-				'inline'    => true,
-			),
 		);
 
 		foreach ( $blocks as $block ) {
