@@ -29,12 +29,16 @@
 		"cssnano": "5.0.7",
 		"lodash": "^4.17.21",
 		"npm-run-all": "^4.1.5",
+		"postcss": "8.4.23",
+		"postcss-cli": "10.1.0",
 		"postcss-import": "15.1.0",
 		"postcss-preset-env": "8.3.2",
 		"prettier": "npm:wp-prettier@2.8.5"
 	},
 	"scripts": {
-		"build": "wp-scripts build",
+		"build": "run-s lint build:wp build:alt",
+		"build:wp": "wp-scripts build",
+		"build:alt": "postcss 'src/blocks/*/block.css' --base src --dir build --env production",
 		"format": "run-p 'format:*'",
 		"format:js": "wp-scripts format",
 		"format:php": "composer format",
@@ -46,6 +50,7 @@
 		"lint:docs": "wp-scripts lint-md-docs",
 		"export": "wp-scripts plugin-zip",
 		"check-engines": "wp-scripts check-engines",
-		"start": "wp-scripts start"
+		"start": "wp-scripts start",
+		"start:alt": "postcss 'src/blocks/*/block.css' --base src --dir build --env development --watch"
 	}
 }

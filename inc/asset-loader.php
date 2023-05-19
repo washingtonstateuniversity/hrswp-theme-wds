@@ -33,6 +33,13 @@ add_action(
 			$asset_file['version'],
 			true
 		);
+
+		wp_enqueue_style(
+			'hrswds-global-editor-style',
+			get_template_directory_uri() . '/build/index.css',
+			array(),
+			$asset_file['version'],
+		);
 	}
 );
 
@@ -57,5 +64,48 @@ add_action(
 			array(),
 			$asset_file['version']
 		);
+	}
+);
+
+/**
+ * Enqueues stylesheets for specific blocks.
+ *
+ * Given a stylesheet in `build/blocks/BLOCK_NAME/block.css`, this
+ * will use `wp_enqueue_block_style` to either enqueue it or inline
+ * it on any page with the given block.
+ *
+ * @since 0.5.0
+ *
+ * @see wp_enqueue_block_style
+ * @return void
+ */
+add_action(
+	'after_setup_theme',
+	function(): void {
+		$blocks = array(
+			array(
+				'namespace' => 'core',
+				'name'      => 'list',
+				'inline'    => true,
+			),
+			array(
+				'namespace' => 'core',
+				'name'      => 'quote',
+				'inline'    => true,
+			),
+		);
+
+		foreach ( $blocks as $block ) {
+			$args = array(
+				'handle' => 'hrswds-' . $block['name'],
+				'src'    => get_theme_file_uri( 'build/blocks/' . $block['name'] . '/block.css' ),
+			);
+
+			if ( false !== $block['inline'] ) {
+				$args['path'] = get_theme_file_path( 'build/blocks/' . $block['name'] . '/block.css' );
+			}
+
+			wp_enqueue_block_style( $block['namespace'] . '/' . $block['name'], $args );
+		}
 	}
 );

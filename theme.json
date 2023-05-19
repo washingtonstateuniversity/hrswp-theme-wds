@@ -424,6 +424,37 @@
 					}
 				}
 			},
+			"core/post-date": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"fontWeight": "500"
+				}
+			},
+            "core/post-terms": {
+				"typography": {
+					"fontWeight": "600"
+				},
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var(--wp--custom--wsu-color-gray--75)"
+						},
+						"typography": {
+							"textDecoration": "var(--wp--custom--wsu-color-gray--40) solid underline"
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "var(--wp--custom--wsu-color-crimson--crimson-light) solid underline"
+							}
+						},
+						":focus": {
+							"typography": {
+								"textDecoration": "var(--wp--custom--wsu-color-crimson--crimson-light) solid underline"
+							}
+						}
+					}
+				}
+			},
             "core/separator": {
                 "border": {
                     "width": "0",
