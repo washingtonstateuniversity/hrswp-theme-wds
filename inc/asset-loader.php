@@ -33,6 +33,13 @@ add_action(
 			$asset_file['version'],
 			true
 		);
+
+		wp_enqueue_style(
+			'hrswds-global-editor-style',
+			get_template_directory_uri() . '/build/index.css',
+			array(),
+			$asset_file['version'],
+		);
 	}
 );
 
@@ -76,6 +83,11 @@ add_action(
 	'after_setup_theme',
 	function(): void {
 		$blocks = array(
+			array(
+				'namespace' => 'core',
+				'name'      => 'quote',
+				'inline'    => true,
+			),
 		);
 
 		foreach ( $blocks as $block ) {
