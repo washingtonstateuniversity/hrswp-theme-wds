@@ -85,6 +85,11 @@ add_action(
 		$blocks = array(
 			array(
 				'namespace' => 'core',
+				'name'      => 'list',
+				'inline'    => true,
+			),
+			array(
+				'namespace' => 'core',
 				'name'      => 'quote',
 				'inline'    => true,
 			),
