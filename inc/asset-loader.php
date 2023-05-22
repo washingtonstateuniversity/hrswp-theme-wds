@@ -93,6 +93,11 @@ add_action(
 				'name'      => 'quote',
 				'inline'    => true,
 			),
+			array(
+				'namespace' => 'core',
+				'name'      => 'table',
+				'inline'    => true,
+			),
 		);
 
 		foreach ( $blocks as $block ) {
