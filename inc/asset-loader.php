@@ -90,6 +90,11 @@ add_action(
 			),
 			array(
 				'namespace' => 'core',
+				'name'      => 'post-author',
+				'inline'    => true,
+			),
+			array(
+				'namespace' => 'core',
 				'name'      => 'quote',
 				'inline'    => true,
 			),
