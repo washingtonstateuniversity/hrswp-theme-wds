@@ -1,0 +1,12 @@
+.wp-block-post-author {
+
+	.wp-block-post-author__content {
+		display: flex;
+		gap: 4px;
+	}
+
+	.wp-block-post-author__byline {
+		font-size: var(--wp--preset--font-size--small);
+		width: inherit;
+	}
+}
