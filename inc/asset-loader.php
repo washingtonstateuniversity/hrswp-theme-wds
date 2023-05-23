@@ -101,7 +101,7 @@ add_action(
 			array(
 				'namespace' => 'core',
 				'name'      => 'table',
-				'inline'    => true,
+				'inline'    => false,
 			),
 		);
 
