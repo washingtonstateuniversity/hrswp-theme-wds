@@ -103,6 +103,11 @@ add_action(
 				'name'      => 'table',
 				'inline'    => false,
 			),
+			array(
+				'namespace' => 'gravityforms',
+				'name'      => 'form',
+				'inline'    => false,
+			),
 		);
 
 		foreach ( $blocks as $block ) {
