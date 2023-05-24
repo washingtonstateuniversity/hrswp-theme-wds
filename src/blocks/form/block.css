@@ -1,0 +1,92 @@
+.gform_wrapper.gravity-theme {
+
+	& form {
+
+		& fieldset {
+
+			border: 1px solid var(--wp--custom--wsu-color-gray--20);
+			border-radius: var(--wp--custom--border-radius--medium);
+			padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
+
+			> .gfield_label {
+				padding-left: var(--wp--preset--spacing--10);
+				padding-right: var(--wp--preset--spacing--10);
+			}
+		}
+
+		& input[type="file"],
+		& input[type="time"],
+		& input[type="week"],
+		& input[type="month"],
+		& input[type="datetime-local"],
+		& input[type="datetime"],
+		& input[type="date"],
+		& input[type="url"],
+		& input[type="tel"],
+		& input[type="search"],
+		& input[type="email"],
+		& input[type="number"],
+		& input[type="password"],
+		& input[type="text"],
+		& select,
+		& textarea {
+			border-radius: var(--wp--custom--border-radius--medium);
+			background-color: var(--wp--preset--color--white);
+			border: 1px solid var(--wp--custom--wsu-color-gray--30);
+			outline: none;
+			transition: box-shadow 300ms cubic-bezier(0, 0, 0.03, 1);
+			font-size: inherit;
+			padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--20);
+			box-sizing: border-box;
+
+			&:focus {
+				box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+				border-color: var(--wp--custom--wsu-color-gray--80);
+			}
+		}
+
+		& input[type="color"] {
+			width: var(--wp--preset--spacing--50);
+			height: var(--wp--preset--spacing--40);
+		}
+
+		& input[type="submit"] {
+			background-color: var(--wp--custom--wsu-color-crimson--crimson);
+			border-width: 0;
+			border-radius: var(--wp--custom--border-radius--large);
+			box-sizing: border-box;
+			color: var(--wp--custom--wsu-color-gray--0);
+			cursor: pointer;
+			display: inline-block;
+			font-family: inherit;
+			font-size: inherit;
+			font-weight: 600;
+			line-height: 1.5;
+			padding-top: 1em;
+			padding-right: 2.5em;
+			padding-bottom: 1em;
+			padding-left: 2.5em;
+			text-align: center;
+			text-decoration: none;
+			transition: box-shadow 0.2s cubic-bezier(0, 0, 0.03, 1);
+			word-break: break-word;
+
+			&:hover,
+			&:focus {
+				background-color: var(--wp--custom--wsu-color-crimson--crimson-light);
+				box-shadow: var(--wp--preset--shadow--medium-rise);
+			}
+		}
+
+		& label,
+		& legend {
+			font-weight: 600;
+		}
+
+		.ginput_complex .ginput_container_date {
+			flex-basis: content;
+		}
+
+	}
+
+}
