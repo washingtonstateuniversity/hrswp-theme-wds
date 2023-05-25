@@ -1,27 +1,48 @@
 .wp-block-hrswds-svg-selector {
+	box-sizing: border-box;
 
-	&.has-base-color svg {
-		fill: var(--wp--preset--color--base);
+	&.has-text-color svg {
+		fill: currentcolor;
 	}
 
-	&.has-contrast-color svg {
-		fill: var(--wp--preset--color--contrast);
+	&.has-background {
+
+		& svg {
+			padding: 1rem;
+		}
+
+		&.has-background {
+			background-color: transparent !important;
+		}
+
+		&.has-base-background-color svg {
+			background-color: var(--wp--preset--color--base);
+		}
+
+		&.has-contrast-background-color svg {
+			background-color: var(--wp--preset--color--contrast);
+		}
+
+		&.has-primary-background-color svg {
+			background-color: var(--wp--preset--color--primary);
+		}
+
+		&.has-primary-light-background-color svg {
+			background-color: var(--wp--preset--color--primary-light);
+		}
+
+		&.has-secondary-background-color svg {
+			background-color: var(--wp--preset--color--secondary);
+		}
+
+		&.has-secondary-light-background-color svg {
+			background-color: var(--wp--preset--color--secondary-light);
+		}
+
 	}
 
-	&.has-primary-color svg {
-		fill: var(--wp--preset--color--primary);
-	}
-
-	&.has-primary-light-color svg {
-		fill: var(--wp--preset--color--primary-light);
-	}
-
-	&.has-secondary-color svg {
-		fill: var(--wp--preset--color--secondary);
-	}
-
-	&.has-secondary-light-color svg {
-		fill: var(--wp--preset--color--secondary-light);
+	&.is-style-round svg {
+		border-radius: 9999px;
 	}
 
 }
