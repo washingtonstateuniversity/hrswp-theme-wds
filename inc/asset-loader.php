@@ -108,6 +108,11 @@ add_action(
 				'name'      => 'form',
 				'inline'    => false,
 			),
+			array(
+				'namespace' => 'hrswds',
+				'name'      => 'svg-selector',
+				'inline'    => true,
+			),
 		);
 
 		foreach ( $blocks as $block ) {
