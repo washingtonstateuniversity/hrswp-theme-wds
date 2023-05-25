@@ -1,0 +1,27 @@
+.wp-block-hrswds-svg-selector {
+
+	&.has-base-color svg {
+		fill: var(--wp--preset--color--base);
+	}
+
+	&.has-contrast-color svg {
+		fill: var(--wp--preset--color--contrast);
+	}
+
+	&.has-primary-color svg {
+		fill: var(--wp--preset--color--primary);
+	}
+
+	&.has-primary-light-color svg {
+		fill: var(--wp--preset--color--primary-light);
+	}
+
+	&.has-secondary-color svg {
+		fill: var(--wp--preset--color--secondary);
+	}
+
+	&.has-secondary-light-color svg {
+		fill: var(--wp--preset--color--secondary-light);
+	}
+
+}
