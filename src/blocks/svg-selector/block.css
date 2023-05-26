@@ -1,5 +1,6 @@
 .wp-block-hrswds-svg-selector {
 	box-sizing: border-box;
+	line-height: 0;
 
 	&.has-text-color svg {
 		fill: currentcolor;
