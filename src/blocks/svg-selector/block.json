@@ -8,6 +8,18 @@
 	"keywords": [ "img", "icon", "svg" ],
 	"textdomain": "default",
 	"attributes": {
+		"iconColor": {
+			"type": "string"
+		},
+		"iconColorValue": {
+			"type": "string"
+		},
+		"iconBackgroundColor": {
+			"type": "string"
+		},
+		"iconBackgroundColorValue": {
+			"type": "string"
+		},
 		"slug": {
 			"type": "string"
 		},
@@ -33,11 +45,18 @@
 			"default": "right"
 		}
 	},
+	"providesContext": {
+		"iconColor": "iconColor",
+		"iconColorValue": "iconColorValue",
+		"backgroundColor": "backgroundColorValue",
+		"iconBackgroundColorValue": "iconBackgroundColorValue"
+	},
 	"supports": {
 		"reusable": false,
 		"html": false,
 		"align": true,
 		"color": {
+			"enableContrastChecker": false,
 			"text": true,
 			"background": true,
 			"link": false

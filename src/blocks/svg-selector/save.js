@@ -13,20 +13,31 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 import { IconComponent } from './icon-component';
 
-export default function save( { attributes } ) {
-	const { slug, url, showLabel, label, labelCondensed, labelPosition, size } =
-		attributes;
-
-	const classes = classNames(
-		{
-			'has-visible-label': showLabel,
-			[ `is-label-position-${ labelPosition }` ]: showLabel,
+export default function save( props ) {
+	const {
+		attributes: {
+			slug,
+			url,
+			showLabel,
+			label,
+			labelCondensed,
+			labelPosition,
+			size,
+			iconBackgroundColorValue,
+			iconBackgroundColorClass,
+			iconColorValue,
+			iconColorClass,
 		},
-		'hrswds-svg-icon',
-		'hrswds-svg-icon-' + slug
-	);
+	} = props;
 
-	const blockProps = useBlockProps.save( { className: classes } );
+	const className = classNames( {
+		'has-visible-label': showLabel,
+		[ `is-label-position-${ labelPosition }` ]: showLabel,
+		'has-icon-color': iconColorValue,
+		'has-icon-background-color': iconBackgroundColorValue,
+	} );
+
+	const blockProps = useBlockProps.save( { className } );
 
 	return (
 		<div { ...blockProps }>
