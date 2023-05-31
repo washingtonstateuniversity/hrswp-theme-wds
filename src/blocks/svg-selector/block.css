@@ -2,44 +2,56 @@
 	box-sizing: border-box;
 	line-height: 0;
 
-	&.has-text-color svg {
-		fill: currentcolor;
+	&.has-base-icon-color {
+		fill: var(--wp--preset--color--base);
 	}
 
-	&.has-background {
+	&.has-contrast-icon-color {
+		fill: var(--wp--preset--color--contrast);
+	}
 
-		& svg {
-			padding: 1rem;
-		}
+	&.has-primary-icon-color {
+		fill: var(--wp--preset--color--primary);
+	}
 
-		&.has-background {
-			background-color: transparent !important;
-		}
+	&.has-primary-light-icon-color {
+		fill: var(--wp--preset--color--primary-light);
+	}
 
-		&.has-base-background-color svg {
-			background-color: var(--wp--preset--color--base);
-		}
+	&.has-secondary-icon-color {
+		fill: var(--wp--preset--color--secondary);
+	}
 
-		&.has-contrast-background-color svg {
-			background-color: var(--wp--preset--color--contrast);
-		}
+	&.has-secondary-light-icon-color {
+		fill: var(--wp--preset--color--secondary-light);
+	}
 
-		&.has-primary-background-color svg {
-			background-color: var(--wp--preset--color--primary);
-		}
+	&.has-base-icon-background-color svg {
+		background-color: var(--wp--preset--color--base);
+	}
 
-		&.has-primary-light-background-color svg {
-			background-color: var(--wp--preset--color--primary-light);
-		}
+	&.has-contrast-icon-background-color svg {
+		background-color: var(--wp--preset--color--contrast);
+	}
 
-		&.has-secondary-background-color svg {
-			background-color: var(--wp--preset--color--secondary);
-		}
+	&.has-primary-icon-background-color svg {
+		background-color: var(--wp--preset--color--primary);
+	}
 
-		&.has-secondary-light-background-color svg {
-			background-color: var(--wp--preset--color--secondary-light);
-		}
+	&.has-primary-light-icon-background-color svg {
+		background-color: var(--wp--preset--color--primary-light);
+	}
 
+	&.has-secondary-icon-background-color svg {
+		background-color: var(--wp--preset--color--secondary);
+	}
+
+	&.has-secondary-light-icon-background-color svg {
+		background-color: var(--wp--preset--color--secondary-light);
+	}
+
+	&.has-icon-background-color svg {
+		padding: 1rem;
 	}
 
 	&.is-style-round svg {
