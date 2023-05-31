@@ -70,7 +70,8 @@
 	},
 	"styles": [
 		{ "name": "default", "label": "Default", "isDefault": true },
-		{ "name": "round", "label": "Round tile" }
+		{ "name": "round", "label": "Round tile" },
+		{ "name": "square", "label": "Square tile "}
 	],
 	"editorScript": "hrswds-blocks-script"
 }
