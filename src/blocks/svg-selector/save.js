@@ -19,7 +19,7 @@ export default function save( props ) {
 			slug,
 			url,
 			showLabel,
-			label,
+			iconLabel,
 			labelCondensed,
 			labelPosition,
 			size,
@@ -35,6 +35,8 @@ export default function save( props ) {
 		[ `is-label-position-${ labelPosition }` ]: showLabel,
 		'has-icon-color': iconColorValue,
 		'has-icon-background-color': iconBackgroundColorValue,
+		[ iconColorClass ]: iconColorClass,
+		[ iconBackgroundColorClass ]: iconBackgroundColorClass,
 	} );
 
 	const blockProps = useBlockProps.save( { className } );
@@ -45,7 +47,7 @@ export default function save( props ) {
 				slug={ slug }
 				url={ url }
 				showLabel={ showLabel }
-				label={ label }
+				label={ iconLabel }
 				labelCondensed={ labelCondensed }
 				size={ size }
 			/>

@@ -90,7 +90,7 @@ const SVGSelectorContainer = ( props ) => {
 		iconBackgroundColorClass,
 		iconColorValue,
 		iconColorClass,
-		label,
+		iconLabel,
 		labelCondensed,
 		labelPosition,
 		showLabel,
@@ -100,10 +100,13 @@ const SVGSelectorContainer = ( props ) => {
 	} = attributes;
 	const [ showURLPopover, setPopover ] = useState( false );
 	const [ popoverAnchor, setPopoverAnchor ] = useState( null );
-	const logosOnly =
-		! ( attributes.className?.includes( 'is-style-round' ) ||
-		attributes.className?.includes( 'is-style-square' ) );
+	const logosOnly = ! (
+		attributes.className?.includes( 'is-style-round' ) ||
+		attributes.className?.includes( 'is-style-square' )
+	);
 
+	// Remove icon background color when default style is selected or
+	// restore it when the round or tile style is selected.
 	const backgroundBackup = useRef( {} );
 	useEffect( () => {
 		if ( logosOnly ) {
@@ -113,25 +116,45 @@ const SVGSelectorContainer = ( props ) => {
 			};
 			setAttributes( {
 				iconBackgroundColor: undefined,
-				customIconBackgroundColor: undefined,
 			} );
 		} else {
 			setAttributes( { ...backgroundBackup.current } );
 		}
-	}, [ logosOnly ] );
+	}, [
+		logosOnly,
+		setAttributes,
+		iconBackgroundColor,
+		iconBackgroundColorValue,
+	] );
 
+	useEffect( () => {
+		setAttributes( { iconColorClass: iconColor.class } );
+	}, [ iconColor, setAttributes ] );
+
+	useEffect( () => {
+		setAttributes( {
+			iconBackgroundColorClass: iconBackgroundColor.class,
+		} );
+	}, [ iconBackgroundColor, setAttributes ] );
+
+	// Fallback color values are used maintain selections in case switching
+	// themes and named colors in palette do not match.
 	const className = classNames( {
 		'has-visible-label': showLabel,
 		[ `is-label-position-${ labelPosition }` ]: showLabel,
 		'has-icon-color': iconColor.color || iconColorValue,
 		'has-icon-background-color':
 			iconBackgroundColor.color || iconBackgroundColorValue,
+		[ iconColorClass ]: iconColorClass,
+		[ iconBackgroundColorClass ]: iconBackgroundColorClass,
 	} );
 
 	const blockProps = useBlockProps( { className } );
 
 	const colorSettings = [
 		{
+			// Use custom attribute as fallback to prevent loss of named color selection when
+			// switching themes to a new theme that does not have a matching named color.
 			value: iconColor.color || iconColorValue,
 			onChange: ( colorValue ) => {
 				setIconColor( colorValue );
@@ -147,6 +170,8 @@ const SVGSelectorContainer = ( props ) => {
 
 	if ( ! logosOnly ) {
 		colorSettings.push( {
+			// Use custom attribute as fallback to prevent loss of named color selection when
+			// switching themes to a new theme that does not have a matching named color.
 			value: iconBackgroundColor.color || iconBackgroundColorValue,
 			onChange: ( colorValue ) => {
 				setIconBackgroundColor( colorValue );
@@ -201,9 +226,9 @@ const SVGSelectorContainer = ( props ) => {
 							help={ __(
 								'Add accompanying text or briefly describe the icon to help screen reader users.'
 							) }
-							value={ label || '' }
+							value={ iconLabel || '' }
 							onChange={ ( value ) =>
-								setAttributes( { label: value } )
+								setAttributes( { iconLabel: value } )
 							}
 						/>
 					</PanelRow>
@@ -281,7 +306,7 @@ const SVGSelectorContainer = ( props ) => {
 				slug={ slug }
 				url={ url }
 				showLabel={ showLabel }
-				label={ label }
+				label={ iconLabel }
 				labelCondensed={ labelCondensed }
 				size={ size }
 			/>

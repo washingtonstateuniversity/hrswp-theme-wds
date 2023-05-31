@@ -14,10 +14,16 @@
 		"iconColorValue": {
 			"type": "string"
 		},
+		"iconColorClass": {
+			"type": "string"
+		},
 		"iconBackgroundColor": {
 			"type": "string"
 		},
 		"iconBackgroundColorValue": {
+			"type": "string"
+		},
+		"iconBackgroundColorClass": {
 			"type": "string"
 		},
 		"slug": {
@@ -34,7 +40,7 @@
 			"type": "boolean",
 			"default": false
 		},
-		"label": {
+		"iconLabel": {
 			"type": "string"
 		},
 		"labelCondensed": {
