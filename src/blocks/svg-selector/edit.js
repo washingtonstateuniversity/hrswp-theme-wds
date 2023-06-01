@@ -137,9 +137,18 @@ const SVGSelectorContainer = ( props ) => {
 		} );
 	}, [ iconBackgroundColor, setAttributes ] );
 
+	let sizeClass = '';
+	if ( size < 30 ) {
+		sizeClass = 'has-small-icon-size';
+	} else if ( size > 200 ) {
+		sizeClass = 'has-large-icon-size';
+	} else {
+		sizeClass = 'has-default-icon-size';
+	}
+
 	// Fallback color values are used maintain selections in case switching
 	// themes and named colors in palette do not match.
-	const className = classNames( {
+	const className = classNames( sizeClass, {
 		'has-visible-label': showLabel,
 		[ `is-label-position-${ labelPosition }` ]: showLabel,
 		'has-icon-color': iconColor.color || iconColorValue,
@@ -212,8 +221,8 @@ const SVGSelectorContainer = ( props ) => {
 						onChange={ ( newSize ) =>
 							setAttributes( { size: newSize } )
 						}
-						min={ 8 }
-						max={ 1000 }
+						min={ 16 }
+						max={ 400 }
 						initialPosition={ size }
 						value={ size || 48 }
 					/>

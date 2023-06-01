@@ -50,8 +50,20 @@
 		background-color: var(--wp--preset--color--secondary-light);
 	}
 
-	&.has-icon-background-color svg {
-		padding: 1rem;
+	&.has-icon-background-color {
+
+		&.has-small-icon-size svg {
+			padding: 0.5rem;
+		}
+
+		&.has-default-icon-size svg {
+			padding: 1rem;
+		}
+
+		&.has-large-icon-size svg {
+			padding: 1.75rem;
+		}
+
 	}
 
 	&.is-style-round svg {
