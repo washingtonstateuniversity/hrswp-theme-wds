@@ -113,19 +113,18 @@ const SVGSelectorContainer = ( props ) => {
 			backgroundBackup.current = {
 				iconBackgroundColor,
 				iconBackgroundColorValue,
+				iconBackgroundColorClass,
 			};
 			setAttributes( {
 				iconBackgroundColor: undefined,
+				iconBackgroundColorValue: undefined,
+				iconBackgroundColorClass: undefined,
 			} );
 		} else {
 			setAttributes( { ...backgroundBackup.current } );
 		}
-	}, [
-		logosOnly,
-		setAttributes,
-		iconBackgroundColor,
-		iconBackgroundColorValue,
-	] );
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [ logosOnly ] );
 
 	useEffect( () => {
 		setAttributes( { iconColorClass: iconColor.class } );
