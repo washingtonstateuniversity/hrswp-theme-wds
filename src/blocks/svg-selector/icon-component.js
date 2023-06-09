@@ -41,11 +41,15 @@ export const IconComponent = ( props ) => {
 
 	if ( url ) {
 		return (
-			<a href={ url } onClick={ preventDefault }>
+			<a
+				href={ url }
+				className="hrswds-svg-icon-container"
+				onClick={ preventDefault }
+			>
 				{ element }
 			</a>
 		);
 	}
 
-	return element;
+	return <span className="hrswds-svg-icon-container">{ element }</span>;
 };

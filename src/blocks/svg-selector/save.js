@@ -30,7 +30,16 @@ export default function save( props ) {
 		},
 	} = props;
 
-	const className = classNames( {
+	let sizeClass = '';
+	if ( size < 30 ) {
+		sizeClass = 'has-small-icon-size';
+	} else if ( size > 200 ) {
+		sizeClass = 'has-large-icon-size';
+	} else {
+		sizeClass = 'has-default-icon-size';
+	}
+
+	const className = classNames( sizeClass, {
 		'has-visible-label': showLabel,
 		[ `is-label-position-${ labelPosition }` ]: showLabel,
 		'has-icon-color': iconColorValue,
