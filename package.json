@@ -40,7 +40,7 @@
 	"scripts": {
 		"build": "run-s lint build:wp build:alt",
 		"build:wp": "wp-scripts build",
-		"build:alt": "postcss 'src/blocks/*/block.css' --base src --dir build --env production",
+		"build:alt": "postcss 'src/block-library/*/block.css' --base src --dir build --env production",
 		"format": "run-p 'format:*'",
 		"format:js": "wp-scripts format",
 		"format:php": "composer format",
@@ -53,6 +53,6 @@
 		"export": "wp-scripts plugin-zip",
 		"check-engines": "wp-scripts check-engines",
 		"start": "wp-scripts start",
-		"start:alt": "postcss 'src/blocks/*/block.css' --base src --dir build --env development --watch"
+		"start:alt": "postcss 'src/block-library/*/block.css' --base src --dir build --env development --watch"
 	}
 }

@@ -118,11 +118,11 @@ add_action(
 		foreach ( $blocks as $block ) {
 			$args = array(
 				'handle' => 'hrswds-' . $block['name'],
-				'src'    => get_theme_file_uri( 'build/blocks/' . $block['name'] . '/block.css' ),
+				'src'    => get_theme_file_uri( 'build/block-library/' . $block['name'] . '/block.css' ),
 			);
 
 			if ( false !== $block['inline'] ) {
-				$args['path'] = get_theme_file_path( 'build/blocks/' . $block['name'] . '/block.css' );
+				$args['path'] = get_theme_file_path( 'build/block-library/' . $block['name'] . '/block.css' );
 			}
 
 			wp_enqueue_block_style( $block['namespace'] . '/' . $block['name'], $args );
