@@ -10,40 +10,31 @@ const postcss = require( 'postcss' );
  */
 const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
 
-const { NODE_ENV: mode = 'development' } = process.env;
+/**
+ * Internal dependencies
+ */
+const { plugins } = require( './tools/shared' );
 
+/**
+ * Escapes the RegExp special characters.
+ *
+ * @param {string} string Input string.
+ *
+ * @return {string} Regex-escaped string.
+ */
 function escapeRegExp( string ) {
 	return string.replace( /[\\^$.*+?()[\]{}|]/g, '\\$&' );
 }
 
+/**
+ * Uses PostCSS to transform css for development or production.
+ *
+ * @param {string} content The css content to modify.
+ *
+ * @return {string} The modified css content.
+ */
 const stylesTransform = ( content ) => {
-	return postcss( [
-		require( 'postcss-import' )( {
-			path: 'src/',
-		} ),
-		require( 'postcss-preset-env' )( {
-			stage: 2,
-			autoprefixer: {
-				grid: true,
-			},
-			features: {
-				'media-query-ranges': true,
-				'nesting-rules': true,
-				'text-decoration-shorthand': true,
-			},
-		} ),
-		require( 'cssnano' )( {
-			preset: [
-				'default',
-				{
-					discardComments: {
-						removeAll: true,
-					},
-					normalizeWhitespace: mode === 'production',
-				},
-			],
-		} ),
-	] )
+	return postcss( plugins )
 		.process( content, {
 			from: 'src/app.css',
 			to: 'dest/app.css',
