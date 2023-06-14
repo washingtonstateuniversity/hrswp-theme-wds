@@ -1,6 +1,6 @@
 h1::after {
 	display: block;
-	content: '';
+	content: "";
 	height: 0.375rem;
 	background-color: var(--wp--custom--wsu-color-crimson--crimson);
 	width: 6.87rem;
