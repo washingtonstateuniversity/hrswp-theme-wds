@@ -95,6 +95,11 @@ add_action(
 			),
 			array(
 				'namespace' => 'core',
+				'name'      => 'post-title',
+				'internal'  => true,
+			),
+			array(
+				'namespace' => 'core',
 				'name'      => 'quote',
 				'internal'  => true,
 			),
