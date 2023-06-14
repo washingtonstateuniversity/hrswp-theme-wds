@@ -27,9 +27,8 @@ add_action(
 		);
 		foreach ( $block_folders as $block_folder ) {
 			register_block_type(
-				get_template_directory() . '/build/blocks/' . $block_folder
+				get_template_directory() . '/build/block-library/' . $block_folder
 			);
 		}
 	}
 );
-
