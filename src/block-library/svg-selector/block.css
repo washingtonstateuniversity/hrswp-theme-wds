@@ -1,0 +1,109 @@
+.wp-block-hrswds-svg-selector {
+	line-height: 0;
+
+	& .hrswds-svg-icon-container {
+		display: flex;
+	}
+
+	&.has-base-icon-color {
+		fill: var(--wp--preset--color--base);
+	}
+
+	&.has-contrast-icon-color {
+		fill: var(--wp--preset--color--contrast);
+	}
+
+	&.has-primary-icon-color {
+		fill: var(--wp--preset--color--primary);
+	}
+
+	&.has-primary-light-icon-color {
+		fill: var(--wp--preset--color--primary-light);
+	}
+
+	&.has-secondary-icon-color {
+		fill: var(--wp--preset--color--secondary);
+	}
+
+	&.has-secondary-light-icon-color {
+		fill: var(--wp--preset--color--secondary-light);
+	}
+
+	&.has-base-icon-background-color svg {
+		background-color: var(--wp--preset--color--base);
+	}
+
+	&.has-contrast-icon-background-color svg {
+		background-color: var(--wp--preset--color--contrast);
+	}
+
+	&.has-primary-icon-background-color svg {
+		background-color: var(--wp--preset--color--primary);
+	}
+
+	&.has-primary-light-icon-background-color svg {
+		background-color: var(--wp--preset--color--primary-light);
+	}
+
+	&.has-secondary-icon-background-color svg {
+		background-color: var(--wp--preset--color--secondary);
+	}
+
+	&.has-secondary-light-icon-background-color svg {
+		background-color: var(--wp--preset--color--secondary-light);
+	}
+
+	&.has-icon-background-color {
+
+		&.has-small-icon-size svg {
+			padding: 0.5rem;
+		}
+
+		&.has-default-icon-size svg {
+			padding: 1rem;
+		}
+
+		&.has-large-icon-size svg {
+			padding: 2rem;
+		}
+
+	}
+
+	&.is-style-round svg {
+		border-radius: 9999px;
+	}
+
+	&.alignleft .hrswds-svg-icon-container {
+		justify-content: flex-start;
+	}
+
+	&.aligncenter .hrswds-svg-icon-container {
+		align-items: center;
+		justify-content: center;
+	}
+
+	&.alignright .hrswds-svg-icon-container {
+		justify-content: flex-end;
+	}
+
+	&.has-visible-label .hrswds-svg-icon-container {
+		flex-flow: row nowrap;
+		gap: var(--wp--style--block-gap);
+	}
+
+	&:not(.is-label-position-top, .is-label-position-bottom) .hrswds-svg-icon-container {
+		align-items: center;
+	}
+
+	&.is-label-position-top .hrswds-svg-icon-container svg,
+	&.is-label-position-left .hrswds-svg-icon-container svg {
+		order: 1;
+	}
+
+	&.is-label-position-top .hrswds-svg-icon-container,
+	&.is-label-position-bottom .hrswds-svg-icon-container {
+		flex-direction: column;
+		line-height: 1.4;
+	}
+
+}

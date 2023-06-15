@@ -12,6 +12,24 @@
   ],
   "textdomain": "default",
   "attributes": {
+    "iconColor": {
+      "type": "string"
+    },
+    "iconColorValue": {
+      "type": "string"
+    },
+    "iconColorClass": {
+      "type": "string"
+    },
+    "iconBackgroundColor": {
+      "type": "string"
+    },
+    "iconBackgroundColorValue": {
+      "type": "string"
+    },
+    "iconBackgroundColorClass": {
+      "type": "string"
+    },
     "slug": {
       "type": "string"
     },
@@ -26,7 +44,7 @@
       "type": "boolean",
       "default": false
     },
-    "label": {
+    "iconLabel": {
       "type": "string"
     },
     "labelCondensed": {
@@ -37,11 +55,18 @@
       "default": "right"
     }
   },
+  "providesContext": {
+    "iconColor": "iconColor",
+    "iconColorValue": "iconColorValue",
+    "backgroundColor": "backgroundColorValue",
+    "iconBackgroundColorValue": "iconBackgroundColorValue"
+  },
   "supports": {
     "reusable": false,
     "html": false,
     "align": true,
     "color": {
+      "enableContrastChecker": false,
       "text": true,
       "background": true,
       "link": false
@@ -59,9 +84,8 @@
     },
     {
       "name": "square",
-      "label": "Square tile"
+      "label": "Square tile "
     }
   ],
-  "editorScript": "hrswds-blocks-script",
-  "style": "hrswds-blocks-style"
+  "editorScript": "hrswds-blocks-script"
 }

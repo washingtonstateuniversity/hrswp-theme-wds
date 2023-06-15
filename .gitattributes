@@ -2,6 +2,7 @@
 
 /.github export-ignore
 /src export-ignore
+/tools export-ignore
 .editorconfig export-ignore
 .eslintrc.js export-ignore
 .gitattributes export-ignore

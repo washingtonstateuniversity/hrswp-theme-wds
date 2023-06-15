@@ -1,0 +1,32 @@
+.wp-block-table {
+	border-top: 4px solid var(--wp--custom--wsu-color-crimson--crimson);
+
+	& th,
+	& td {
+		padding: var(--wp--preset--spacing--10);
+		border: none;
+		border-top: 1px solid var(--wp--custom--wsu-color-gray--20);
+	}
+
+	& th,
+	& tfoot {
+		font-weight: 700;
+		text-align: left;
+	}
+
+	& tr:last-of-type {
+		border-bottom: 1px solid var(--wp--custom--wsu-color-gray--20);
+	}
+
+	& thead {
+		border-bottom: none;
+	}
+
+	& tfoot {
+		border-top: none;
+	}
+
+	&.is-style-stripes tbody tr:nth-child(2n+1) {
+		background-color: var(--wp--custom--wsu-color-gray--5);
+	}
+}

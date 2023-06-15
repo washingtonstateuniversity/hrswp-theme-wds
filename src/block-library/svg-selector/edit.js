@@ -13,9 +13,13 @@ import {
 	URLPopover,
 	URLInput,
 	useBlockProps,
+	ContrastChecker,
+	withColors,
 	__experimentalBlockVariationPicker as BlockVariationPicker,
+	__experimentalColorGradientSettingsDropdown as ColorGradientSettingsDropdown,
+	__experimentalUseMultipleOriginColorsAndGradients as useMultipleOriginColorsAndGradients,
 } from '@wordpress/block-editor';
-import { useState } from '@wordpress/element';
+import { useEffect, useRef, useState } from '@wordpress/element';
 import {
 	Button,
 	PanelBody,
@@ -70,26 +74,132 @@ const LinkURLPopover = ( {
 	</URLPopover>
 );
 
-const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
-	const { slug, url, showLabel, label, labelCondensed, labelPosition, size } =
-		attributes;
+const SVGSelectorContainer = ( props ) => {
+	const {
+		attributes,
+		clientId,
+		iconBackgroundColor,
+		iconColor,
+		isSelected,
+		setAttributes,
+		setIconBackgroundColor,
+		setIconColor,
+	} = props;
+	const {
+		iconBackgroundColorValue,
+		iconBackgroundColorClass,
+		iconColorValue,
+		iconColorClass,
+		iconLabel,
+		labelCondensed,
+		labelPosition,
+		showLabel,
+		size,
+		slug,
+		url,
+	} = attributes;
 	const [ showURLPopover, setPopover ] = useState( false );
 	const [ popoverAnchor, setPopoverAnchor ] = useState( null );
-
-	const classes = classNames(
-		{
-			'has-visible-label': showLabel,
-			[ `is-label-position-${ labelPosition }` ]: showLabel,
-		},
-		'hrswds-svg-icon',
-		'hrswds-svg-icon-' + slug
+	const logosOnly = ! (
+		attributes.className?.includes( 'is-style-round' ) ||
+		attributes.className?.includes( 'is-style-square' )
 	);
 
-	const blockProps = useBlockProps( { className: classes } );
+	// Remove icon background color when default style is selected or
+	// restore it when the round or tile style is selected.
+	const backgroundBackup = useRef( {} );
+	useEffect( () => {
+		if ( logosOnly ) {
+			backgroundBackup.current = {
+				iconBackgroundColor,
+				iconBackgroundColorValue,
+				iconBackgroundColorClass,
+			};
+			setAttributes( {
+				iconBackgroundColor: undefined,
+				iconBackgroundColorValue: undefined,
+				iconBackgroundColorClass: undefined,
+			} );
+		} else {
+			setAttributes( { ...backgroundBackup.current } );
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [ logosOnly ] );
+
+	useEffect( () => {
+		setAttributes( { iconColorClass: iconColor.class } );
+	}, [ iconColor, setAttributes ] );
+
+	useEffect( () => {
+		setAttributes( {
+			iconBackgroundColorClass: iconBackgroundColor.class,
+		} );
+	}, [ iconBackgroundColor, setAttributes ] );
+
+	let sizeClass = '';
+	if ( size < 30 ) {
+		sizeClass = 'has-small-icon-size';
+	} else if ( size > 200 ) {
+		sizeClass = 'has-large-icon-size';
+	} else {
+		sizeClass = 'has-default-icon-size';
+	}
+
+	// Fallback color values are used maintain selections in case switching
+	// themes and named colors in palette do not match.
+	const className = classNames( sizeClass, {
+		'has-visible-label': showLabel,
+		[ `is-label-position-${ labelPosition }` ]: showLabel,
+		'has-icon-color': iconColor.color || iconColorValue,
+		'has-icon-background-color':
+			iconBackgroundColor.color || iconBackgroundColorValue,
+		[ iconColorClass ]: iconColorClass,
+		[ iconBackgroundColorClass ]: iconBackgroundColorClass,
+	} );
+
+	const blockProps = useBlockProps( { className } );
+
+	const colorSettings = [
+		{
+			// Use custom attribute as fallback to prevent loss of named color selection when
+			// switching themes to a new theme that does not have a matching named color.
+			value: iconColor.color || iconColorValue,
+			onChange: ( colorValue ) => {
+				setIconColor( colorValue );
+				setAttributes( { iconColorValue: colorValue } );
+			},
+			label: __( 'Icon color' ),
+			resetAllFilter: () => {
+				setIconColor( undefined );
+				setAttributes( { iconColorValue: undefined } );
+			},
+		},
+	];
+
+	if ( ! logosOnly ) {
+		colorSettings.push( {
+			// Use custom attribute as fallback to prevent loss of named color selection when
+			// switching themes to a new theme that does not have a matching named color.
+			value: iconBackgroundColor.color || iconBackgroundColorValue,
+			onChange: ( colorValue ) => {
+				setIconBackgroundColor( colorValue );
+				setAttributes( {
+					iconBackgroundColorValue: colorValue,
+				} );
+			},
+			label: __( 'Icon background' ),
+			resetAllFilter: () => {
+				setIconBackgroundColor( undefined );
+				setAttributes( { iconBackgroundColorValue: undefined } );
+			},
+		} );
+	}
+
+	const colorGradientSettings = useMultipleOriginColorsAndGradients();
 
 	return (
 		<div { ...blockProps }>
-			<BlockControls group="block">
+			<BlockControls group="other">
 				<ToolbarButton
 					icon={ linkIcon }
 					title={ __( 'Add link' ) }
@@ -110,8 +220,8 @@ const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
 						onChange={ ( newSize ) =>
 							setAttributes( { size: newSize } )
 						}
-						min={ 8 }
-						max={ 1000 }
+						min={ 16 }
+						max={ 400 }
 						initialPosition={ size }
 						value={ size || 48 }
 					/>
@@ -124,9 +234,9 @@ const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
 							help={ __(
 								'Add accompanying text or briefly describe the icon to help screen reader users.'
 							) }
-							value={ label || '' }
+							value={ iconLabel || '' }
 							onChange={ ( value ) =>
-								setAttributes( { label: value } )
+								setAttributes( { iconLabel: value } )
 							}
 						/>
 					</PanelRow>
@@ -169,11 +279,42 @@ const SVGSelectorContainer = ( { attributes, isSelected, setAttributes } ) => {
 					}
 				/>
 			</InspectorControls>
+			<InspectorControls group="color">
+				{ colorSettings.map(
+					( { onChange, label, value, resetAllFilter } ) => (
+						<ColorGradientSettingsDropdown
+							key={ `svg-selector-color-${ label }` }
+							__experimentalIsRenderedInSidebar
+							settings={ [
+								{
+									colorValue: value,
+									label,
+									onColorChange: onChange,
+									isShownByDefault: true,
+									resetAllFilter,
+									enableAlpha: true,
+								},
+							] }
+							panelId={ clientId }
+							{ ...colorGradientSettings }
+						/>
+					)
+				) }
+				{ ! logosOnly && (
+					<ContrastChecker
+						{ ...{
+							textColor: iconColorValue,
+							backgroundColor: iconBackgroundColorValue,
+						} }
+						isLargeText={ false }
+					/>
+				) }
+			</InspectorControls>
 			<IconComponent
 				slug={ slug }
 				url={ url }
 				showLabel={ showLabel }
-				label={ label }
+				label={ iconLabel }
 				labelCondensed={ labelCondensed }
 				size={ size }
 			/>
@@ -233,4 +374,9 @@ const SVGSelectorEdit = ( props ) => {
 	return <Component { ...props } />;
 };
 
-export default SVGSelectorEdit;
+const iconColorAttributes = {
+	iconColor: 'icon-color',
+	iconBackgroundColor: 'icon-background-color',
+};
+
+export default withColors( iconColorAttributes )( SVGSelectorEdit );
