@@ -12,7 +12,8 @@
 	}
 
 	/* The default border version */
-	&.wp-block-search__button-outside {
+	&.wp-block-search__button-outside,
+	&.wp-block-search__no-button {
 
 		.wp-block-search__input {
 			border-color: var(--wp--custom--wsu-color-gray--30);
