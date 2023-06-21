@@ -1,7 +1,6 @@
 .editor-styles-wrapper .wp-block-search {
 
 	.wp-block-search__button {
-		/* border-radius: 0 6px 6px 0; */
 		margin-left: 0;
 		padding: 0 1.75rem;
 		transition: box-shadow 0.2s cubic-bezier(0, 0, 0.03, 1);

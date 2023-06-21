@@ -1,6 +1,5 @@
 .wp-block-search {
 
-	/* Shared styles */
 	.wp-block-search__button {
 		margin-left: 0;
 		transition: box-shadow 0.2s cubic-bezier(0, 0, 0.03, 1);
@@ -11,7 +10,6 @@
 		font-weight: 600;
 	}
 
-	/* The default border version */
 	&.wp-block-search__button-outside,
 	&.wp-block-search__no-button {
 
@@ -36,7 +34,6 @@
 
 	}
 
-	/* The underline version with no border */
 	&.wp-block-search__button-inside {
 
 		.wp-block-search__inside-wrapper {
