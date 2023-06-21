@@ -105,6 +105,11 @@ add_action(
 			),
 			array(
 				'namespace' => 'core',
+				'name'      => 'search',
+				'internal'  => true,
+			),
+			array(
+				'namespace' => 'core',
 				'name'      => 'table',
 				'internal'  => false,
 			),

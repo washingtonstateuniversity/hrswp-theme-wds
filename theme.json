@@ -393,6 +393,31 @@
 					"gradients": []
 				}
 			},
+			"core/search": {
+				"border": {
+					"color": false,
+					"radius": false,
+					"width": false
+				},
+				"color": {
+					"background": false,
+					"gradients": [],
+					"palette": []
+				},
+				"spacing": {
+					"padding": false
+				},
+				"typography": {
+					"fontFamilies": [],
+					"fontSizes": [],
+					"fontStyle": false,
+					"fontWeight": false,
+					"letterSpacing": false,
+					"lineHeight": false,
+					"textDecoration": false,
+					"textTransform": false
+				}
+			},
             "core/table": {
 				"color": {
 					"gradients": [],
