@@ -47,21 +47,24 @@ module.exports = {
 	plugins: [
 		...defaultConfig.plugins,
 		new CopyWebpackPlugin( {
-			patterns: [
+			patterns: Object.entries( {
+				'./src/block-library/': 'block-library',
+				'./src/pattern-library': 'pattern-library',
+			} ).flatMap( ( [ from, to ] ) => [
 				{
-					from: './src/block-library/*/block.css',
+					from: `${ from }/**/block.css`,
 					to( { absoluteFilename } ) {
 						const [ , dirname ] = absoluteFilename.match(
 							new RegExp(
-								`([\\w-]+)${ escapeRegExp( sep ) }block.css$`
+								`([\\w-]+)${ escapeRegExp( sep ) }block\\.css$`
 							)
 						);
 
-						return join( 'block-library', dirname, 'block.css' );
+						return join( to, dirname, 'block.css' );
 					},
 					transform: stylesTransform,
 				},
-			],
+			] ),
 		} ),
 	].filter( Boolean ),
 };
