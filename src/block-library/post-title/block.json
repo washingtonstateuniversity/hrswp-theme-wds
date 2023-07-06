@@ -1,8 +1,5 @@
 {
-	"name": "core/image",
-	"styles": [
-		{ "name": "framed", "label": "Framed" }
-	],
+	"name": "core/post-title",
 	"extraStyle": [
 		{
 			"source": "file:./block.css",

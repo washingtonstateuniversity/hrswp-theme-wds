@@ -4,5 +4,11 @@
 		{ "name": "round", "label": "Round" },
 		{ "name": "small", "label": "Small" },
 		{ "name": "large", "label": "Large" }
+	],
+	"extraStyle": [
+		{
+			"source": "file:./block.css",
+			"internal": true
+		}
 	]
 }

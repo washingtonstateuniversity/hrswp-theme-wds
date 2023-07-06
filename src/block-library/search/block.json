@@ -1,0 +1,9 @@
+{
+	"name": "core/search",
+	"extraStyle": [
+		{
+			"source": "file:./block.css",
+			"internal": false
+		}
+	]
+}
