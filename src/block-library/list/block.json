@@ -6,5 +6,11 @@
 		{ "name": "checkbox", "label": "Checkbox" },
 		{ "name": "checkmark", "label": "Checkmark" },
 		{ "name": "lined", "label": "Lined" }
+	],
+	"extraStyle": [
+		{
+			"source": "file:./block.css",
+			"internal": true
+		}
 	]
 }

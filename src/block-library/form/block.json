@@ -1,0 +1,9 @@
+{
+	"name": "gravityforms/form",
+	"extraStyle": [
+		{
+			"source": "file:./block.css",
+			"internal": false
+		}
+	]
+}
