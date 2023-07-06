@@ -82,60 +82,34 @@ add_action(
 add_action(
 	'after_setup_theme',
 	function(): void {
-		$blocks = array(
-			array(
-				'namespace' => 'core',
-				'name'      => 'list',
-				'internal'  => true,
-			),
-			array(
-				'namespace' => 'core',
-				'name'      => 'post-author',
-				'internal'  => true,
-			),
-			array(
-				'namespace' => 'core',
-				'name'      => 'post-title',
-				'internal'  => true,
-			),
-			array(
-				'namespace' => 'core',
-				'name'      => 'quote',
-				'internal'  => true,
-			),
-			array(
-				'namespace' => 'core',
-				'name'      => 'search',
-				'internal'  => true,
-			),
-			array(
-				'namespace' => 'core',
-				'name'      => 'table',
-				'internal'  => false,
-			),
-			array(
-				'namespace' => 'gravityforms',
-				'name'      => 'form',
-				'internal'  => false,
-			),
-			array(
-				'namespace' => 'hrswds',
-				'name'      => 'svg-selector',
-				'internal'  => true,
-			),
-		);
+		$metadata_files = glob( get_theme_file_path( 'build' ) . '/**/**/block.json' );
 
-		foreach ( $blocks as $block ) {
-			$args = array(
-				'handle' => 'hrswds-' . $block['name'],
-				'src'    => get_theme_file_uri( 'build/block-library/' . $block['name'] . '/block.css' ),
-			);
+		foreach ( $metadata_files as $metadata_file ) {
+			$metadata = wp_json_file_decode( $metadata_file, array( 'associative' => true ) );
 
-			if ( false !== $block['internal'] ) {
-				$args['path'] = get_theme_file_path( 'build/block-library/' . $block['name'] . '/block.css' );
+			if ( ! is_array( $metadata ) || empty( $metadata['name'] ) || empty( $metadata['extraStyle'] ) ) {
+				continue;
 			}
 
-			wp_enqueue_block_style( $block['namespace'] . '/' . $block['name'], $args );
+			$block_name_array = explode( '/', $metadata['name'] );
+			$block_namespace  = $block_name_array[0];
+			$block_name       = $block_name_array[1];
+
+			foreach ( $metadata['extraStyle'] as $extra_style ) {
+				$style_file = remove_block_asset_path_prefix( $extra_style['source'] );
+				$style_path = dirname( explode( 'build', $metadata_file )[1] );
+
+				$block_style_args = array(
+					'handle' => "hrswds-{$block_namespace}-{$block_name}-extra",
+					'src'    => get_theme_file_uri( "build/{$style_path}/{$style_file}" ),
+				);
+
+				if ( false !== $extra_style['internal'] ) {
+					$block_style_args['path'] = wp_normalize_path( realpath( dirname( $metadata_file ) . '/' . $style_file ) );
+				}
+
+				wp_enqueue_block_style( $metadata['name'], $block_style_args );
+			}
 		}
 	}
 );

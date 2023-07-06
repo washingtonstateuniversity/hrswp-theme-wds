@@ -1,0 +1,9 @@
+{
+	"name": "core/post-author",
+	"externalStyle": [
+		{
+			"source": "file:./block.css",
+			"internal": true
+		}
+	]
+}
