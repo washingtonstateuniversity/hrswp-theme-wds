@@ -1,5 +1,6 @@
 {
-	"name": "core/post-author",
+	"name": "hrswds/logo-lockup",
+	"blockDependency": "hrswds/svg-selector",
 	"extraStyle": [
 		{
 			"source": "file:./block.css",

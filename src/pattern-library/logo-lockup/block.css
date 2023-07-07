@@ -1,0 +1,50 @@
+.wp-block-hrswds-svg-selector.wsu-logo-lockup {
+
+	& svg {
+		height: 5.375em;
+		margin: 0.75em calc(1em - var(--wp--style--block-gap)) 1.5em 1.5em;
+		width: 5.375em;
+	}
+
+	.hrswds-svg-icon-container {
+		color: #404040;
+		font-size: 0.5rem;
+		text-decoration: none;
+
+		@media screen and (min-width: 576px) {
+			font-size: 0.6rem;
+		}
+
+		@media screen and (min-width: 768px) {
+			font-size: 0.7rem;
+		}
+
+		@media screen and (min-width: 860px) {
+			font-size: 0.9rem;
+		}
+
+		@media screen and (min-width: 1260px) {
+			font-size: 1rem;
+		}
+	}
+
+	.hrswds-svg-icon-label {
+		font-size: 2.4em;
+		font-weight: 700;
+		line-height: 1;
+		padding: 0.2em 0 0.2em 0.5em;
+		position: relative;
+
+		&::before {
+			background-color: #b3b3b3;
+			bottom: calc(50% - 0.95em);
+			content: "";
+			height: auto;
+			left: 0;
+			position: absolute;
+			top: calc(50% - 0.95em);
+			width: 1px;
+		}
+	}
+
+}

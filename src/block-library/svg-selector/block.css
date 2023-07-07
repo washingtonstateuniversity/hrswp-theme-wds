@@ -1,7 +1,7 @@
 .wp-block-hrswds-svg-selector {
 	line-height: 0;
 
-	& .hrswds-svg-icon-container {
+	.hrswds-svg-icon-container {
 		display: flex;
 	}
 
