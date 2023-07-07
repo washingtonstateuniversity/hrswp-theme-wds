@@ -1,0 +1,9 @@
+{
+  "name": "core/quote",
+  "extraStyle": [
+    {
+      "source": "file:./block.css",
+      "internal": false
+    }
+  ]
+}

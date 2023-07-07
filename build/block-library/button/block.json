@@ -13,5 +13,11 @@
       "name": "large",
       "label": "Large"
     }
+  ],
+  "extraStyle": [
+    {
+      "source": "file:./block.css",
+      "internal": true
+    }
   ]
 }

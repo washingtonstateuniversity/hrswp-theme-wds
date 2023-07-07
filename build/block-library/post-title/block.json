@@ -1,0 +1,9 @@
+{
+  "name": "core/post-title",
+  "extraStyle": [
+    {
+      "source": "file:./block.css",
+      "internal": true
+    }
+  ]
+}

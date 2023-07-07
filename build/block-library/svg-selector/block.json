@@ -87,5 +87,11 @@
       "label": "Square tile "
     }
   ],
-  "editorScript": "hrswds-blocks-script"
+  "editorScript": "hrswds-blocks-script",
+  "extraStyle": [
+    {
+      "source": "file:./block.css",
+      "internal": true
+    }
+  ]
 }

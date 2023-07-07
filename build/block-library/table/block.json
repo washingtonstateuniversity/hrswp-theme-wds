@@ -1,0 +1,9 @@
+{
+  "name": "core/table",
+  "extraStyle": [
+    {
+      "source": "file:./block.css",
+      "internal": false
+    }
+  ]
+}

@@ -5,5 +5,11 @@
       "name": "framed",
       "label": "Framed"
     }
+  ],
+  "extraStyle": [
+    {
+      "source": "file:./block.css",
+      "internal": true
+    }
   ]
 }
