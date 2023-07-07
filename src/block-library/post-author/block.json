@@ -1,6 +1,6 @@
 {
 	"name": "core/post-author",
-	"externalStyle": [
+	"extraStyle": [
 		{
 			"source": "file:./block.css",
 			"internal": true
