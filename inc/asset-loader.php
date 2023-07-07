@@ -68,11 +68,13 @@ add_action(
 );
 
 /**
- * Enqueues stylesheets for specific blocks.
+ * Enqueues per-block stylesheets.
  *
- * Given a stylesheet in `build/blocks/BLOCK_NAME/block.css`, this
- * will use `wp_enqueue_block_style` to either enqueue it or load
- * it internally on any page with the given block.
+ * Looks for `block.json` files in the `build` directory and subdirectories
+ * and parses them for an `extraStyle` property. Uses styles defined there
+ * to enqueue them on a per-block basis either internally or externally.
+ * Can also load styles for patterns given a block defined in the `block.json`
+ * metadata file `blockDependency` property.
  *
  * @since 0.5.0
  *
@@ -91,24 +93,21 @@ add_action(
 				continue;
 			}
 
-			$block_name_array = explode( '/', $metadata['name'] );
-			$block_namespace  = $block_name_array[0];
-			$block_name       = $block_name_array[1];
-
 			foreach ( $metadata['extraStyle'] as $extra_style ) {
 				$style_file = remove_block_asset_path_prefix( $extra_style['source'] );
 				$style_path = dirname( explode( 'build', $metadata_file )[1] );
+				$block_dep  = $metadata['blockDependency'] ?? $metadata['name'];
 
 				$block_style_args = array(
-					'handle' => "hrswds-{$block_namespace}-{$block_name}-extra",
-					'src'    => get_theme_file_uri( "build/{$style_path}/{$style_file}" ),
+					'handle' => str_replace( '/', '-', $metadata['name'] ) . '-extra',
+					'src'    => get_theme_file_uri( "build{$style_path}/{$style_file}" ),
 				);
 
 				if ( false !== $extra_style['internal'] ) {
 					$block_style_args['path'] = wp_normalize_path( realpath( dirname( $metadata_file ) . '/' . $style_file ) );
 				}
 
-				wp_enqueue_block_style( $metadata['name'], $block_style_args );
+				wp_enqueue_block_style( $block_dep, $block_style_args );
 			}
 		}
 	}
