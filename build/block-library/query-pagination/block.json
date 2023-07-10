@@ -1,0 +1,9 @@
+{
+  "name": "core/query-pagination",
+  "extraStyle": [
+    {
+      "source": "file:./block.css",
+      "internal": true
+    }
+  ]
+}
