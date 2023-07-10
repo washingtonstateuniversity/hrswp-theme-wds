@@ -1,0 +1,5 @@
+.wp-block-query-pagination {
+	border-top: 1px solid var(--wp--custom--wsu-color-gray--15);
+	margin-top: 3.125rem;
+	padding-top: 1.75rem;
+}
