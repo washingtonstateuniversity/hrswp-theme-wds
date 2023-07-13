@@ -9,12 +9,13 @@ import { registerBlockStyle, registerBlockType } from '@wordpress/blocks';
 import * as button from './button';
 import * as image from './image';
 import * as list from './list';
+import * as logoLockup from './logo-lockup';
 import * as svgSelector from './svg-selector';
 
 /**
  * Blocks to register
  */
-const blocks = [ svgSelector ];
+const blocks = [ logoLockup, svgSelector ];
 
 /**
  * Blocks to register styles for

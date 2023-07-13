@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "hrswds/logo-lockup",
+	"title": "Logo Lockup",
+	"category": "theme",
+	"description": "The WSU HRS logo lockup.",
+	"keywords": [ "img", "logo" ],
+	"textdomain": "default",
+	"attributes": {
+		"url": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"reusable": false,
+		"html": false,
+		"align": true
+	},
+	"editorScript": "hrswds-blocks-script",
+	"editorStyle": "hrswds-global-editor-style",
+	"extraStyle": [
+		{
+			"source": "file:./block.css",
+			"internal": true
+		}
+	]
+}
