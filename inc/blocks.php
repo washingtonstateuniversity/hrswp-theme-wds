@@ -23,6 +23,7 @@ add_action(
 	'init',
 	function(): void {
 		$block_folders = array(
+			'logo-lockup',
 			'svg-selector',
 		);
 		foreach ( $block_folders as $block_folder ) {
