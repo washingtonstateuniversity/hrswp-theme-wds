@@ -49,6 +49,7 @@ module.exports = {
 		new CopyWebpackPlugin( {
 			patterns: Object.entries( {
 				'./src/block-library/': 'block-library',
+				'./src/template-library': 'template-library',
 			} ).flatMap( ( [ from, to ] ) => [
 				{
 					from: `${ from }/**/block.css`,
