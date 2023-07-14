@@ -1,0 +1,22 @@
+.wsu-header-unit {
+	align-items: center;
+	display: flex;
+	background-color: var(--wp--preset--color--white);
+	min-height: calc(150px - var(--wp--preset--spacing--10));
+	padding-right: 90px;
+	position: relative;
+	width: 100%;
+	z-index: 1030;
+
+	&::after {
+		background: linear-gradient(to bottom, #000 0, rgba(0, 0, 0, 0) 100%);
+		bottom: -5px;
+		content: "";
+		height: 5px;
+		left: 0;
+		opacity: 0.2;
+		position: absolute;
+		right: 0;
+		width: auto;
+	}
+}
