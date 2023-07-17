@@ -41,7 +41,8 @@
 				width: 5px;
 			}
 
-			&:hover::before {
+			&:hover::before,
+			&:focus::before {
 				background-color: var(--wp--preset--color--white);
 				visibility: visible;
 			}
