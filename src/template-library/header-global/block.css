@@ -1,0 +1,51 @@
+.wsu-header-global {
+	background-color: var(--wp--custom--wsu-color-gray--75);
+	height: 35px;
+	box-sizing: border-box;
+	border-bottom: 2px solid var(--wp--preset--color--primary);
+	display: flex;
+	z-index: 1030;
+
+	& ul {
+		display: flex;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		& li {
+			display: flex;
+			padding: 0;
+			margin: 0;
+		}
+
+		& a {
+			align-items: center;
+			color: var(--wp--custom--wsu-color-gray--5);
+			display: flex;
+			font-size: 0.75rem;
+			font-weight: 300;
+			letter-spacing: 1px;
+			padding: 0 0.875rem;
+			position: relative;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&::before {
+				background-color: transparent;
+				content: "";
+				display: inline-block;
+				height: 12px;
+				margin-right: 0.4rem;
+				transition: background-color 0.2s cubic-bezier(0, 0, 0.03, 1);
+				visibility: hidden;
+				width: 5px;
+			}
+
+			&:hover::before,
+			&:focus::before {
+				background-color: var(--wp--preset--color--white);
+				visibility: visible;
+			}
+		}
+	}
+}

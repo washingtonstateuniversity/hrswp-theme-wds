@@ -1,0 +1,10 @@
+{
+	"name": "hrswds/template-header-utility-bar",
+	"blockDependency": "core/buttons",
+	"extraStyle": [
+		{
+			"source": "file:./block.css",
+			"internal": true
+		}
+	]
+}

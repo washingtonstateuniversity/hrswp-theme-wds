@@ -1,6 +1,6 @@
 {
-	"name": "hrswds/logo-lockup",
-	"blockDependency": "hrswds/svg-selector",
+	"name": "hrswds/template-header-global",
+	"blockDependency": "core/list",
 	"extraStyle": [
 		{
 			"source": "file:./block.css",
