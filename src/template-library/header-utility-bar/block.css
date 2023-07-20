@@ -1,7 +1,8 @@
 .wsu-header-utility-bar {
+	margin-top: 0;
 	position: absolute;
 	right: 0;
-	top: calc(-1 * var(--wp--preset--spacing--10));
+	top: 0;
 	z-index: 1035;
 
 	@media screen and (max-width: 1260px) {
@@ -9,7 +10,7 @@
 	}
 
 	.admin-bar & {
-		top: calc(-1 * var(--wp--preset--spacing--10) + 32px);
+		top: 32px;
 	}
 
 	&::before {
