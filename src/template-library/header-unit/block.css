@@ -1,3 +1,7 @@
+.wsu-header-unit {
+	margin-top: 0;
+}
+
 .wsu-header-unit__banner {
 	align-items: center;
 	display: flex;
