@@ -1,5 +1,6 @@
 {
 	"name": "core/list",
+	"apiVersion": 3,
 	"styles": [
 		{ "name": "boxed", "label": "Rectangle" },
 		{ "name": "arrow", "label": "Arrow" },
