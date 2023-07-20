@@ -1,5 +1,6 @@
 {
   "name": "core/post-title",
+  "apiVersion": 3,
   "extraStyle": [
     {
       "source": "file:./block.css",

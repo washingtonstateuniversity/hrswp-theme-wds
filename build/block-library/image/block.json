@@ -1,5 +1,6 @@
 {
   "name": "core/image",
+  "apiVersion": 3,
   "styles": [
     {
       "name": "framed",

@@ -1,5 +1,6 @@
 {
   "name": "gravityforms/form",
+  "apiVersion": 3,
   "extraStyle": [
     {
       "source": "file:./block.css",
