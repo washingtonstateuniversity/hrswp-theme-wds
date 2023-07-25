@@ -23,4 +23,37 @@
 		font-size: 1.25rem;
 	}
 
+	.is-style-action.is-style-action& {
+		background-color: transparent;
+		color: var(--wp--custom--wsu-color-crimson--crimson);
+		display: inline-flex;
+		font-size: 1.125rem;
+		padding: 1rem 0;
+
+		&::before {
+			align-items: center;
+			background-color: var(--wp--custom--wsu-color-crimson--crimson);
+			border-radius: 50%;
+			color: var(--wp--preset--color--white);
+			content: "→";
+			display: flex;
+			font-size: 0.8em;
+			height: 2em;
+			justify-content: center;
+			margin-right: 0.65em;
+			width: 2em;
+		}
+
+		&:hover {
+			box-shadow: none;
+			color: var(--wp--custom--wsu-color-crimson--crimson);
+
+			&::before {
+				background-color: var(--wp--custom--wsu-color-crimson--crimson-light);
+				outline: 2px solid var(--wp--custom--wsu-color-crimson--crimson-light);
+				outline-offset: 2px;
+			}
+		}
+	}
+
 }
