@@ -1,0 +1,99 @@
+.wsu-navigation-menu--content {
+	background-color: var(--wp--preset--color--white);
+	border-left: 3px solid var(--wp--preset--color--primary);
+	border-top: 2px solid var(--wp--preset--color--primary-light);
+	display: block;
+	height: 100vh;
+	max-width: 100%;
+	position: fixed;
+	right: 0;
+	top: 0;
+
+	/* transform: translateX(calc(400px + 6px)); */
+	transform: translateX(0);
+
+	transition: transform 0.2s cubic-bezier(0, 0, 0.03, 1);
+	width: 400px;
+	z-index: 1060;
+
+	&[aria-expanded="true"] {
+		transform: translateX(0);
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: var(--wp--preset--color--primary-light);
+		width: 80px;
+		height: 80px;
+		display: block;
+		clip-path: polygon(100% 0, 100% calc(100% - 100px), calc(100% - 100px) 100%, 0 100%, 0 0);
+	}
+
+	.wsu-navigation-menu--close {
+		padding: 1.25rem 1.75rem;
+		justify-content: right;
+	}
+
+	@media screen and (width > 1260px) {
+		height: auto;
+		padding-top: 60px;
+		position: sticky;
+		top: 0;
+		transform: none;
+
+		.wsu-navigation-menu--close {
+			display: none;
+		}
+	}
+}
+
+.site-navigation {
+
+	.wp-block-navigation {
+		gap: 0;
+	}
+
+	.wp-block-navigation-item {
+		align-self: stretch;
+		border-bottom: 1px solid var(--wp--custom--wsu-color-gray--10);
+		margin: 0;
+
+		.wp-block-navigation-item__content,
+		.wp-block-navigation__submenu-icon {
+			font-size: 1rem;
+			line-height: 1.5;
+			padding: 1.5rem 1.125rem;
+		}
+
+		.wp-block-navigation-item__content {
+			color: var(--wp--custom--wsu-color-gray--75);
+			flex-grow: 1;
+			font-weight: 600;
+		}
+
+		.wp-block-navigation__submenu-icon {
+			border-left: 1px solid var(--wp--custom--wsu-color-gray--10);
+			height: 100%;
+			margin-left: 0;
+			width: 70px;
+
+			&:hover,
+			&:focus {
+				background-color: var(--wp--custom--wsu-color-gray--10);
+				border-color: var(--wp--custom--wsu-color-gray--30);
+				border-width: 4px;
+				width: 73px;
+
+			}
+
+			& svg {
+				height: auto;
+				width: 0.75em;
+			}
+		}
+	}
+
+}
