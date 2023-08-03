@@ -1,3 +1,55 @@
+.wsu-navigation-menu--content {
+	background-color: var(--wp--preset--color--white);
+	border-left: 3px solid var(--wp--preset--color--primary);
+	border-top: 2px solid var(--wp--preset--color--primary-light);
+	display: block;
+	height: 100vh;
+	max-width: 100%;
+	position: fixed;
+	right: 0;
+	top: 0;
+
+	/* transform: translateX(calc(400px + 6px)); */
+	transform: translateX(0);
+
+	transition: transform 0.2s cubic-bezier(0, 0, 0.03, 1);
+	width: 400px;
+	z-index: 1060;
+
+	&[aria-expanded="true"] {
+		transform: translateX(0);
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: var(--wp--preset--color--primary-light);
+		width: 80px;
+		height: 80px;
+		display: block;
+		clip-path: polygon(100% 0, 100% calc(100% - 100px), calc(100% - 100px) 100%, 0 100%, 0 0);
+	}
+
+	.wsu-navigation-menu--close {
+		padding: 1.25rem 1.75rem;
+		justify-content: right;
+	}
+
+	@media screen and (width > 1260px) {
+		height: auto;
+		padding-top: 60px;
+		position: sticky;
+		top: 0;
+		transform: none;
+
+		.wsu-navigation-menu--close {
+			display: none;
+		}
+	}
+}
+
 .site-navigation {
 
 	.wp-block-navigation {
@@ -43,4 +95,5 @@
 			}
 		}
 	}
+
 }

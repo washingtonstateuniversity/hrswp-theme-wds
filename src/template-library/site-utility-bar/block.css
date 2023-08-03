@@ -1,0 +1,135 @@
+.site-utility-bar {
+	margin-top: 0;
+
+	.wp-block-buttons {
+		font-size: 1rem;
+		gap: 0;
+
+		.wp-element-button {
+			border-radius: 0;
+			box-shadow: none;
+			line-height: 1;
+			transition: ease-in-out 0.1s;
+
+			&::before {
+				background-color: transparent;
+				content: "";
+				display: inline-block;
+				height: 12px;
+				margin-right: 0.3rem;
+				transition: background-color 0.2s cubic-bezier(0, 0, 0.03, 1);
+				visibility: hidden;
+				width: 5px;
+			}
+
+			&:hover,
+			&:focus {
+				border-bottom-color: var(--wp--custom--wsu-color-crimson--crimson-dark);
+				outline: none;
+
+				&::before {
+					visibility: visible;
+					background-color: var(--wp--preset--color--contrast);
+				}
+			}
+		}
+	}
+
+	.site-utility-bar__cta .wp-element-button,
+	&.is-position-absolute {
+		display: none;
+	}
+
+	.site-utility-bar__quicklinks {
+		width: 100%;
+
+		.wp-element-button {
+			background-color: #f2f2f2;
+			border: none;
+			color: inherit;
+			font-weight: 600;
+			text-align: left;
+			width: 100%;
+			padding: 1.5em;
+			padding-left: calc(1.5em - 5px - 0.3rem);
+		}
+	}
+
+	@media screen and (min-width: 1260px) {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1035;
+
+		&.is-position-absolute {
+			display: block;
+		}
+
+		&:not(.is-position-absolute) {
+			display: none;
+		}
+
+		.admin-bar & {
+			top: 32px;
+		}
+
+		&::before {
+			background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 0, rgba(0, 0, 0, 0.5) 100%);
+			content: "";
+			display: block;
+			height: 35px;
+			left: -6px;
+			opacity: 0.5;
+			position: absolute;
+			top: 0;
+			width: 6px;
+		}
+
+		.wp-block-buttons {
+			justify-content: flex-end;
+
+			.wp-block-button {
+				min-height: 56px;
+				max-height: 56px;
+			}
+
+			.wp-element-button {
+				border-bottom: 5px solid var(--wp--preset--color--primary-light);
+
+				&:hover::before,
+				&:focus::before {
+					background-color: var(--wp--preset--color--white);
+				}
+			}
+		}
+
+		.site-utility-bar__quicklinks {
+			width: auto;
+
+			.wp-element-button {
+				background-color: var(--wp--custom--wsu-color-gray--65);
+				color: var(--wp--preset--color--white);
+				font-weight: 400;
+				padding: 1em 2.5em;
+
+				&:hover,
+				&:focus {
+					background-color: var(--wp--custom--wsu-color-gray--75);
+				}
+			}
+		}
+
+		.site-utility-bar__cta .wp-element-button {
+			background-color: var(--wp--preset--color--primary-light);
+			clip-path: polygon(100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 0);
+			display: block;
+			font-weight: 700;
+			padding: 1em calc(1.75em + 0.3rem + 5px) 1em 1.75em;
+
+			&:hover,
+			&:focus {
+				background-color: var(--wp--custom--wsu-color-crimson--crimson-dark);
+			}
+		}
+	}
+}
