@@ -18,8 +18,8 @@
 		"url": "https://github.com/washingtonstateuniversity/hrswp-theme-wds/issues"
 	},
 	"engines": {
-		"node": ">=14.0.0",
-		"npm": ">=6.9.0 <7"
+		"node": ">=16.19.1",
+		"npm": ">=8.19.3 <9"
 	},
 	"main": "build/index.js",
 	"devDependencies": {
