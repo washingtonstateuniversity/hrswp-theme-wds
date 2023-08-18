@@ -28,4 +28,8 @@
 		margin-top: 0;
 	}
 
+	@media screen and (width > 1260px) {
+		border-right: 1px solid var(--wp--custom--wsu-color-gray--10);
+	}
+
 }
