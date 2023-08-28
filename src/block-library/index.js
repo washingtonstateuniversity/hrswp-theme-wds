@@ -26,7 +26,6 @@ const blockStyles = [ button, image, list ];
  * Function to register an individual block.
  *
  * @param {Object} block The block to be registered.
- *
  */
 const registerBlock = ( block ) => {
 	if ( ! block ) {
