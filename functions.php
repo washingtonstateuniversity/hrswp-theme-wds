@@ -12,8 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Load asset loader and blocks.
-require_once dirname( __FILE__ ) . '/inc/asset-loader.php';
-require_once dirname( __FILE__ ) . '/inc/blocks.php';
+require_once __DIR__ . '/inc/asset-loader.php';
+require_once __DIR__ . '/inc/blocks.php';
 
 // Include classes.
-require_once dirname( __FILE__ ) . '/inc/classes/class-svg-icons.php';
+require_once __DIR__ . '/inc/classes/class-svg-icons.php';
