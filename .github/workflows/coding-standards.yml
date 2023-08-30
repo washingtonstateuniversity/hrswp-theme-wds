@@ -9,6 +9,7 @@ on:
     pull_request:
         branches:
             - develop
+    workflow_dispatch:
 
 jobs:
     lint:
@@ -42,7 +43,8 @@ jobs:
             - name: Set up PHP version
               uses: shivammathur/setup-php@v2
               with:
-                  php-version: '7.4'
+                  php-version: 'latest'
+                  ini-values: memory_limit=1G'
                   coverage: none
                   tools: composer, cs2pr
             - name: Log debug information
@@ -52,10 +54,11 @@ jobs:
             - name: Install Composer dependencies
               uses: ramsey/composer-install@v2
               with:
-                  composer-options: '--no-progress --no-ansi --no-interaction'
+                  custom-cache-suffix: $(date -u "+%Y-%m")
             - name: Make Composer packages available globally
               run: echo "${PWD}/vendor/bin" >> $GITHUB_PATH
             - name: Log PHPCS debug information
               run: phpcs -i
-            - name: Run PHPCS
+            - name: Run PHPCS checks
+              id: phpcs
               run: phpcs -q -n --report=checkstyle . | cs2pr
