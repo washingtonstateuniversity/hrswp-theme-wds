@@ -4,19 +4,6 @@
 	margin: 0;
 	padding: 0;
 
-	.wp-block-navigation__container {
-		border-top: 1px solid #e5e5e5;
-
-		> .wp-block-navigation-item::after {
-			content: "";
-			position: absolute;
-			height: 1px;
-			width: 100%;
-			bottom: 0;
-			background-color: #e5e5e5;
-		}
-	}
-
 	.wp-block-navigation-item {
 		margin-bottom: 0;
 		position: relative;
@@ -39,7 +26,6 @@
 	}
 
 	.wp-block-navigation__submenu-icon {
-		/* align-self: start; */
         align-self: center;
 		background-color: inherit;
 		border: none;
@@ -55,10 +41,8 @@
 
 		& svg {
 			display: inline-block;
-			/* height: inherit; */
 			height: 0.8em;
 			stroke: currentColor;
-			/* width: inherit; */
 			width: 0.8em;
             transition: transform ease-in-out 150ms;
 		}
@@ -95,8 +79,6 @@
 		align-items: normal;
 		background-color: inherit;
 		color: inherit;
-		/* display: flex; */
-		/* flex-direction: column; */
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
@@ -108,7 +90,6 @@
 		max-height: 0;
 		overflow: hidden;
 
-		/* Spacing in all submenus. */
 		.wp-block-navigation-item__content {
             font-weight: 500;
 			margin: 0;
