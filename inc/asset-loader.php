@@ -112,3 +112,19 @@ add_action(
 		}
 	}
 );
+
+add_action(
+	'wp_enqueue_scripts',
+	/**
+	 * Deregisters selected WP Core block styles and scripts.
+	 *
+	 * @since 0.5.0
+	 *
+	 * @see wp_dequeue_style
+	 * @see wp_deregister_script
+	 * @return void
+	 */
+	function (): void {
+		wp_dequeue_style( 'wp-block-navigation' );
+	}
+);
