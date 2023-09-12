@@ -1,5 +1,5 @@
 {
-  "name": "hrswds/template-header-utility-bar",
+  "name": "hrswds/template-site-utility-bar",
   "blockDependency": "core/buttons",
   "extraStyle": [
     {

@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 */
 add_action(
 	'init',
-	function(): void {
+	function (): void {
 		$block_folders = array(
 			'logo-lockup',
 			'svg-selector',

@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 add_action(
 	'admin_enqueue_scripts',
-	function(): void {
+	function (): void {
 		$asset_file = include get_template_directory() . '/build/index.asset.php';
 
 		wp_register_script(
@@ -55,7 +55,7 @@ add_action(
  */
 add_action(
 	'enqueue_block_assets',
-	function(): void {
+	function (): void {
 		$asset_file = include get_template_directory() . '/build/index.asset.php';
 
 		wp_enqueue_style(
@@ -83,7 +83,7 @@ add_action(
  */
 add_action(
 	'after_setup_theme',
-	function(): void {
+	function (): void {
 		$metadata_files = glob( get_theme_file_path( 'build' ) . '/**/**/block.json' );
 
 		foreach ( $metadata_files as $metadata_file ) {

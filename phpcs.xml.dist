@@ -9,18 +9,11 @@
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 
-	<!-- Ignore filenames -->
-	<rule ref="WordPress-Extra">
-		<exclude name="WordPress.Files.FileName"/>
-	</rule>
-
 	<!-- Loads the PHP Compatibility ruleset. -->
 	<rule ref="PHPCompatibilityWP"/>
 
 	<!-- Loads the WP rulesets -->
-	<rule ref="WordPress-Core"/>
-	<rule ref="WordPress-Docs"/>
-	<rule ref="WordPress.WP.I18n"/>
+	<rule ref="WordPress"/>
 
 	<!-- Loads the variable analysis ruleset. -->
 	<rule ref="VariableAnalysis"/>
@@ -34,7 +27,7 @@
 	<config name="testVersion" value="7.4-"/>
 
 	<!-- Sets the minimum supported WP version to 5.4. -->
-	<config name="minimum_supported_wp_version" value="5.4" />
+	<config name="minimum_wp_version" value="5.4" />
 
 	<!-- Defines the valid textdomain options. -->
 	<config name="text_domain" value="hrswp-theme-wds,default"/>
