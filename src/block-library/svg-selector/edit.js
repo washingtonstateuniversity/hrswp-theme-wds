@@ -91,6 +91,7 @@ const SVGSelectorContainer = ( props ) => {
 		iconColorValue,
 		iconColorClass,
 		iconLabel,
+		isButton,
 		labelCondensed,
 		labelPosition,
 		showLabel,
@@ -200,12 +201,14 @@ const SVGSelectorContainer = ( props ) => {
 	return (
 		<div { ...blockProps }>
 			<BlockControls group="other">
-				<ToolbarButton
-					icon={ linkIcon }
-					title={ __( 'Add link' ) }
-					ref={ setPopoverAnchor }
-					onClick={ () => setPopover( true ) }
-				/>
+				{ ! isButton && (
+					<ToolbarButton
+						icon={ linkIcon }
+						title={ __( 'Add link' ) }
+						ref={ setPopoverAnchor }
+						onClick={ () => setPopover( true ) }
+					/>
+				) }
 				<ToolbarButton
 					title={ __( 'Replace SVG icon' ) }
 					text={ __( 'Replace' ) }
@@ -267,6 +270,12 @@ const SVGSelectorContainer = ( props ) => {
 				</PanelBody>
 			</InspectorControls>
 			<InspectorControls group="advanced">
+				<ToggleControl
+					__nextHasNoMarginBottom
+					label={ __( 'Format as button' ) }
+					checked={ isButton }
+					onChange={ () => setAttributes( { isButton: ! isButton } ) }
+				/>
 				<TextControl
 					__nextHasNoMarginBottom
 					label={ __( 'Icon label (short version)' ) }
@@ -317,6 +326,7 @@ const SVGSelectorContainer = ( props ) => {
 				label={ iconLabel }
 				labelCondensed={ labelCondensed }
 				size={ size }
+				isButton={ isButton }
 			/>
 			{ isSelected && showURLPopover && (
 				<LinkURLPopover
