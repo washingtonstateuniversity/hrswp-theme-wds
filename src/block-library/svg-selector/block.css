@@ -5,6 +5,20 @@
 		display: flex;
 	}
 
+	& button {
+		border: none;
+		background-color: inherit;
+		cursor: pointer;
+		font: inherit;
+		padding: 0;
+
+		&:focus {
+			outline: 2px solid var(--wp--custom--wsu-color-crimson--crimson);
+			border-radius: 3px;
+			outline-offset: 2px;
+		}
+	}
+
 	&.has-base-icon-color {
 		fill: var(--wp--preset--color--base);
 	}
@@ -80,6 +94,11 @@
 	&.aligncenter .hrswds-svg-icon-container {
 		align-items: center;
 		justify-content: center;
+
+		&button {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 
 	&.alignright .hrswds-svg-icon-container {

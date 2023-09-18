@@ -27,6 +27,7 @@ export default function save( props ) {
 			iconBackgroundColorClass,
 			iconColorValue,
 			iconColorClass,
+			isButton,
 		},
 	} = props;
 
@@ -59,6 +60,7 @@ export default function save( props ) {
 				label={ iconLabel }
 				labelCondensed={ labelCondensed }
 				size={ size }
+				isButton={ isButton }
 			/>
 		</div>
 	);
