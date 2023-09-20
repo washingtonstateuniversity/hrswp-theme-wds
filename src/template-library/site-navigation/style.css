@@ -32,8 +32,25 @@
 		}
 
 		.wsu-navigation-menu--close {
-			padding: 1.25rem 1.75rem;
+			font-size: 1.125rem;
+			font-weight: 600;
 			justify-content: right;
+			padding: 2.25rem 1.75rem;
+
+			&.has-icon-background-color.has-small-icon-size svg {
+				padding: 0.2em;
+			}
+
+			.hrswds-svg-icon-container:hover,
+			.hrswds-svg-icon-container:focus {
+				color: var(--wp--preset--color--primary-light);
+
+				svg {
+					background-color: var(--wp--preset--color--primary-light);
+					outline: 2px solid var(--wp--preset--color--primary-light);
+					outline-offset: 2px;
+				}
+			}
 		}
 
 		@media screen and (width > 1260px) {
