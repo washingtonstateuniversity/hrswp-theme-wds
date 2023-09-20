@@ -1,3 +1,4 @@
+export * from './arrow-right';
 export * from './chain';
 export * from './cougar';
 export * from './lab';

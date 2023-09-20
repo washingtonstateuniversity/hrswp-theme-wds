@@ -7,6 +7,7 @@ import { __ } from '@wordpress/i18n';
  * Internal dependencies
  */
 import {
+	ArrowRightIcon,
 	ChainIcon,
 	CougarIcon,
 	LabIcon,
@@ -18,6 +19,13 @@ import {
 } from './svg';
 
 const variations = [
+	{
+		name: 'arrow-right',
+		title: __( 'Arrow right' ),
+		attributes: { slug: 'arrow-right' },
+		scope: [ 'block' ],
+		icon: ArrowRightIcon,
+	},
 	{
 		name: 'cougar',
 		title: __( 'WSU Cougar head' ),
