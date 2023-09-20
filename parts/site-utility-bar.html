@@ -1,14 +1,21 @@
-<!-- wp:buttons {"layout":{"type":"flex"}} -->
-<div class="wp-block-buttons">
-	<!-- wp:button {"className":"site-utility-bar__quicklinks wsu-slide-in-panel--open"} -->
-	<div class="wp-block-button site-utility-bar__quicklinks wsu-slide-in-panel--open" id="open-modal">
-		<a class="wp-block-button__link wp-element-button" href="#">Quicklinks / Search</a>
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"}} -->
+<div class="wp-block-group">
+	<!-- wp:hrswds/svg-selector {"isButton":true,"slug":"search","size":24,"showLabel":true,"iconLabel":"Quicklinks / Search","labelPosition":"left","className":"site-utility-bar__quicklinks wsu-slide-in-panel\u002d\u002dopen wp-element-button"} -->
+	<div class="wp-block-hrswds-svg-selector has-small-icon-size has-visible-label is-label-position-left site-utility-bar__quicklinks wsu-slide-in-panel--open wp-element-button">
+		<button type="button" class="hrswds-svg-icon-container">
+			<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" aria-hidden="true"><path d="M13 5c-3.3 0-6 2.7-6 6 0 1.4.5 2.7 1.3 3.7l-3.8 3.8 1.1 1.1 3.8-3.8c1 .8 2.3 1.3 3.7 1.3 3.3 0 6-2.7 6-6S16.3 5 13 5zm0 10.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z"></path></svg>
+			<span class="hrswds-svg-icon-label">Quicklinks / Search</span>
+		</button>
 	</div>
-	<!-- /wp:button -->
-	<!-- wp:button {"className":"site-utility-bar__cta"} -->
-	<div class="wp-block-button site-utility-bar__cta">
-		<a class="wp-block-button__link wp-element-button" href="https://foundation.wsu.edu/give/">Give</a>
+	<!-- /wp:hrswds/svg-selector -->
+	<!-- wp:buttons {"layout":{"type":"flex"}} -->
+	<div class="wp-block-buttons">
+		<!-- wp:button {"className":"site-utility-bar__cta"} -->
+		<div class="wp-block-button site-utility-bar__cta">
+			<a class="wp-block-button__link wp-element-button" href="https://foundation.wsu.edu/give/">Give</a>
+		</div>
+		<!-- /wp:button -->
 	</div>
-	<!-- /wp:button -->
+	<!-- /wp:buttons -->
 </div>
-<!-- /wp:buttons -->
+<!-- /wp:group -->
