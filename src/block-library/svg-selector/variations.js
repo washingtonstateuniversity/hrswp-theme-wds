@@ -12,6 +12,7 @@ import {
 	LabIcon,
 	MenuIcon,
 	RocketIcon,
+	SearchIcon,
 	TreesIcon,
 	WrenchIcon,
 } from './svg';
@@ -65,6 +66,13 @@ const variations = [
 		attributes: { slug: 'wrench' },
 		scope: [ 'block' ],
 		icon: WrenchIcon,
+	},
+	{
+		name: 'search',
+		title: __( 'Search' ),
+		attributes: { slug: 'search' },
+		scope: [ 'block' ],
+		icon: SearchIcon,
 	},
 ];
 

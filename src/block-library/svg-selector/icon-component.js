@@ -11,7 +11,8 @@ import { getIconBySlug, getTitleBySlug } from './utils';
 const preventDefault = ( event ) => event.preventDefault();
 
 export const IconComponent = ( props ) => {
-	const { slug, url, showLabel, label, labelCondensed, size } = props;
+	const { slug, url, showLabel, label, labelCondensed, size, isButton } =
+		props;
 
 	const Icon = getIconBySlug( slug );
 	const iconTitle = getTitleBySlug( slug );
@@ -27,6 +28,8 @@ export const IconComponent = ( props ) => {
 		}
 	);
 
+	const Tag = isButton ? 'button' : 'span';
+
 	const element = (
 		<>
 			<Icon size={ size } />
@@ -39,17 +42,26 @@ export const IconComponent = ( props ) => {
 		</>
 	);
 
-	if ( url ) {
+	if ( url && ! isButton ) {
 		return (
-			<a
-				href={ url }
-				className="hrswds-svg-icon-container"
-				onClick={ preventDefault }
-			>
-				{ element }
-			</a>
+			<Tag className="hrswds-svg-icon-container">
+				<a
+					href={ url }
+					onClick={ preventDefault }
+					className="hrswds-svg-icon-container"
+				>
+					{ element }
+				</a>
+			</Tag>
 		);
 	}
 
-	return <span className="hrswds-svg-icon-container">{ element }</span>;
+	return (
+		<Tag
+			type={ isButton ? 'button' : '' }
+			className="hrswds-svg-icon-container"
+		>
+			{ element }
+		</Tag>
+	);
 };

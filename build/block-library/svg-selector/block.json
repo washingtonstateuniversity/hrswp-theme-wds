@@ -30,6 +30,10 @@
     "iconBackgroundColorClass": {
       "type": "string"
     },
+    "isButton": {
+      "type": "boolean",
+      "default": false
+    },
     "slug": {
       "type": "string"
     },

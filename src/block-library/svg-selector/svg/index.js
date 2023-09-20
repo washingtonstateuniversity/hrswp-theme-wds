@@ -3,5 +3,6 @@ export * from './cougar';
 export * from './lab';
 export * from './menu';
 export * from './rocket';
+export * from './search';
 export * from './trees';
 export * from './wrench';
