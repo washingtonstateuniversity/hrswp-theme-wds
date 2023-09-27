@@ -13,17 +13,12 @@
 		color: inherit;
 		display: block;
 		flex-grow: 1;
-		font-size: 1rem;
 		padding: 0.2rem 0;
 		text-decoration: none;
 
 		&:hover,
 		&:focus {
 			text-decoration: underline;
-		}
-
-		@media screen and (width > 1260px) {
-			font-size: 0.875rem;
 		}
 	}
 
