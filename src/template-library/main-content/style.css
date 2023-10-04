@@ -1,0 +1,11 @@
+.main-content {
+	padding-top: 2.25rem;
+	padding-bottom: 1.75rem;
+
+	@media screen and (width > 576px) {
+		padding-top: 4.125rem;
+		--wp--style--root--padding-right: 2.25rem;
+		padding-bottom: 4.125rem;
+		--wp--style--root--padding-left: 2.25rem;
+	}
+}

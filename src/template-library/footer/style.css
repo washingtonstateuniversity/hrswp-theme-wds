@@ -106,7 +106,7 @@
 	margin-bottom: 0;
 
 	@media screen and (width > 992px) {
-		padding: 2.25rem 3.125rem 1.75rem;
+		padding: 2.25rem 2.25rem 1.75rem;
 	}
 
 	.footer-audiences,
