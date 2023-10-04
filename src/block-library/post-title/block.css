@@ -1,4 +1,4 @@
-h1::after {
+.wp-block-post-title::after {
 	display: block;
 	content: "";
 	height: 0.375rem;
