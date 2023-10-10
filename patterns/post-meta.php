@@ -4,7 +4,6 @@
  * Slug: hrswds/post-meta
  * Categories: query
  * Keywords: post meta
- * Block Types: hrswds/template-part/wsu-article-footer
  *
  * @package HRSWP_ThemeWDS
  */
