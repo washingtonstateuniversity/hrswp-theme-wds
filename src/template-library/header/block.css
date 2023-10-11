@@ -1,4 +1,4 @@
-.wsu-header-global {
+.header-global {
 	background-color: var(--wp--custom--wsu-color-gray--75);
 	height: 35px;
 	box-sizing: border-box;
@@ -50,7 +50,7 @@
 	}
 }
 
-.wsu-header-unit {
+.header-unit {
 	align-items: center;
 	display: flex;
 	background-color: var(--wp--preset--color--white);
