@@ -1,5 +1,5 @@
 {
-	"name": "hrswds/template-header-main",
+	"name": "hrswds/template-main-header",
 	"blockDependency": "core/group",
 	"extraStyle": [
 		{
