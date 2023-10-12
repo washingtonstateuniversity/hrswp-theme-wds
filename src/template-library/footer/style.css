@@ -33,19 +33,13 @@
 			.wp-block-navigation-item {
 				flex-basis: calc(50% - var(--wp--style--block-gap));
 			}
-
-			.wp-block-navigation-item__content {
-				display: inline-block;
-			}
 		}
 
 	}
 
-	.footer-deeplinks li > a,
 	.wp-block-navigation-item__content {
-		color: inherit;
+		display: inline-block;
 		position: relative;
-		text-decoration: none;
 
 		&::after {
 			background-color: var(--wp--preset--color--primary-light);
@@ -131,15 +125,6 @@
 				flex-basis: 100% !important;
 				max-width: 200px;
 				min-width: 200px;
-			}
-		}
-
-		li {
-			margin: 0;
-
-			> a {
-				display: inline-block;
-				padding: 0.2em 0;
 			}
 		}
 	}
