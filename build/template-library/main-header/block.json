@@ -1,6 +1,6 @@
 {
-  "name": "core/post-author",
-  "apiVersion": 3,
+  "name": "hrswds/template-main-header",
+  "blockDependency": "core/group",
   "extraStyle": [
     {
       "source": "file:./block.css",
