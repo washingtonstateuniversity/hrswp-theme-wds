@@ -126,5 +126,6 @@ add_action(
 	 */
 	function (): void {
 		wp_dequeue_style( 'wp-block-navigation' );
+		wp_dequeue_style( 'wp-block-post-terms' );
 	}
 );
