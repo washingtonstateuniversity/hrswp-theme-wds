@@ -21,6 +21,7 @@
 		background: linear-gradient(135deg, rgba(242, 242, 242, 0.65) 0%, rgba(145, 145, 145, 0) 40%, rgba(0, 0, 0, 0) 100%);
 		border-top: 6px solid var(--wp--custom--wsu-color-crimson--crimson);
 		flex-basis: calc(30% - var(--wp--style--root--padding-right) *2);
+		margin-top: 2rem;
 		margin-right: auto;
 		margin-left: auto;
 		position: relative;
