@@ -1,7 +1,22 @@
 .main-footer {
 
+	.wp-block-social-links {
+		border-bottom: 1px solid #262626;
+		margin-top: 2em;
+		margin-bottom: 0.5em;
+		padding-bottom: 0.5em;
+	}
+
 	.wsu-meta-byline {
 		gap: 4px;
+	}
+
+	.wp-block-post-terms a:where(:not(.wp-element-button)) {
+		color: inherit;
+	}
+
+	.taxonomy-category {
+		font-weight: 600;
 	}
 
 }
