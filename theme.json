@@ -680,9 +680,14 @@
 			"title": "Footer"
 		},
 		{
+			"area": "footer",
+			"name": "main-footer",
+			"title": "Main Footer"
+		},
+		{
 			"area": "uncategorized",
-			"name": "post-meta",
-			"title": "Post Meta"
+			"name": "sidebar",
+			"title": "Sidebar"
 		}
 	]
 }

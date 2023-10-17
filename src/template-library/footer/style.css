@@ -12,7 +12,7 @@
 	}
 
 	.footer-audiences .wp-block-navigation,
-	.wsu-footer-global__navigation {
+	.footer-global-navigation {
 		display: flex;
 		flex-wrap: nowrap;
 		gap: calc(var(--wp--style--block-gap) * 2);
@@ -33,19 +33,13 @@
 			.wp-block-navigation-item {
 				flex-basis: calc(50% - var(--wp--style--block-gap));
 			}
-
-			.wp-block-navigation-item__content {
-				display: inline-block;
-			}
 		}
 
 	}
 
-	.footer-deeplinks li > a,
 	.wp-block-navigation-item__content {
-		color: inherit;
+		display: inline-block;
 		position: relative;
-		text-decoration: none;
 
 		&::after {
 			background-color: var(--wp--preset--color--primary-light);
@@ -99,7 +93,7 @@
 	}
 }
 
-.main-footer {
+.footer-unit {
 	background-color: var(--wp--custom--wsu-color-gray--80);
 	padding: 2.25rem 1.5rem 1.75rem;
 	margin-top: 0;
@@ -133,19 +127,10 @@
 				min-width: 200px;
 			}
 		}
-
-		li {
-			margin: 0;
-
-			> a {
-				display: inline-block;
-				padding: 0.2em 0;
-			}
-		}
 	}
 }
 
-.wsu-footer-global {
+.footer-global {
 	align-items: center;
 	background-color: var(--wp--preset--color--contrast);
 	display: flex;
@@ -156,7 +141,7 @@
 	min-height: 60px;
 	padding: 1.5rem 3.125rem 1.5rem;
 
-	.wsu-footer-global__navigation {
+	.footer-global-navigation {
 		text-transform: uppercase;
 	}
 

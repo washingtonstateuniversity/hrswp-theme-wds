@@ -1,6 +1,6 @@
 {
-	"name": "hrswds/template-header-global",
-	"blockDependency": "core/list",
+	"name": "hrswds/template-main-header",
+	"blockDependency": "core/group",
 	"extraStyle": [
 		{
 			"source": "file:./block.css",
