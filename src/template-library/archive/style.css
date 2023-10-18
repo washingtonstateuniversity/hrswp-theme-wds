@@ -1,0 +1,29 @@
+.archive {
+
+	.wp-block-query {
+
+		.wp-block-post-title a:hover {
+			color: #ca1237;
+			text-decoration: underline;
+		}
+
+		.main-footer .wp-block-social-links {
+			margin-top: 0;
+		}
+
+		@media (width > 782px) {
+
+			.wp-block-columns:not(.is-not-stacked-on-mobile) {
+
+				> .wp-block-column.featured-image-container {
+					flex-basis: 25%;
+					flex-grow: 0;
+					order: 1;
+				}
+
+			}
+
+		}
+
+	}
+}

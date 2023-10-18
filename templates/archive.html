@@ -11,13 +11,26 @@
 				<!-- wp:query-title {"type":"archive","showPrefix":false} /-->
 			</header>
 			<!-- /wp:group -->
-			<!-- wp:query {"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"taxQuery":null,"parents":[]},"displayLayout":{"type":"flex","columns":3},"align":"wide","layout":{"type":"constrained"}} -->
-			<div class="wp-block-query alignwide">
+			<!-- wp:query {"query":{"className":"has-global-padding","perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"taxQuery":null,"parents":[]},"align":"wide","layout":{"type":"flex"}} -->
+			<div class="wp-block-query alignwide has-global-padding">
 				<!-- wp:post-template {"align":"wide","className":"main-article"} -->
-					<!-- wp:post-title {"isLink":true} /-->
-					<!-- wp:post-date {"isLink":true} /-->
-					<!-- wp:post-excerpt /-->
-					<!-- wp:template-part {"slug":"main-footer","className":"main-footer has-global-padding"} /-->
+					<!-- wp:columns -->
+					<div class="wp-block-columns">
+						<!-- wp:column {"className":"featured-image-container"} -->
+						<div class="wp-block-column featured-image-container">
+							<!-- wp:post-featured-image {"aspectRatio":"16/9","sizeSlug":"medium"} /-->
+						</div>
+						<!-- /wp:column -->
+						<!-- wp:column -->
+						<div class="wp-block-column">
+							<!-- wp:post-date {"isLink":false} /-->
+							<!-- wp:post-title {"isLink":true,"fontSize":"large"} /-->
+							<!-- wp:post-excerpt {"excerptLength":15,"fontSize":"small"} /-->
+							<!-- wp:template-part {"slug":"main-footer","className":"main-footer has-global-padding"} /-->
+						</div>
+						<!-- /wp:column -->
+					</div>
+					<!-- /wp:columns -->
 				<!-- /wp:post-template -->
 
 				<!-- wp:query-pagination {"align":"wide","layout":{"type":"flex","justifyContent":"left"}} -->
@@ -32,6 +45,7 @@
 			<!-- /wp:query-no-results -->
 			</div>
 			<!-- /wp:query -->
+			<!-- wp:template-part {"tagName":"aside","slug":"sidebar-main","className":"main-sidebar has-global-padding"} -->
 		</main>
 		<!-- /wp:group -->
 	</div>
