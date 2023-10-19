@@ -4,8 +4,8 @@
 	<!-- wp:group {"className":"main-wrapper"} -->
 	<div class="wp-block-group main-wrapper">
 		<!-- wp:template-part {"slug":"sidebar","className":"sidebar-wrapper"} /-->
-		<!-- wp:group {"tagName":"main","className":"main-content","layout":{"type":"flex"}} -->
-		<main class="wp-block-group main-content">
+		<!-- wp:group {"tagName":"main","className":"main-content has-main-sidebar","layout":{"type":"flex"}} -->
+		<main class="wp-block-group main-content has-main-sidebar">
 			<!-- wp:group {"tagName":"article","className":"main-article"} -->
 			<article class="wp-block-group main-article">
 				<!-- wp:group {"tagName":"header","className":"main-header","layout":{"type":"constrained"}} -->
@@ -19,7 +19,7 @@
 				<!-- wp:template-part {"tagName":"footer","slug":"main-footer","className":"main-footer has-global-padding"} /-->
 			</article>
 			<!-- /wp:group -->
-			<!-- wp:template-part {"tagName":"aside","slug":"sidebar-main","className":"main-sidebar has-global-padding"} -->
+			<!-- wp:template-part {"tagName":"aside","slug":"main-sidebar","className":"main-sidebar has-global-padding"} -->
 		</main>
 		<!-- /wp:group -->
 	</div>
