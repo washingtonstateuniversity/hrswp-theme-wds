@@ -1,0 +1,8 @@
+.wp-block-post-featured-image,
+.wp-block-latest-posts__featured-image {
+
+	.wp-post-image {
+		border-radius: 3px;
+	}
+
+}
