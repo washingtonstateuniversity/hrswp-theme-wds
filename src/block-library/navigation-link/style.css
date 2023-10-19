@@ -13,4 +13,14 @@ a:where(:not(.wp-element-button)) {
 			transition: text-decoration 0.1s ease;
 		}
 	}
+
+	h1 &,
+	h2 &,
+	h3 &,
+	h4 &,
+	h5 &,
+	h6 & {
+		color: inherit;
+		text-decoration: none;
+	}
 }

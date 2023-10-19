@@ -1,0 +1,59 @@
+.main-sidebar {
+	background: linear-gradient(135deg, rgba(242, 242, 242, 0.65) 0%, rgba(145, 145, 145, 0) 40%, rgba(0, 0, 0, 0) 100%);
+	border-top: 6px solid var(--wp--custom--wsu-color-crimson--crimson);
+	flex-basis: calc(30% - var(--wp--style--root--padding-right) *2);
+	margin-top: 2rem;
+	position: relative;
+
+	@media screen and (width < 991px) {
+
+		.is-layout-flex & {
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+	}
+
+	@media screen and (width > 992px) {
+		max-width: 400px;
+	}
+
+	&::after {
+		background: linear-gradient(to bottom, rgba(204, 204, 204, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+		content: "";
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 1px;
+	}
+
+	> .wp-block-heading {
+		margin-top: 0.75rem;
+	}
+
+	.wp-block-latest-posts__featured-image {
+		aspect-ratio: 16/9;
+
+		.wp-post-image {
+			height: 100%;
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+}
+
+/* Adjust the parent element to accommodate the sidebar. */
+.main-content.has-main-sidebar {
+	align-items: flex-start;
+	flex-direction: column;
+
+	@media screen and (width > 992px) {
+		flex-direction: row;
+	}
+
+	.main-article {
+		flex-basis: calc(70% - var(--wp--style--block-gap));
+	}
+}
