@@ -6,10 +6,12 @@
 	position: relative;
 
 	@media screen and (width < 991px) {
+
 		.is-layout-flex & {
 			margin-right: auto;
 			margin-left: auto;
 		}
+
 	}
 
 	@media screen and (width > 992px) {
