@@ -128,6 +128,11 @@
 			}
 		}
 	}
+
+	.wp-block-social-link .wp-block-social-link-anchor svg {
+		color: var(--wp--preset--color--secondary-light);
+		fill: var(--wp--preset--color--secondary-light);
+	}
 }
 
 .footer-global {
