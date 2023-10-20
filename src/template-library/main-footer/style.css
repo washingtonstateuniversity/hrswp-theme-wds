@@ -5,6 +5,11 @@
 		margin-top: 2em;
 		margin-bottom: 0.5em;
 		padding-bottom: 0.5em;
+
+		.wp-block-social-link-anchor svg {
+			color: var(--wp--preset--color--secondary);
+			fill: var(--wp--preset--color--secondary);
+		}
 	}
 
 	.wsu-meta-byline {

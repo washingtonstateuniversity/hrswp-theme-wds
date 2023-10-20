@@ -1,0 +1,16 @@
+.wp-block-social-links {
+
+	.wp-block-social-link .wp-block-social-link-anchor {
+
+		&:hover,
+		&:focus {
+
+			svg {
+				fill: var(--wp--preset--color--primary-light);
+			}
+
+		}
+
+	}
+
+}

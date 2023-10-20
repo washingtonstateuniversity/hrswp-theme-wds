@@ -12,7 +12,7 @@
 namespace HRSWP\Theme\WDS\Patterns\PostMeta;
 
 ?>
-<!-- wp:social-links {"iconColor":"secondary","iconColorValue":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dwsu-color-gray\u002d\u002d70)","size":"has-normal-icon-size","className":"is-style-logos-only","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<!-- wp:social-links {"size":"has-normal-icon-size","className":"is-style-logos-only","layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <ul class="wp-block-social-links has-normal-icon-size has-icon-color is-style-logos-only">
 	<!-- wp:social-link {"url":"https://www.facebook.com/wsuhrs","service":"facebook","label":"Share on Facebook"} /-->
 	<!-- wp:social-link {"url":"https://www.linkedin.com/showcase/wsu-jobs","service":"linkedin","label":"Share on LinkedIn"} /-->
