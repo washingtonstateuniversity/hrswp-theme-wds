@@ -17,7 +17,7 @@ Changelog formatting (http://semver.org/):
 ### Security (in case of vulnerabilities.)
 -->
 
-## 0.5.0-rc.1 (:construction: TBD)
+## 0.5.0 (2023-10-27)
 
 ### Added
 
@@ -63,6 +63,7 @@ Changelog formatting (http://semver.org/):
 
 ### Changed
 
+- Bump WordPress tested-to to 6.4.
 - Style Core social icons block without inline styles to close #54. (f241161)
 - Update and style archive template with sidebar to close #74. (2603787)
 - Set feature image resolution (attribute added in WordPress 6.4). (c2231b9)
