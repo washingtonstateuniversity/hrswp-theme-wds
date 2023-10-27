@@ -1,0 +1,16 @@
+{
+  "name": "core/image",
+  "apiVersion": 3,
+  "styles": [
+    {
+      "name": "framed",
+      "label": "Framed"
+    }
+  ],
+  "extraStyle": [
+    {
+      "source": "file:./block.css",
+      "internal": true
+    }
+  ]
+}

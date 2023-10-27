@@ -1,0 +1,10 @@
+{
+	"name": "hrswds/template-header",
+	"blockDependency": "core/group",
+	"extraStyle": [
+		{
+			"source": "file:./block.css",
+			"internal": true
+		}
+	]
+}

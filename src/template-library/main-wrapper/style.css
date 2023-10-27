@@ -1,0 +1,19 @@
+.main-wrapper {
+	margin-top: 0;
+
+	@media screen and (width > 1260px) {
+		display: grid;
+		grid-template-areas:
+			"sidebar main"
+			"main-footer main-footer";
+		grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+
+		.main-content {
+			grid-area: main;
+		}
+
+		.main-footer {
+			grid-area: main-footer;
+		}
+	}
+}

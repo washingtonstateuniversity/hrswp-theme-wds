@@ -1,0 +1,10 @@
+{
+  "name": "core/search",
+  "apiVersion": 3,
+  "extraStyle": [
+    {
+      "source": "file:./block.css",
+      "internal": false
+    }
+  ]
+}

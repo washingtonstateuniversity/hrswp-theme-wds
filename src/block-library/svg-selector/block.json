@@ -1,0 +1,87 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "hrswds/svg-selector",
+	"title": "SVG Selector",
+	"category": "media",
+	"description": "Insert an icon from a library of SVGs.",
+	"keywords": [ "img", "icon", "svg" ],
+	"textdomain": "default",
+	"attributes": {
+		"iconColor": {
+			"type": "string"
+		},
+		"iconColorValue": {
+			"type": "string"
+		},
+		"iconColorClass": {
+			"type": "string"
+		},
+		"iconBackgroundColor": {
+			"type": "string"
+		},
+		"iconBackgroundColorValue": {
+			"type": "string"
+		},
+		"iconBackgroundColorClass": {
+			"type": "string"
+		},
+		"isButton": {
+			"type": "boolean",
+			"default": false
+		},
+		"slug": {
+			"type": "string"
+		},
+		"size": {
+			"type": "number",
+			"default": 48
+		},
+		"url": {
+			"type": "string"
+		},
+		"showLabel": {
+			"type": "boolean",
+			"default": false
+		},
+		"iconLabel": {
+			"type": "string"
+		},
+		"labelCondensed": {
+			"type": "string"
+		},
+		"labelPosition": {
+			"type": "string",
+			"default": "right"
+		}
+	},
+	"providesContext": {
+		"iconColor": "iconColor",
+		"iconColorValue": "iconColorValue",
+		"backgroundColor": "backgroundColorValue",
+		"iconBackgroundColorValue": "iconBackgroundColorValue"
+	},
+	"supports": {
+		"reusable": false,
+		"html": false,
+		"align": true,
+		"color": {
+			"enableContrastChecker": false,
+			"text": true,
+			"background": true,
+			"link": false
+		}
+	},
+	"styles": [
+		{ "name": "default", "label": "Default", "isDefault": true },
+		{ "name": "round", "label": "Round tile" },
+		{ "name": "square", "label": "Square tile "}
+	],
+	"editorScript": "hrswds-blocks-script",
+	"extraStyle": [
+		{
+			"source": "file:./block.css",
+			"internal": true
+		}
+	]
+}

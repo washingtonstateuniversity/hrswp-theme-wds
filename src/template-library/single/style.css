@@ -1,0 +1,17 @@
+.single {
+
+	.main-article .wp-block-post-title {
+		margin-bottom: 3.125rem;
+	}
+
+	.wp-block-post-featured-image {
+		aspect-ratio: 16/9;
+
+		.wp-post-image {
+			height: 100%;
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+
+}

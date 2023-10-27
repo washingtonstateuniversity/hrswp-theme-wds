@@ -1,0 +1,192 @@
+ol,
+ul {
+	padding-left: 1.5em;
+
+	& li {
+
+		margin-bottom: 0.875em;
+
+		&::marker {
+			color: var(--wp--custom--wsu-color-crimson--crimson-light);
+		}
+	}
+
+	& ol,
+	& ul {
+		margin-bottom: 1.125em;
+		margin-top: 0.875em;
+		padding-left: 2em;
+	}
+
+	&.is-style-arrow li::marker {
+		content: "> ";
+		font-size: 0.7em;
+		font-weight: 600;
+	}
+
+	&.is-style-checkbox {
+
+		& li {
+			list-style-type: none;
+			position: relative;
+
+			&::before {
+				content: "☐";
+				color: var(--wp--custom--wsu-color-crimson--crimson-light);
+				font-weight: 400;
+				font-size: 1.3em;
+				line-height: 1;
+				position: absolute;
+				left: -1.5em;
+				top: 0.1em;
+			}
+		}
+
+	}
+
+	&.is-style-checkmark {
+
+		& li {
+			list-style-type: none;
+			position: relative;
+
+			&::before {
+				content: "☑";
+				color: var(--wp--custom--wsu-color-crimson--crimson-light);
+				font-weight: 400;
+				font-size: 1em;
+				line-height: 1;
+				position: absolute;
+				left: -1.75em;
+				top: 0.1em;
+			}
+		}
+
+	}
+
+	&.is-style-lined {
+		list-style-type: none;
+		margin-left: 0;
+		padding-left: 0;
+
+		> li {
+			border-bottom: 1px solid var(--wp--custom--wsu-color-gray--5);
+			margin: 0;
+			padding: 0.5em 0;
+			font-weight: 600;
+			position: relative;
+		}
+	}
+
+	&.is-style-boxed {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		& li {
+			list-style-type: none;
+			margin: 0 0 0.75em 0;
+			padding: 0 0 0 1.25em;
+			line-height: 1.4;
+			position: relative;
+
+			&::before {
+				content: "";
+				height: 6px;
+				width: 10px;
+				background-color: var(--wp--custom--wsu-color-crimson--crimson-light);
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0.6em;
+				transform: translateY(-3px);
+			}
+		}
+	}
+
+}
+
+ul {
+
+	& li li li {
+		list-style-type: circle;
+	}
+
+	& ul ul li {
+		list-style-type: square;
+	}
+
+	& ul ul ul li {
+		list-style-type: disc;
+	}
+
+	& ul ul ul ul li {
+		list-style-type: circle;
+	}
+
+	& ul ul ul ul ul li {
+		list-style-type: square;
+	}
+
+}
+
+ol {
+
+	& li {
+		list-style-type: decimal;
+
+		& li {
+			list-style-type: lower-alpha;
+		}
+
+	}
+
+	& ol ol li {
+		list-style-type: lower-roman;
+	}
+
+
+	& ol ol ol li {
+		list-style-type: decimal;
+	}
+
+
+	& ol ol ol ol li {
+		list-style-type: lower-alpha;
+	}
+
+
+	& ol ol ol ol ol li {
+		list-style-type: lower-roman;
+	}
+
+	& ul {
+
+		& li {
+			list-style-type: disc;
+		}
+
+		& ul li {
+			list-style-type: circle;
+		}
+
+		& ul ul li {
+			list-style-type: square;
+		}
+
+		& ul ul ul li {
+			list-style-type: disc;
+		}
+
+		& ul ul ul ul li {
+			list-style-type: circle;
+		}
+
+	}
+
+}
+
+ul ul ol li,
+ol ul ol li {
+	list-style-type: lower-roman;
+}

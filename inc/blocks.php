@@ -21,15 +21,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 */
 add_action(
 	'init',
-	function(): void {
+	function (): void {
 		$block_folders = array(
+			'logo-lockup',
 			'svg-selector',
 		);
 		foreach ( $block_folders as $block_folder ) {
 			register_block_type(
-				get_template_directory() . '/build/blocks/' . $block_folder
+				get_template_directory() . '/build/block-library/' . $block_folder
 			);
 		}
 	}
 );
-
