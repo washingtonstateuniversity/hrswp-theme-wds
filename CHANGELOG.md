@@ -17,6 +17,102 @@ Changelog formatting (http://semver.org/):
 ### Security (in case of vulnerabilities.)
 -->
 
+## 0.5.0 (2023-10-27)
+
+### Added
+
+- Add post featured image styles. (bf326e9)
+- Create main sidebar template part and pattern. (dd3c959)
+- Create main header styles to close #55. (a587a7c)
+- Create main content layout styles and adjust padding for #55. (39b7349)
+- Style site navigation component small- and large-screen views. (19e78fe)
+- Set up primary layout. (29c66e4)
+- Create Logo Lockup block for header for #63. (c30d23a)
+- Format and style pagination links for #57. (d9357f2)
+- Set up Core search block options and styles for #57. (e20241d)
+- Add post title styles for #57. (ffc82a0)
+- Extend Gravity Forms form styles for #57. (3660101)
+- Style post author block. (e4c4835)
+- Create table block styles for #44, loaded externally. (bca602e, 2e2693b)
+- Add quote block styles for #44. (1ac96f0)
+- Set up editor-only styles. (1ac96f0)
+- Create alternate stylesheet build scripts and use `wp_enqueue_block_style` to load per-block styles in addition to those in `theme.json` to close #56. (ec963c3)
+- Style core post date block for #15. (24d59b0)
+- Create base separator block style for #15.
+- Style core list block for #44 and add list style variants to close #45. (492c221)
+- Create image block styles with outline variation for #15. (0848084)
+- Create global quote styles for #15. (9133b0c)
+- Create global cite styles for #43. (9455a3d)
+- Create global caption styles for #43. (90e957d)
+- Create core button styles with shadow and radius presets, core button variations, and add styles. (3449d1a, aff438a)
+- Set up block style variation registration methods to close #41. (071fd18)
+- Close #9 set up CSS build tools and loader. (a56f2af)
+- Add global link styles, underline styles, and interaction styles. (f472d3a)
+- Define default block gap and available spacing units. (5dc011e)
+- Define color palette, custom color values, gradient presets, and border color settings to close #38. (67a280c)
+- Add IBM Plex Mono font. (d2fade3)
+- Close #14 set up local fonts and base typography including font files. (cfe53b1)
+- Add fast-glob package. (4f18b04)
+- Add copy-webpack-plugin package. (303bb1f)
+- Add postcss-cli package for manually generating alt stylesheets. (ce1eb27)
+- Add postcss package for manually generating alt stylesheets. (4cebc78)
+- Add wp:prettier package for more reliable linting. (18bc646)
+- Add postcss-preset-env package. (a56f2af)
+- Add postcss-import package. (a56f2af)
+- Add cssnano package for npm v<7. (a56f2af)
+
+### Changed
+
+- Bump WordPress tested-to to 6.4.
+- Style Core social icons block without inline styles to close #54. (f241161)
+- Update and style archive template with sidebar to close #74. (2603787)
+- Set feature image resolution (attribute added in WordPress 6.4). (c2231b9)
+- Modify header link styles to remove underline and color. (10b5742)
+- Style single post template with sidebar. (dd3c959)
+- Add social links to post meta pattern. (dd3c959)
+- Replace post-author block with hardcoded byline. (4961330)
+- Rename footer deeplinks pattern and replace links with nav components. (4961330)
+- Move "audiences" navigation component to a pattern. (4961330)
+- Merge `header-global` and `header-unit` template parts into main `header` part. (4961330)
+- Merge site footer into page footer, update and style page footer with deeplinks pattern, and style site footer for #55. (598e468)
+- Update and style global footer to close #30. (d244ff2)
+- Replace WP Core navigation block styles with local styles. (19e78fe)
+- Update site navigation component styles for #30. (19e78fe)
+- Replace site navigation open and close menu event handler links and with button elements to close #71. (19e78fe)
+- Replace quicklinks event handler link with button and add search icon for #71. (4bb6fc3)
+- Add button element option to SVG Selector block to close #70. (361da7b)
+- Update all blocks to api version 3 for WordPress 6.3 to close #65. (6d56ea0)
+- Update header with new WDS v3 header layout for #63. (13c2687)
+- Modify per-block style loader to use block.json files instead of static array. (9f8e8fd)
+- Set up SVG Selector block color controls and styles, load SVG Selector block styles internally, and fix round style clipping for #57. (7de6591)
+- Load list styles internally on a per-block basis. (99ab539)
+- Replace custom tags HTML with Core block. (a2a041d)
+- Replace custom categories HTML with Core post terms block and style for #15. (f6e7a2d)
+- Enable media query range and text decoration shorthand support. (886d10e)
+- Close #35 set up block spacing support with custom steps. (eb2d13d)
+- Set default content width to 1200px and wide width to 1400px. (eb2d13d, 39b7349)
+- Rename Montserrat files. (d2fade3)
+- Upgrade `wp-coding-standards/wpcs` to v3 and remove packages replaced by WPCS v3 and update phpcs config and GitHub Actions for WPCS v3 to close #68. (9a42523)
+- Upgrade Node.js version (to 16) with WP Scripts and associated npm build tools to close #67. (ef852cc)
+
+### Removed
+
+- Remove WP core post terms styles. (4961330)
+- Remove extra paragraph styles as unneeded. (020a5ac)
+
+### Fixed
+
+- Fix #79 Remove post meta footer from page template. (2935b99)
+- Fix #75 Invalid block issues in templates and parts. (b87d00b)
+- Fix #76 Update main sidebar to work with any template. (6181afa)
+- Fix #72 Clean up templates and patterns: rename dirs and files to match class names, move user-created content into patterns, and remove theme attributes from template part tags. (4961330)
+- Fix #64 use margin style now that Core layout styles issues is resolved in WP 6.3. (5ffb32c)
+- Fix #62 Extend default WP Scripts Webpack config to process internally loaded css files, rename `blocks` directory to `block-library` for consistency, and remove now-unused `:alt` build scripts. (c0c91bc, 774a22e)
+- Fix #61 SVG Selector block: Unresponsive icon background color control. (76c4557)
+- Fix #60 SVG Selector Block: Separate icon color from text (label) color. (2267efc)
+- Fix #50 replace custom author credit with author block to align WDS and WP HTML. (c82ceb0)
+- Fix #39 Add "constrained" layout type to fix content width and align wide style. (eb2d13d)
+
 ## 0.4.0 (2023-04-13)
 
 ### Added
