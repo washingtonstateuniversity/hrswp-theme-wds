@@ -101,6 +101,7 @@ Changelog formatting (http://semver.org/):
 
 ### Fixed
 
+- Fix #79 Remove post meta footer from page template. (2935b99)
 - Fix #75 Invalid block issues in templates and parts. (b87d00b)
 - Fix #76 Update main sidebar to work with any template. (6181afa)
 - Fix #72 Clean up templates and patterns: rename dirs and files to match class names, move user-created content into patterns, and remove theme attributes from template part tags. (4961330)
