@@ -69,10 +69,12 @@ const stylesTransform = ( content ) => {
 		.then( ( result ) => result.css );
 };
 
-console.log( createEntrypoints() );
-
 module.exports = {
 	...defaultConfig,
+	entry: createEntrypoints(),
+	output: {
+		filename: '[name].min.js'
+	},
 	plugins: [
 		...defaultConfig.plugins,
 		new CopyWebpackPlugin( {
