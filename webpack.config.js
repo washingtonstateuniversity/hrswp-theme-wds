@@ -3,6 +3,7 @@
  */
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 const { join, sep } = require( 'path' );
+const fastGlob = require( 'fast-glob' );
 const postcss = require( 'postcss' );
 
 /**
@@ -26,6 +27,32 @@ function escapeRegExp( string ) {
 	return string.replace( /[\\^$.*+?()[\]{}|]/g, '\\$&' );
 }
 
+/*
+ * Matches a block's filepaths in the form build/<filename>.js.
+ */
+const blockViewRegex = new RegExp(
+	/block-library\/(?<filename>.*\/frontend.*).js$/
+);
+
+const createEntrypoints = () => {
+	const blockViewScriptPaths = fastGlob.sync(
+		'./src/block-library/**/frontend*.js'
+	);
+
+	return blockViewScriptPaths.reduce( ( entries, scriptPath ) => {
+		const result = scriptPath.match( blockViewRegex );
+
+		if ( ! result?.groups?.filename ) {
+			return entries;
+		}
+
+		return {
+			...entries,
+			[ result.groups.filename ]: scriptPath,
+		};
+	}, {} );
+};
+
 /**
  * Uses PostCSS to transform css for development or production.
  *
@@ -41,6 +68,8 @@ const stylesTransform = ( content ) => {
 		} )
 		.then( ( result ) => result.css );
 };
+
+console.log( createEntrypoints() );
 
 module.exports = {
 	...defaultConfig,
