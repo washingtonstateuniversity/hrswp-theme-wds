@@ -48,7 +48,7 @@ const createEntrypoints = () => {
 
 		return {
 			...entries,
-			[ result.groups.filename ]: scriptPath,
+			[ result.groups.filename.replace( '/', '' ) ]: scriptPath,
 		};
 	}, {} );
 };
@@ -71,10 +71,7 @@ const stylesTransform = ( content ) => {
 
 module.exports = {
 	...defaultConfig,
-	entry: createEntrypoints(),
-	output: {
-		filename: '[name].min.js'
-	},
+	entry: Object.assign( defaultConfig.entry(), createEntrypoints() ),
 	plugins: [
 		...defaultConfig.plugins,
 		new CopyWebpackPlugin( {
