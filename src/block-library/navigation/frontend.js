@@ -1,1 +1,1 @@
-console.log( 'fish' );
+export default {};
