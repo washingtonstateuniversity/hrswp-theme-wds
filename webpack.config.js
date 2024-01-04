@@ -28,12 +28,15 @@ function escapeRegExp( string ) {
 }
 
 /*
- * Matches a block's filepaths in the form build/<filename>.js.
+ * Matches a block's frontend JS filepaths.
  */
 const blockViewRegex = new RegExp(
 	/block-library\/(?<filename>.*\/frontend.*).js$/
 );
 
+/*
+ * Creates the frontend script entrypoints.
+ */
 const createEntrypoints = () => {
 	const blockViewScriptPaths = fastGlob.sync(
 		'./src/block-library/**/frontend*.js'
@@ -48,7 +51,7 @@ const createEntrypoints = () => {
 
 		return {
 			...entries,
-			[ result.groups.filename.replace( '/', '' ) ]: scriptPath,
+			[ result.groups.filename ]: scriptPath,
 		};
 	}, {} );
 };
@@ -72,6 +75,14 @@ const stylesTransform = ( content ) => {
 module.exports = {
 	...defaultConfig,
 	entry: Object.assign( defaultConfig.entry(), createEntrypoints() ),
+	output: {
+		filename: ( pathData ) => {
+			return pathData.chunk.name === 'index'
+				? '[name].js'
+				: 'block-library/[name].js';
+		},
+		path: defaultConfig?.output?.path,
+	},
 	plugins: [
 		...defaultConfig.plugins,
 		new CopyWebpackPlugin( {
