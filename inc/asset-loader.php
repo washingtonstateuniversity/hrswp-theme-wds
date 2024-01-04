@@ -13,16 +13,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Registers the editor-only scripts and styles.
+ * Fires when enqueuing scripts for all admin pages.
  *
- * @since 0.4.0
+ * `admin_enqueue_scripts` is the proper hook to use when enqueuing scripts
+ * and styles that are meant to be used in the administration panel. Despite
+ * the name, it is used for enqueuing both scripts and styles.
  *
- * @see wp_register_script
- * @see wp_register_style
- * @return void
+ * @see admin_enqueue_scripts
  */
 add_action(
 	'admin_enqueue_scripts',
+	/**
+	 * Registers the editor-only scripts and styles.
+	 *
+	 * @since 0.4.0
+	 *
+	 * @see wp_register_script
+	 * @see wp_register_style
+	 * @return void
+	 */
 	function (): void {
 		$asset_file = include get_template_directory() . '/build/index.asset.php';
 
@@ -44,17 +53,28 @@ add_action(
 );
 
 /**
- * Registers scripts and styles to load on both the frontend and backend.
+ * Fires after enqueuing block assets for both editor and front-end.
  *
- * @since 0.5.0
+ * From WordPress version 6.3 onwards, styles and scripts added using
+ * `enqueue_block_assets` will be enqueued for the editor iframe.
  *
- * @todo If the global stylesheet stays small, consider inlining it instead
- * like is done with the WP global stylesheet. @see https://developer.wordpress.org/reference/functions/wp_enqueue_global_styles_css_custom_properties/
- *
- * @return void
+ * @see enqueue_block_assets
  */
 add_action(
 	'enqueue_block_assets',
+	/**
+	 * Registers scripts and styles to load on both the frontend and backend.
+	 *
+	 * Enqueues the shared frontend/backend styles.
+	 *
+	 * @since 0.5.0
+	 *
+	 * @todo If the global stylesheet stays small, consider inlining it instead
+	 * like is done with the WP global stylesheet. @see https://developer.wordpress.org/reference/functions/wp_enqueue_global_styles_css_custom_properties/
+	 *
+	 * @see wp_enqueue_style
+	 * @return void
+	 */
 	function (): void {
 		$asset_file = include get_template_directory() . '/build/index.asset.php';
 
@@ -68,21 +88,102 @@ add_action(
 );
 
 /**
- * Enqueues per-block stylesheets.
+ * Fires when scripts and styles are enqueued.
  *
- * Looks for `block.json` files in the `build` directory and subdirectories
- * and parses them for an `extraStyle` property. Uses styles defined there
- * to enqueue them on a per-block basis either internally or externally.
- * Can also load styles for patterns given a block defined in the `block.json`
- * metadata file `blockDependency` property.
+ * `wp_enqueue_scripts` is for enqueuing scripts and styles on the front end.
+ * Despite the name, it is used for enqueuing both scripts and styles.
  *
- * @since 0.5.0
+ * @see wp_enqueue_scripts
+ */
+add_action(
+	'wp_enqueue_scripts',
+	/**
+	 * Registers and deregisters styles and scripts.
+	 *
+	 * @since 0.5.0
+	 *
+	 * @see wp_dequeue_style
+	 * @see wp_deregister_script
+	 * @return void
+	 */
+	function (): void {
+		wp_dequeue_style( 'wp-block-navigation' );
+		wp_dequeue_style( 'wp-block-post-terms' );
+	}
+);
+
+/**
+ * Filters the content of a single block.
  *
- * @see wp_enqueue_block_style
- * @return void
+ * @see render_block
+ */
+add_filter(
+	'render_block',
+	/**
+	 * Callback function to register and enqueue per-block scripts.
+	 *
+	 * @see wp_enqueue_script
+	 *
+	 * @param string $content When the callback is used for the render_block filter,
+	 *                        the content needs to be returned so the function parameter
+	 *                        is to ensure the content exists.
+	 * @param array  $block   The full block, including name and attributes.
+	 * @return string Block content.
+	 */
+	function ( $content, $block ) {
+		$metadata_files = glob( get_theme_file_path( 'build' ) . '/**/**/block.json' );
+
+		foreach ( $metadata_files as $metadata_file ) {
+			$metadata = wp_json_file_decode( $metadata_file, array( 'associative' => true ) );
+
+			if ( ! is_array( $metadata ) || empty( $metadata['name'] ) || empty( $metadata['frontendScript'] ) ) {
+				continue;
+			}
+
+			if ( $metadata['name'] === $block['blockName'] ) {
+				$script_file = remove_block_asset_path_prefix( $metadata['frontendScript'] );
+				$script_path = dirname( explode( 'build', $metadata_file )[1] );
+				$asset_file  = include get_template_directory() . "/build{$script_path}/frontend.asset.php";
+
+				wp_enqueue_script(
+					'hrswds-' . str_replace( '/', '-', $metadata['name'] ) . '-frontend',
+					get_theme_file_uri( "build{$script_path}/{$script_file}" ),
+					$asset_file['dependencies'],
+					$asset_file['version'],
+					array( 'strategy' => 'defer' )
+				);
+			}
+		}
+
+		return $content;
+	},
+	10,
+	2
+);
+
+/**
+ * Fires after the theme is loaded.
+ *
+ * @see after_setup_theme
  */
 add_action(
 	'after_setup_theme',
+	/**
+	 * Enqueues per-block stylesheets.
+	 *
+	 * Looks for `block.json` files in the `build` directory and subdirectories
+	 * and parses them for an `extraStyle` property. Uses styles defined there
+	 * to enqueue them on a per-block basis either internally or externally.
+	 * Can also load styles for patterns given a block defined in the `block.json`
+	 * metadata file `blockDependency` property. Because `wp_enqueue_block_style`
+	 * hooks enqueuing internally to `enqueue_block_assets` this must be hooked
+	 * on `after_setup_theme`.
+	 *
+	 * @since 0.5.0
+	 *
+	 * @see wp_enqueue_block_style
+	 * @return void
+	 */
 	function (): void {
 		$metadata_files = glob( get_theme_file_path( 'build' ) . '/**/**/block.json' );
 
@@ -110,22 +211,5 @@ add_action(
 				wp_enqueue_block_style( $block_dep, $block_style_args );
 			}
 		}
-	}
-);
-
-add_action(
-	'wp_enqueue_scripts',
-	/**
-	 * Deregisters selected WP Core block styles and scripts.
-	 *
-	 * @since 0.5.0
-	 *
-	 * @see wp_dequeue_style
-	 * @see wp_deregister_script
-	 * @return void
-	 */
-	function (): void {
-		wp_dequeue_style( 'wp-block-navigation' );
-		wp_dequeue_style( 'wp-block-post-terms' );
 	}
 );
