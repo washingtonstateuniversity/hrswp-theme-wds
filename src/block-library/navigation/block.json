@@ -1,3 +1,4 @@
 {
-	"name": "core/navigation"
+	"name": "core/navigation",
+	"frontendScript": "file:/frontend.js"
 }
