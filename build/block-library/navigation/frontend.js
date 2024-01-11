@@ -1,0 +1,1 @@
+!function(){const t=document.querySelector("nav.site-navigation");t&&function(t){const e=t.querySelector(".current-menu-ancestor ~ button");e&&setTimeout((()=>e.setAttribute("aria-expanded",!0)),100)}(t)}();
