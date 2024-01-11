@@ -62,6 +62,7 @@ add_filter(
 			$find = array(
 				'data-wp-on--mouseenter="actions.core.navigation.openMenuOnHover"',
 				'data-wp-on--mouseleave="actions.core.navigation.closeMenuOnHover"',
+				'data-wp-on--focusout="actions.core.navigation.handleMenuFocusout"',
 			);
 
 			$block_content = str_replace( $find, '', $block_content );
