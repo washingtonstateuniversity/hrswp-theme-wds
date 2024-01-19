@@ -3,16 +3,16 @@
 	.wsu-navigation-menu--scrim {
 		background-color: rgb(0, 0, 0, 0.7);
 		display: none;
-		height: 100%;
+		min-height: 100vh;
 		left: 0;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		transition: opacity 150ms cubic-bezier(0, 0, 0.03, 1);
 		width: 100%;
 		z-index: 1050;
 	}
 
-	&[aria-expanded="true"] {
+	&.show-sidebar {
 
 		.wsu-navigation-menu--scrim {
 			display: block;
