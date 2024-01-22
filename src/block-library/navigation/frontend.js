@@ -5,6 +5,9 @@ class SiteNavigation {
 	constructor( siteNavigationBlock ) {
 		this.parent = siteNavigationBlock;
 		this.sidebarWrapper = document.querySelector( '.sidebar-wrapper' );
+		this.navigationScrim = document.querySelector(
+			'.wsu-navigation-menu--scrim'
+		);
 		this.menuControls = {
 			menuToggle: document.querySelector( 'button.open-site-navigation' ),
 			closeMenuTarget: document.querySelector(
@@ -22,8 +25,7 @@ class SiteNavigation {
 		this.setSubmenuActive();
 	}
 
-	openMenu( event ) {
-		event.preventDefault();
+	openMenu() {
 		this.sidebarWrapper.classList.add( 'show-sidebar' );
 
 		Object.values( this.menuControls ).forEach( ( control ) => {
@@ -31,10 +33,11 @@ class SiteNavigation {
 			control.setAttribute( 'aria-label', 'Close site navigation' );
 			control.setAttribute( 'title', 'Close site navigation' );
 		} );
+
+		this.navigationScrim.addEventListener( 'click', this.closeMenu );
 	}
 
-	closeMenu( event ) {
-		event.preventDefault();
+	closeMenu() {
 		this.sidebarWrapper.classList.remove( 'show-sidebar' );
 
 		Object.values( this.menuControls ).forEach( ( control ) => {
@@ -44,11 +47,11 @@ class SiteNavigation {
 		} );
 	}
 
-	toggleMenu( event ) {
+	toggleMenu() {
 		if ( this._isMenuOpen() ) {
-			this.closeMenu( event );
+			this.closeMenu();
 		} else {
-			this.openMenu( event );
+			this.openMenu();
 		}
 	}
 
@@ -70,10 +73,9 @@ class SiteNavigation {
 			'click',
 			this.closeMenu
 		);
-
 		document.addEventListener( 'keyup', ( event ) => {
 			if ( this._isMenuOpen() && event.key === 'Escape' ) {
-				this.closeMenu( event );
+				this.closeMenu();
 			}
 		} );
 	}
