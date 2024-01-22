@@ -68,6 +68,23 @@ add_filter(
 			$block_content = str_replace( $find, '', $block_content );
 		}
 
+		if ( 'hrswds/svg-selector' === $block['blockName'] && isset( $block['attrs']['className'] ) ) {
+
+			if ( 'wp-block-navigation__responsive-container-open' === $block['attrs']['className'] ) {
+				$p = new \WP_HTML_Tag_Processor( $block_content );
+				if ( $p->next_tag( 'button' ) ) {
+					$p->add_class( 'open-site-navigation' );
+					$p->set_attribute( 'title', 'Open site navigation' );
+					$p->set_attribute( 'aria-haspopup', 'menu' );
+					$p->set_attribute( 'aria-label', 'Open site navigation' );
+					$p->set_attribute( 'aria-expanded', 'false' );
+					$p->set_attribute( 'aria-controls', 'site-navigation-parent' );
+				}
+
+				$block_content = $p->get_updated_html();
+			}
+		}
+
 		return $block_content;
 	},
 	10,
