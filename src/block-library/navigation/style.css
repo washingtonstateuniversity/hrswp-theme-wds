@@ -68,7 +68,7 @@
 	}
 }
 
-.wp-block-navigation .has-child {
+.wp-block-navigation__container:not(.quicklinks-menu) .wp-block-navigation-item.has-child {
 	display: flex;
 	flex-wrap: wrap;
 
