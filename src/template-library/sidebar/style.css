@@ -12,7 +12,8 @@
 		z-index: 1050;
 	}
 
-	&.show-sidebar {
+	&.show-scrim-menu,
+	&.show-scrim-search {
 
 		.wsu-navigation-menu--scrim {
 			display: block;
