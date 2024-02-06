@@ -8,14 +8,12 @@ class SiteNavigation {
 		this.navigationScrim = document.querySelector(
 			'.wsu-navigation-menu--scrim'
 		);
-
 		this.openSearchTargets = document.querySelectorAll(
 			'.quicklinks-panel-toggle .wp-element-button'
 		);
 		this.closeSearchTarget = document.querySelector(
 			'.search-menu--close .hrswds-svg-icon-container'
 		);
-
 		this.menuControls = {
 			menuToggle: document.querySelector( 'button.open-site-navigation' ),
 			closeMenuTarget: document.querySelector(
@@ -26,12 +24,14 @@ class SiteNavigation {
 		this.openMenu = this.openMenu.bind( this );
 		this.closeMenu = this.closeMenu.bind( this );
 		this.toggleMenu = this.toggleMenu.bind( this );
-
 		this.openSearchMenu = this.openSearchMenu.bind( this );
 		this.closeSearchMenu = this.closeSearchMenu.bind( this );
-
 		this.setSubmenuActive = this.setSubmenuActive.bind( this );
 
+		this.init();
+	}
+
+	init() {
 		this.openSearchTargets.forEach( ( target ) => {
 			this.initButton(
 				target,
@@ -59,9 +59,7 @@ class SiteNavigation {
 		this.sidebarWrapper.classList.add( 'show-sidebar', 'show-scrim-menu' );
 
 		Object.values( this.menuControls ).forEach( ( control ) => {
-			control.setAttribute( 'aria-expanded', 'true' );
-			control.setAttribute( 'aria-label', 'Close site navigation' );
-			control.setAttribute( 'title', 'Close site navigation' );
+			this.toggleAttributes( control, 'Close site navigation' );
 		} );
 
 		this.navigationScrim.addEventListener( 'click', this.closeMenu );
@@ -74,9 +72,7 @@ class SiteNavigation {
 		);
 
 		Object.values( this.menuControls ).forEach( ( control ) => {
-			control.setAttribute( 'aria-expanded', 'false' );
-			control.setAttribute( 'aria-label', 'Open site navigation' );
-			control.setAttribute( 'title', 'Open site navigation' );
+			this.toggleAttributes( control, 'Open site navigation' );
 		} );
 	}
 
@@ -86,6 +82,13 @@ class SiteNavigation {
 		);
 		control.classList.add( 'show-menu' );
 		this.sidebarWrapper.classList.add( 'show-scrim-search' );
+
+		this.openSearchTargets.forEach( ( target ) => {
+			this.toggleAttributes( target, 'Close search menu' );
+		} );
+		this.closeSearchTarget.setAttribute( 'aria-expanded', 'true' );
+
+		this.navigationScrim.addEventListener( 'click', this.closeSearchMenu );
 	}
 
 	closeSearchMenu() {
@@ -94,6 +97,11 @@ class SiteNavigation {
 		);
 		control.classList.remove( 'show-menu' );
 		this.sidebarWrapper.classList.remove( 'show-scrim-search' );
+
+		this.openSearchTargets.forEach( ( target ) => {
+			this.toggleAttributes( target, 'Open search menu' );
+		} );
+		this.closeSearchTarget.setAttribute( 'aria-expanded', 'false' );
 	}
 
 	toggleMenu() {
@@ -102,20 +110,6 @@ class SiteNavigation {
 		} else {
 			this.openMenu();
 		}
-	}
-
-	/**
-	 * Sets up a button target.
-	 *
-	 * @param {Element} button
-	 * @param {string}  label
-	 * @param {string}  controls
-	 */
-	initButton( button, label, controls ) {
-		button.setAttribute( 'aria-expanded', 'false' );
-		button.setAttribute( 'title', label );
-		button.setAttribute( 'aria-label', label );
-		button.setAttribute( 'aria-controls', controls );
 	}
 
 	addEventListeners() {
@@ -137,10 +131,54 @@ class SiteNavigation {
 		);
 
 		document.addEventListener( 'keyup', ( event ) => {
-			if ( this._isMenuOpen() && event.key === 'Escape' ) {
-				this.closeMenu();
+			if ( event.key === 'Escape' ) {
+				if ( this._isMenuOpen() ) {
+					this.closeMenu();
+				}
+				if ( this._isSearchOpen() ) {
+					this.closeSearchMenu();
+				}
 			}
 		} );
+	}
+
+	/**
+	 * Sets up a button target.
+	 *
+	 * @param {Element} button
+	 * @param {string}  label
+	 * @param {string}  controls
+	 */
+	initButton( button, label, controls ) {
+		button.setAttribute( 'aria-expanded', 'false' );
+		button.setAttribute( 'title', label );
+		button.setAttribute( 'aria-label', label );
+		button.setAttribute( 'aria-controls', controls );
+	}
+
+	/**
+	 * Updates an element's attributes on menu state change.
+	 *
+	 * @param {Element} target
+	 * @param {string}  label
+	 */
+	toggleAttributes( target, label = '' ) {
+		const ariaExpanded =
+			target.getAttribute( 'aria-expanded' ) === 'true'
+				? 'false'
+				: 'true';
+
+		target.setAttribute( 'aria-expanded', ariaExpanded );
+		target.setAttribute( 'aria-label', label );
+		target.setAttribute( 'title', label );
+	}
+
+	_isMenuOpen() {
+		return this.sidebarWrapper.classList.contains( 'show-sidebar' );
+	}
+
+	_isSearchOpen() {
+		return this.sidebarWrapper.classList.contains( 'show-scrim-search' );
 	}
 
 	/**
@@ -160,10 +198,6 @@ class SiteNavigation {
 				100
 			);
 		}
-	}
-
-	_isMenuOpen() {
-		return this.sidebarWrapper.classList.contains( 'show-sidebar' );
 	}
 }
 
