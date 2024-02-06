@@ -36,6 +36,7 @@
 			position: sticky;
 			top: 0;
 			transform: none;
+			transition: none;
 			z-index: 1000;
 
 			.wsu-navigation-menu--close {
