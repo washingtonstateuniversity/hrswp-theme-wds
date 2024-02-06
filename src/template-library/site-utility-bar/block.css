@@ -146,11 +146,7 @@
 
 .quicklinks-search-menu {
 	background: var(--wp--preset--color--white);
-	background: linear-gradient(
-		135deg,
-		var(--wp--custom--wsu-color-gray--0) 0,
-		var(--wp--custom--wsu-color-gray--30) 100%
-	);
+	background: linear-gradient(135deg, var(--wp--custom--wsu-color-gray--0) 0, var(--wp--custom--wsu-color-gray--30) 100%);
 	border-left: 3px solid var(--wp--preset--color--primary);
 	border-top: 2px solid var(--wp--preset--color--primary-light);
 	display: block;
@@ -166,7 +162,7 @@
 	z-index: 1090;
 
 	&.show-menu {
-		transform: translateX( 0 );
+		transform: translateX(0);
 	}
 
 	&::before {
@@ -191,17 +187,11 @@
 
 	.search-icon {
 		min-height: 40px;
-  		min-width: 40px;
+		min-width: 40px;
 	}
 
 	.wp-block-separator {
-		background-image: repeating-linear-gradient(
-			135deg,
-			var(--wp--custom--wsu-color-gray--35),
-			var(--wp--custom--wsu-color-gray--35) 2px,
-			transparent 2px,
-			transparent 10px
-		);
+		background-image: repeating-linear-gradient(135deg, var(--wp--custom--wsu-color-gray--35), var(--wp--custom--wsu-color-gray--35) 2px, transparent 2px, transparent 10px);
 		background-position: 0 -4px;
 		background-repeat: no-repeat;
 		border: 0;
