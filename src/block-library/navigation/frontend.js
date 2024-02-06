@@ -20,12 +20,14 @@ class SiteNavigation {
 				'.wsu-navigation-menu--close .hrswds-svg-icon-container'
 			),
 		};
+		this.mediaQuery = window.matchMedia( '(min-width: 1260px)' );
 
 		this.openMenu = this.openMenu.bind( this );
 		this.closeMenu = this.closeMenu.bind( this );
 		this.toggleMenu = this.toggleMenu.bind( this );
 		this.openSearchMenu = this.openSearchMenu.bind( this );
 		this.closeSearchMenu = this.closeSearchMenu.bind( this );
+		this.handleMediaExpand = this.handleMediaExpand.bind( this );
 		this.setSubmenuActive = this.setSubmenuActive.bind( this );
 
 		this.init();
@@ -39,7 +41,6 @@ class SiteNavigation {
 				'quicklinks-search-menu'
 			);
 		} );
-
 		this.initButton(
 			this.menuControls.closeMenuTarget,
 			'Close site navigation',
@@ -53,6 +54,13 @@ class SiteNavigation {
 
 		this.addEventListeners();
 		this.setSubmenuActive();
+
+		return () => {
+			this.mediaQuery.removeEventListener(
+				'change',
+				this.handleMediaExpand
+			);
+		};
 	}
 
 	openMenu() {
@@ -112,6 +120,15 @@ class SiteNavigation {
 		}
 	}
 
+	handleMediaExpand() {
+		if ( this.mediaQuery.matches ) {
+			this.sidebarWrapper.classList.remove(
+				'show-sidebar',
+				'show-scrim-menu'
+			);
+		}
+	}
+
 	addEventListeners() {
 		this.menuControls.menuToggle.addEventListener(
 			'click',
@@ -140,6 +157,8 @@ class SiteNavigation {
 				}
 			}
 		} );
+
+		this.mediaQuery.addEventListener( 'change', this.handleMediaExpand );
 	}
 
 	/**
