@@ -5,14 +5,25 @@
 <!-- wp:group {"className":"site-navigation-container","layout":{"type":"default"}} -->
 <div class="wp-block-group site-navigation-container" id="site-navigation-parent">
 	<!-- wp:hrswds/svg-selector {"iconColor":"base","iconColorValue":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dwsu-color-gray\u002d\u002d0)","iconColorClass":"has-base-icon-color","iconBackgroundColor":"primary","iconBackgroundColorValue":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dwsu-color-crimson\u002d\u002dcrimson)","iconBackgroundColorClass":"has-primary-icon-background-color","isButton":true,"slug":"arrow-right","size":24,"showLabel":true,"iconLabel":"Close Menu","className":"is-style-round wsu-navigation-menu\u002d\u002dclose is-layout-flex","textColor":"primary"} -->
-	<div class="wp-block-hrswds-svg-selector has-small-icon-size has-visible-label is-label-position-right has-icon-color has-icon-background-color has-base-icon-color has-primary-icon-background-color is-style-round wsu-navigation-menu--close is-layout-flex has-primary-color has-text-color">
+	<div class="wp-block-hrswds-svg-selector has-small-icon-size has-visible-label is-label-position-right has-icon-color has-icon-background-color has-base-icon-color has-primary-icon-background-color is-style-round wsu-navigation-menu--close close-menu-button is-layout-flex has-primary-color has-text-color">
 		<button type="button" class="hrswds-svg-icon-container">
 			<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" aria-hidden="true"><path d="m14.5 6.5-1 1 3.7 3.7H4v1.6h13.2l-3.7 3.7 1 1 5.6-5.5z"></path></svg>
 			<span class="hrswds-svg-icon-label">Close Menu</span>
 		</button>
 	</div>
 	<!-- /wp:hrswds/svg-selector -->
-	<!-- wp:template-part {"slug":"site-utility-bar","className":"site-utility-bar"} /-->
+	<!-- wp:group {"className":"utility-bar-buttons","layout":{"type":"default"},"metadata":{"name":"Site nav quicklinks toggle"}} -->
+	<div class="wp-block-group utility-bar-buttons">
+		<!-- wp:hrswds/svg-selector {"isButton":true,"slug":"search","size":24,"showLabel":true,"iconLabel":"Quicklinks / Search","labelPosition":"left","className":"quicklinks-panel-toggle"} -->
+		<div class="wp-block-hrswds-svg-selector has-small-icon-size has-visible-label is-label-position-left quicklinks-panel-toggle">
+			<button type="button" class="hrswds-svg-icon-container wp-element-button">
+				<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" aria-hidden="true"><path d="M13 5c-3.3 0-6 2.7-6 6 0 1.4.5 2.7 1.3 3.7l-3.8 3.8 1.1 1.1 3.8-3.8c1 .8 2.3 1.3 3.7 1.3 3.3 0 6-2.7 6-6S16.3 5 13 5zm0 10.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z"></path></svg>
+				<span class="hrswds-svg-icon-label">Quicklinks / Search</span>
+			</button>
+		</div>
+		<!-- /wp:hrswds/svg-selector -->
+	</div>
+	<!-- /wp:group -->
 	<!-- wp:template-part {"slug":"site-navigation","className":"sidebar-nav-wrapper"} /-->
 </div>
 <!-- /wp:group -->

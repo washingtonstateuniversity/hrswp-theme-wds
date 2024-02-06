@@ -13,10 +13,10 @@
 		font: inherit;
 		padding: 0;
 
+		&:hover,
 		&:focus {
-			outline: 2px solid var(--wp--custom--wsu-color-crimson--crimson);
-			border-radius: 3px;
-			outline-offset: 2px;
+			background: none;
+			box-shadow: none;
 		}
 	}
 

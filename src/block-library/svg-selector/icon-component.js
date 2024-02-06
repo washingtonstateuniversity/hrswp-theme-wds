@@ -27,6 +27,9 @@ export const IconComponent = ( props ) => {
 			'screen-reader-text': ! showLabel,
 		}
 	);
+	const tagClassName = classNames( 'hrswds-svg-icon-container', {
+		'wp-element-button': isButton,
+	} );
 
 	const Tag = isButton ? 'button' : 'span';
 
@@ -44,7 +47,7 @@ export const IconComponent = ( props ) => {
 
 	if ( url && ! isButton ) {
 		return (
-			<Tag className="hrswds-svg-icon-container">
+			<Tag className={ tagClassName }>
 				<a
 					href={ url }
 					onClick={ preventDefault }
@@ -57,10 +60,7 @@ export const IconComponent = ( props ) => {
 	}
 
 	return (
-		<Tag
-			type={ isButton ? 'button' : '' }
-			className="hrswds-svg-icon-container"
-		>
+		<Tag type={ isButton ? 'button' : '' } className={ tagClassName }>
 			{ element }
 		</Tag>
 	);
