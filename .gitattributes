@@ -13,6 +13,7 @@
 .nvmrc export-ignore
 .prettierrc.js export-ignore
 .stylelintrc.json export-ignore
+CHANGELOG.md export-ignore
 composer.json export-ignore
 composer.lock export-ignore
 CONTRIBUTING.md export-ignore
@@ -20,3 +21,4 @@ package.json export-ignore
 package-lock.json export-ignore
 phpcs.xml.dist export-ignore
 postcss.config.js export-ignore
+webpack.config.js export-ignore
