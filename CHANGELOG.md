@@ -26,6 +26,7 @@ Changelog formatting (http://semver.org/):
 
 ### Changed
 
+- Add changelog and webpack config to export-ignore rules. (53f356a)
 - Update quicklinks styles and deduplicate site utility bar. (1b1d3ac)
 - Add wp-element-button class to SVG Selector icons formatted as button. (1b1d3ac)
 - Complete site navigation interactivity with ARIA attributes, styles, and scrim behavior to close #17. (ac75eaf)
