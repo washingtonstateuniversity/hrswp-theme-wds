@@ -17,7 +17,7 @@ Changelog formatting (http://semver.org/):
 ### Security (in case of vulnerabilities.)
 -->
 
-## 0.6.0-rc.1 (:construction: TBD)
+## 0.6.0 (2024-02-08)
 
 ### Added
 
@@ -26,6 +26,7 @@ Changelog formatting (http://semver.org/):
 
 ### Changed
 
+- Bump WordPress tested-to to 6.4.3.
 - Add changelog and webpack config to export-ignore rules. (53f356a)
 - Update quicklinks styles and deduplicate site utility bar. (1b1d3ac)
 - Add wp-element-button class to SVG Selector icons formatted as button. (1b1d3ac)
