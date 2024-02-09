@@ -17,6 +17,28 @@ Changelog formatting (http://semver.org/):
 ### Security (in case of vulnerabilities.)
 -->
 
+## 0.6.0 (2024-02-08)
+
+### Added
+
+- Create quicklinks/search menu and set up interactivity to close #83. (1b1d3ac)
+- Create frontend script per-block script enqueuing and update docs, fix #81. (27cb9b9)
+
+### Changed
+
+- Bump WordPress tested-to to 6.4.3.
+- Add changelog and webpack config to export-ignore rules. (53f356a)
+- Update quicklinks styles and deduplicate site utility bar. (1b1d3ac)
+- Add wp-element-button class to SVG Selector icons formatted as button. (1b1d3ac)
+- Complete site navigation interactivity with ARIA attributes, styles, and scrim behavior to close #17. (ac75eaf)
+- Fix #80 site nav submenus should stay open with current page. (2965f2f)
+- Remove Navigation block close on focus out behavior. (2965f2f)
+
+### Fixed
+
+- Remove transition on static nav menu to fix wiggling on screen resize. (7d27d60)
+- Fix #77 remove core navigation block hover trigger. (73a9295)
+
 ## 0.5.0 (2023-10-27)
 
 ### Added
