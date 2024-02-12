@@ -22,6 +22,12 @@ namespace HRSWP\Theme\WDS\Patterns\Hidden404;
 <p><?php echo esc_html_x( 'We\'re sorry, but the page you are looking for could not be found. Please try our site search or one of the following links.', 'Message to convey that a webpage could not be found', 'hrswp-theme-wds' ); ?></p>
 <!-- /wp:paragraph -->
 
+<!-- wp:group {"tagName":"section","align":"full","backgroundColor":"secondary-light","layout":{"type":"constrained"},"metadata":{"name":"Search"}} -->
+<section class="wp-block-group alignfull has-secondary-light-background-color has-background">
+	<!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search","buttonText":"Search","buttonUseIcon":true} /-->
+</section>
+<!-- /wp:group -->
+
 <!-- wp:list -->
 <ul>
 	<!-- wp:list-item -->
