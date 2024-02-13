@@ -1,0 +1,22 @@
+.error404 {
+
+	.main-content {
+
+		.is-horizontal .wp-block-navigation {
+			list-style-type: disc;
+			padding-left: 1.5em;
+
+			@media (width > 782px) {
+				display: flex;
+				flex-flow: row wrap;
+
+				.wp-block-navigation-item {
+					padding-right: var(--wp--preset--spacing--50);
+					flex-basis: calc(50% - var(--wp--preset--spacing--50));
+				}
+			}
+		}
+
+	}
+
+}
