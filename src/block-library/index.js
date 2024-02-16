@@ -7,6 +7,7 @@ import { registerBlockStyle, registerBlockType } from '@wordpress/blocks';
  * Internal dependencies
  */
 import * as button from './button';
+import * as heading from './heading';
 import * as image from './image';
 import * as list from './list';
 import * as logoLockup from './logo-lockup';
@@ -20,7 +21,7 @@ const blocks = [ logoLockup, svgSelector ];
 /**
  * Blocks to register styles for
  */
-const blockStyles = [ button, image, list ];
+const blockStyles = [ button, heading, image, list ];
 
 /**
  * Function to register an individual block.

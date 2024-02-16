@@ -1,5 +1,5 @@
 .has-inline-icon {
-	display: flex;
+	display: inline-flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	align-items: center;
