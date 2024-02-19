@@ -2,6 +2,7 @@
 	"name": "core/heading",
 	"apiVersion": 3,
 	"styles": [
-		{ "name": "callout", "label": "Callout" }
+		{ "name": "callout", "label": "Callout" },
+		{ "name": "outline", "label": "Outline" }
 	]
 }
