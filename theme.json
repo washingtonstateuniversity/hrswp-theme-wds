@@ -291,6 +291,22 @@
 					"fontFamily": "Montserrat, serif",
 					"name": "Montserrat",
 					"slug": "montserrat"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "WSU Outline",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "500",
+							"src": [
+								"file:./assets/fonts/wsu-outline/Montserrat-Bold-static.ttf.woff2"
+							]
+						}
+					],
+					"fontFamily": "'WSU Outline', sans-serif",
+					"name": "WSU Outline",
+					"slug": "wsu-outline"
 				}
 			],
 			"fontSizes": [
