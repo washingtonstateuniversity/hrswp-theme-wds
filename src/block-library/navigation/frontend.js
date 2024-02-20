@@ -214,7 +214,7 @@ class SiteNavigation {
 		if ( currentMenuTarget ) {
 			setTimeout(
 				() => currentMenuTarget.setAttribute( 'aria-expanded', true ),
-				100
+				200
 			);
 		}
 	}

@@ -60,9 +60,9 @@ add_filter(
 	function ( string $block_content, array $block ): string {
 		if ( 'core/navigation' === $block['blockName'] ) {
 			$find = array(
-				'data-wp-on--mouseenter="actions.core.navigation.openMenuOnHover"',
-				'data-wp-on--mouseleave="actions.core.navigation.closeMenuOnHover"',
-				'data-wp-on--focusout="actions.core.navigation.handleMenuFocusout"',
+				'data-wp-on--mouseenter="actions.openMenuOnHover"',
+				'data-wp-on--mouseleave="actions.closeMenuOnHover"',
+				'data-wp-on--focusout="actions.handleMenuFocusout"',
 			);
 
 			$block_content = str_replace( $find, '', $block_content );
