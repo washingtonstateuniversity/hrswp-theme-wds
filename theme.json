@@ -513,8 +513,8 @@
                 }
             },
             "core/quote": {
-                "spacing": {
-                    "margin": {
+				"spacing": {
+                    "padding": {
                         "right": "4%",
                         "bottom": "2rem",
                         "left": "4%"

@@ -1,3 +1,8 @@
-.is-layout-constrained > .wp-block-quote:where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+.wp-block-quote {
+	font-size: $wsu-font-size--xmedium;
+}
+
+/* Highly selected to override Core inline style. */
+body .is-layout-constrained > .wp-block-quote:where(:not(.alignleft):not(.alignright):not(.alignfull)) {
 	max-width: calc(var(--wp--style--global--content-size) - 8%);
 }
