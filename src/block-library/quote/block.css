@@ -1,5 +1,16 @@
 .wp-block-quote {
 	font-size: $wsu-font-size--xmedium;
+
+	& cite {
+		margin-left: 1.2em;
+
+		&::before {
+			content: "\2014";
+			margin-right: 0.2em;
+			margin-left: -1.2em;
+		}
+	}
+
 }
 
 /* Highly selected to override Core inline style. */

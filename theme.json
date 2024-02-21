@@ -516,7 +516,6 @@
 				"spacing": {
                     "padding": {
                         "right": "4%",
-                        "bottom": "2rem",
                         "left": "4%"
                     }
                 }
@@ -578,7 +577,6 @@
 			"cite": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--small)",
-					"fontWeight": "600",
 					"fontStyle": "normal"
 				}
 			},
