@@ -101,13 +101,29 @@ add_filter(
 
 		// Adds icons to figcaption elements.
 		if ( 'core/image' === $block['blockName'] ) {
-
 			$p = new \WP_HTML_Tag_Processor( $block_content );
 			if ( $p->next_tag( 'figcaption' ) ) {
 				$icon = Class_SVG_Icons\SVG_Icons::get_svg( 'camera', 20 );
 				$p->add_class( 'has-inline-icon' );
 				$block_content = $p->get_updated_html();
 				$block_content = preg_replace( '/(<figcaption .*?>)/', '$1' . $icon, $block_content );
+			}
+		}
+
+		// Adds decorator icon to quote block.
+		if ( 'core/quote' === $block['blockName'] ) {
+			$p = new \WP_HTML_Tag_Processor( $block_content );
+			if ( $p->next_tag() ) {
+				// Return early if it's the "plain" style.
+				if ( str_contains( $p->get_attribute( 'class' ), 'is-style-plain' ) ) {
+					return $block_content;
+				}
+				$icon = Class_SVG_Icons\SVG_Icons::get_svg( 'quote', 52 );
+				$p->next_tag();
+				$tag = '<' . strtolower( $p->get_tag() );
+
+				$block_content = $p->get_updated_html();
+				$block_content = str_replace( $tag, $icon . $tag, $block_content );
 			}
 		}
 
