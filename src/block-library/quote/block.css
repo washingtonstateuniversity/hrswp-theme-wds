@@ -1,5 +1,4 @@
 .wp-block-quote {
-	font-size: $wsu-font-size--xmedium;
 
 	& cite {
 		margin-left: 1.2em;
@@ -9,6 +8,10 @@
 			margin-right: 0.2em;
 			margin-left: -1.2em;
 		}
+	}
+
+	&.is-style-border {
+		border-left: 5px solid var(--wp--preset--color--primary-light);
 	}
 
 }

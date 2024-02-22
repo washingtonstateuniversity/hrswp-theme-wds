@@ -1,6 +1,9 @@
 {
 	"name": "core/quote",
 	"apiVersion": 3,
+	"styles": [
+		{ "name": "border", "label": "Border" }
+	],
 	"extraStyle": [
 		{
 			"source": "file:./block.css",
