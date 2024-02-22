@@ -1,4 +1,23 @@
-.is-layout-constrained > .wp-block-quote:where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+.wp-block-quote {
+
+	& cite {
+		margin-left: 1.2em;
+
+		&::before {
+			content: "\2014";
+			margin-right: 0.2em;
+			margin-left: -1.2em;
+		}
+	}
+
+	&.is-style-border {
+		border-left: 5px solid var(--wp--preset--color--primary-light);
+	}
+
+}
+
+/* Highly selected to override Core inline style. */
+body .is-layout-constrained > .wp-block-quote:where(:not(.alignleft):not(.alignright):not(.alignfull)) {
 	max-width: calc(var(--wp--style--global--content-size) - 8%);
 }
 
