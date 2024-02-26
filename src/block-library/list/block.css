@@ -3,7 +3,6 @@ ul {
 	padding-left: 1.5em;
 
 	& li {
-
 		margin-bottom: 0.875em;
 
 		&::marker {
@@ -18,54 +17,45 @@ ul {
 		padding-left: 2em;
 	}
 
-	&.is-style-arrow li {
+	&.is-style-arrow li,
+	&.is-style-checkbox li,
+	&.is-style-checkmark li {
 		padding-left: 0.4em;
-
-		&::marker {
-			content: "\276F";
-			font-size: 0.85em;
-			font-weight: 600;
-		}
 	}
 
-	&.is-style-checkbox {
+	&.is-style-arrow li::marker {
+		content: "\276F";
+		font-size: 0.85em;
+		font-weight: 600;
+	}
+
+	&.is-style-checkbox li::marker {
+		content: "\2610";
+	}
+
+	&.is-style-checkmark li::marker {
+		content: "\2611";
+	}
+
+	&.is-style-boxed {
+		padding-left: 1em;
 
 		& li {
 			list-style-type: none;
+			padding-left: 1em;
 			position: relative;
 
 			&::before {
-				content: "☐";
-				color: var(--wp--custom--wsu-color-crimson--crimson-light);
-				font-weight: 400;
-				font-size: 1.3em;
-				line-height: 1;
+				background-color: var(--wp--custom--wsu-color-crimson--crimson-light);
+				content: "";
+				display: block;
+				height: 6px;
+				left: 0;
 				position: absolute;
-				left: -1.5em;
-				top: 0.1em;
+				top: 0.65em;
+				width: 10px;
 			}
 		}
-
-	}
-
-	&.is-style-checkmark {
-
-		& li {
-			list-style-type: none;
-			position: relative;
-
-			&::before {
-				content: "☑";
-				color: var(--wp--custom--wsu-color-crimson--crimson-light);
-				font-weight: 400;
-				font-size: 1em;
-				line-height: 1;
-				position: absolute;
-				left: -1.75em;
-				top: 0.1em;
-			}
-		}
-
 	}
 
 	&.is-style-lined {
@@ -79,32 +69,6 @@ ul {
 			padding: 0.5em 0;
 			font-weight: 600;
 			position: relative;
-		}
-	}
-
-	&.is-style-boxed {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-
-		& li {
-			list-style-type: none;
-			margin: 0 0 0.75em 0;
-			padding: 0 0 0 1.25em;
-			line-height: 1.4;
-			position: relative;
-
-			&::before {
-				content: "";
-				height: 6px;
-				width: 10px;
-				background-color: var(--wp--custom--wsu-color-crimson--crimson-light);
-				display: block;
-				position: absolute;
-				left: 0;
-				top: 0.6em;
-				transform: translateY(-3px);
-			}
 		}
 	}
 
