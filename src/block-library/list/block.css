@@ -18,10 +18,14 @@ ul {
 		padding-left: 2em;
 	}
 
-	&.is-style-arrow li::marker {
-		content: "> ";
-		font-size: 0.7em;
-		font-weight: 600;
+	&.is-style-arrow li {
+		padding-left: 0.4em;
+
+		&::marker {
+			content: "\276F";
+			font-size: 0.85em;
+			font-weight: 600;
+		}
 	}
 
 	&.is-style-checkbox {
