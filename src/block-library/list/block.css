@@ -3,7 +3,7 @@ ul {
 	padding-left: 1.5em;
 
 	& li {
-		margin-bottom: 0.875em;
+		margin-bottom: var(--wp--style--block-gap);
 
 		&::marker {
 			color: var(--wp--custom--wsu-color-crimson--crimson-light);
@@ -12,66 +12,10 @@ ul {
 
 	& ol,
 	& ul {
-		margin-bottom: 1.125em;
-		margin-top: 0.875em;
+		margin-bottom: var(--wp--style--block-gap);
+		margin-top: var(--wp--style--block-gap);
 		padding-left: 2em;
 	}
-
-	&.is-style-arrow li,
-	&.is-style-checkbox li,
-	&.is-style-checkmark li {
-		padding-left: 0.4em;
-	}
-
-	&.is-style-arrow li::marker {
-		content: "\276F";
-		font-size: 0.85em;
-		font-weight: 600;
-	}
-
-	&.is-style-checkbox li::marker {
-		content: "\2610";
-	}
-
-	&.is-style-checkmark li::marker {
-		content: "\2611";
-	}
-
-	&.is-style-boxed {
-		padding-left: 1em;
-
-		& li {
-			list-style-type: none;
-			padding-left: 1em;
-			position: relative;
-
-			&::before {
-				background-color: var(--wp--custom--wsu-color-crimson--crimson-light);
-				content: "";
-				display: block;
-				height: 6px;
-				left: 0;
-				position: absolute;
-				top: 0.65em;
-				width: 10px;
-			}
-		}
-	}
-
-	&.is-style-lined {
-		list-style-type: none;
-		margin-left: 0;
-		padding-left: 0;
-
-		> li {
-			border-bottom: 1px solid var(--wp--custom--wsu-color-gray--5);
-			margin: 0;
-			padding: 0.5em 0;
-			font-weight: 600;
-			position: relative;
-		}
-	}
-
 }
 
 ul {
@@ -94,6 +38,59 @@ ul {
 
 	& ul ul ul ul ul li {
 		list-style-type: square;
+	}
+
+	&.is-style-arrow li,
+	&.is-style-checkbox li,
+	&.is-style-checkmark li {
+		padding-left: 0.4em;
+	}
+
+	&.is-style-arrow > li::marker {
+		content: "\276F";
+		font-size: 0.85em;
+		font-weight: 600;
+	}
+
+	&.is-style-checkbox > li::marker {
+		content: "\2610";
+	}
+
+	&.is-style-checkmark > li::marker {
+		content: "\2611";
+	}
+
+	&.is-style-boxed {
+		padding-left: 1em;
+
+		> li {
+			list-style-type: none;
+			padding-left: 1em;
+			position: relative;
+
+			&::before {
+				background-color: var(--wp--custom--wsu-color-crimson--crimson-light);
+				content: "";
+				display: block;
+				height: 6px;
+				left: 0;
+				position: absolute;
+				top: 0.65em;
+				width: 10px;
+			}
+		}
+	}
+
+	&.is-style-lined {
+		list-style-type: none;
+		margin-left: 0;
+		padding-left: 0;
+
+		> li:not(:has(.is-style-lined)) {
+			border-bottom: 1px solid var(--wp--custom--wsu-color-gray--5);
+			margin: 0;
+			padding: 0.5em 0;
+		}
 	}
 
 }
@@ -150,6 +147,10 @@ ol {
 			list-style-type: circle;
 		}
 
+	}
+
+	&.is-style-alpha > li {
+		list-style-type: upper-alpha;
 	}
 
 }
