@@ -127,6 +127,13 @@ add_filter(
 			}
 		}
 
+		// Adds decorator icon to post date block.
+		if ( 'core/post-date' === $block['blockName'] ) {
+			$icon = Class_SVG_Icons\SVG_Icons::get_svg( 'clock', 18 );
+
+			$block_content = str_replace( '<time', $icon . '<time', $block_content );
+		}
+
 		return $block_content;
 	},
 	10,
