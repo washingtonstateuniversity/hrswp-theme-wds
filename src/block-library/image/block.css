@@ -7,4 +7,12 @@
 		outline-color: #fff;
 	}
 
+	.has-inline-icon .svg-icon {
+		fill: currentcolor;
+		left: 0;
+		margin-right: 0.3rem;
+		position: relative;
+		top: 0.3rem;
+	}
+
 }

@@ -20,3 +20,9 @@
 body .is-layout-constrained > .wp-block-quote:where(:not(.alignleft):not(.alignright):not(.alignfull)) {
 	max-width: calc(var(--wp--style--global--content-size) - 8%);
 }
+
+.wp-block-quote .svg-icon {
+	fill: var(--wp--preset--color--primary-light);
+	margin-bottom: calc(var(--wp--style--block-gap) * -2);
+	transform: rotateX(180deg) scaleX(-1);
+}
