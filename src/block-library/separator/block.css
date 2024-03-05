@@ -1,0 +1,36 @@
+/* Highly selected to override Core layout. */
+body .is-layout-constrained > .wp-block-separator:not(.is-style-wide, .is-style-dots, .alignwide, .alignfull) {
+	max-width: 95px;
+}
+
+.wp-block-separator {
+
+	&.is-style-thin {
+		border-top-width: 1px;
+	}
+
+	&.has-base-background-color {
+		border-top-color: var(--wp--preset--color--base);
+	}
+
+	&.has-contrast-background-color {
+		border-top-color: var(--wp--preset--color-contrast);
+	}
+
+	&.has-primary-background-color {
+		border-top-color: var(--wp--preset--color--primary);
+	}
+
+	&.has-primary-light-background-color {
+		border-top-color: var(--wp--preset--color--primary-light);
+	}
+
+	&.has-secondary-background-color {
+		border-top-color: var(--wp--preset--color--secondary);
+	}
+
+	&.has-secondary-light-background-color {
+		border-top-color: var(--wp--preset--color--secondary-light);
+	}
+
+}
