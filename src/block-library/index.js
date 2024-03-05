@@ -12,6 +12,7 @@ import * as image from './image';
 import * as list from './list';
 import * as logoLockup from './logo-lockup';
 import * as quote from './quote';
+import * as separator from './separator';
 import * as svgSelector from './svg-selector';
 
 /**
@@ -22,7 +23,7 @@ const blocks = [ logoLockup, svgSelector ];
 /**
  * Blocks to register styles for
  */
-const blockStyles = [ button, heading, image, list, quote ];
+const blockStyles = [ button, heading, image, list, quote, separator ];
 
 /**
  * Function to register an individual block.
