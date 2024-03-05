@@ -1,0 +1,16 @@
+{
+  "name": "core/separator",
+  "apiVersion": 3,
+  "styles": [
+    {
+      "name": "thin",
+      "label": "Thin"
+    }
+  ],
+  "extraStyle": [
+    {
+      "source": "file:./block.css",
+      "internal": false
+    }
+  ]
+}
