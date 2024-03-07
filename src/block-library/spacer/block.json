@@ -1,0 +1,13 @@
+{
+	"name": "core/spacer",
+	"apiVersion": 3,
+	"styles": [
+		{ "name": "decorator-wsu", "label": "Decorator WSU" }
+	],
+	"extraStyle": [
+		{
+			"source": "file:./block.css",
+			"internal": true
+		}
+	]
+}
