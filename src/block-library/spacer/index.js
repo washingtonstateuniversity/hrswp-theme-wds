@@ -20,6 +20,9 @@ const filters = [
 					backgroundColor: {
 						type: 'string',
 					},
+					textColor: {
+						type: 'string',
+					},
 				},
 				supports: {
 					...settings.supports,
@@ -27,7 +30,7 @@ const filters = [
 						enableContrastChecker: false,
 						__experimentalDefaultControls: {
 							background: true,
-							text: false,
+							text: true,
 						},
 					},
 				},
