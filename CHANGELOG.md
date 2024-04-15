@@ -17,6 +17,10 @@ Changelog formatting (http://semver.org/):
 ### Security (in case of vulnerabilities.)
 -->
 
+## 0.7.0-rc.1 (TBD)
+
+:construction:
+
 ## 0.6.0 (2024-02-08)
 
 ### Added
