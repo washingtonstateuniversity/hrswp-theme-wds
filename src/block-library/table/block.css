@@ -29,4 +29,25 @@
 	&.is-style-stripes tbody tr:nth-child(2n+1) {
 		background-color: var(--wp--custom--wsu-color-gray--5);
 	}
+
+	&.is-style-stats {
+
+		& th,
+		& td {
+			font-weight: 500;
+		}
+
+		& th {
+			text-align: left;
+			font-weight: 600;
+		}
+
+		& td:last-child {
+			font-size: var(--wp--preset--font-size--large);
+			font-weight: 900;
+			background: linear-gradient(0deg, #b12d47 0%, var(--wp--preset--color--primary-light) 100%);
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
 }
