@@ -1,6 +1,9 @@
 {
 	"name": "core/table",
 	"apiVersion": 3,
+	"styles": [
+		{ "name": "stats", "label": "Stats" }
+	],
 	"extraStyle": [
 		{
 			"source": "file:./block.css",
