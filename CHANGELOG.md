@@ -19,7 +19,41 @@ Changelog formatting (http://semver.org/):
 
 ## 0.7.0-rc.1 (TBD)
 
-:construction:
+### Added
+
+- Create block filter handling pipeline. (88f01a8)
+- Create stats table style to close #48. (2da47c2)
+- Add spacer WSU and lines decorator styles and enable colors with filter for #97. (88f01a8)
+- Close #47 Create separater block style variations. (c68496a)
+- Add camera, quote, person, and clock svg icons. (fe93638)
+- Add inline decorator icon to figcaption, quote block, and post date block. (fe93638)
+- Close #59 create quote style variations and adjust layout to override Core layout. (a2b7f12)
+- Add WSU Outline font family and heading decoration. (24d4354)
+- Create heading outline and callout styles for #46. (24d4354)
+- Create group block styles. (27eabeb)
+- Create 404 template styles. (27eabeb)
+
+### Changed
+
+- Bump minimum supported WP version to 6.5.
+- Update list arrow style with unicode for #42. (fe93638)
+- Update list ballot and boxed styles for #42. (fe93638)
+- Create alternate list styles for #42. (fe93638)
+- Style cite element with updated quote style. (fe93638)
+- Tune heading font sizes. (24d4354)
+- Style heading links for #46 and add inline icon for #42 (24d4354)
+- Add quicklinks navigation menu to 404 page template. (27eabeb)
+- Update `browserlist` datbase. (02fbe15)
+
+### Removed
+
+-  Remove `common` styles until they are needed again. (fe93638)
+
+### Fixed
+
+- Increase timeout wait to account for Interactivity API. (f568d8c)
+- Fix navigation hover from WP 6.5 markup change. (f568d8c)
+- Fix #40 replace 404 template search block. (27eabeb)
 
 ## 0.6.0 (2024-02-08)
 
