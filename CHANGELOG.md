@@ -17,7 +17,7 @@ Changelog formatting (http://semver.org/):
 ### Security (in case of vulnerabilities.)
 -->
 
-## 0.7.0-rc.1 (TBD)
+## 0.7.0 (2024-04-16)
 
 ### Added
 
@@ -35,6 +35,7 @@ Changelog formatting (http://semver.org/):
 
 ### Changed
 
+- Bump WordPress tested-to to 6.5.2. (5534ddd)
 - Bump minimum supported WP version to 6.5.
 - Update list arrow style with unicode for #42. (fe93638)
 - Update list ballot and boxed styles for #42. (fe93638)
