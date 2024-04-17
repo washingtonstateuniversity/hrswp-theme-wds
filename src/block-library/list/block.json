@@ -6,7 +6,8 @@
 		{ "name": "arrow", "label": "Arrow" },
 		{ "name": "checkbox", "label": "Checkbox" },
 		{ "name": "checkmark", "label": "Checkmark" },
-		{ "name": "lined", "label": "Lined" }
+		{ "name": "lined", "label": "Lined" },
+		{ "name": "alpha", "label": "Alphabetical" }
 	],
 	"extraStyle": [
 		{

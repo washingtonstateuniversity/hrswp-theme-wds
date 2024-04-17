@@ -21,6 +21,10 @@
     {
       "name": "lined",
       "label": "Lined"
+    },
+    {
+      "name": "alpha",
+      "label": "Alphabetical"
     }
   ],
   "extraStyle": [

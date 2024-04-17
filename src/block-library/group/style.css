@@ -1,0 +1,8 @@
+.wp-block-group.has-background {
+	padding: var(--wp--preset--spacing--50) var(--wp--style--root--padding-right);
+}
+
+section.wp-block-group {
+	margin-top: calc(var(--wp--style--block-gap) * 3);
+	margin-bottom: calc(var(--wp--style--block-gap) * 3);
+}

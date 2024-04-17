@@ -3,6 +3,7 @@ export * from './chain';
 export * from './cougar';
 export * from './lab';
 export * from './menu';
+export * from './person';
 export * from './rocket';
 export * from './search';
 export * from './trees';
