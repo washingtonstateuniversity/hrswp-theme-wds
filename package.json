@@ -23,7 +23,7 @@
 	},
 	"main": "build/index.js",
 	"devDependencies": {
-		"@wordpress/icons": "^9.26.2",
+		"@wordpress/icons": "^9.46.0",
 		"@wordpress/scripts": "^27.6.0",
 		"classnames": "^2.3.2",
 		"copy-webpack-plugin": "11.0.0",
