@@ -34,7 +34,7 @@
 		"postcss": "^8.4.38",
 		"postcss-cli": "11.0.0",
 		"postcss-import": "16.1.0",
-		"postcss-preset-env": "9.1.2",
+		"postcss-preset-env": "9.5.5",
 		"prettier": "npm:wp-prettier@2.8.5"
 	},
 	"scripts": {
