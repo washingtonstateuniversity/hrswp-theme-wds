@@ -1,64 +1,66 @@
-name: Coding Standards
+name: Static Analysis (Linting, etc.)
 
 on:
+    pull_request:
     push:
         branches:
             - develop
             - stable
             - release/**
-    pull_request:
-        branches:
-            - develop
     workflow_dispatch:
 
 jobs:
-    lint:
-        name: Script and Style Coding Standards
+    check:
+        name: Lint
         runs-on: ubuntu-latest
+
         steps:
-            - name: Checkout repository
-              uses: actions/checkout@v3
-            - name: Install NodeJS
-              uses: actions/setup-node@v3
+            - uses: actions/checkout@v4
+
+            - name: Use stored Node.js version
+              uses: actions/setup-node@v4
               with:
                   node-version-file: '.nvmrc'
+                  check-latest: true
                   cache: npm
-            - name: NPM install
+
+            - name: Npm install
               run: npm install
 
-            - name: Run eslint
+            - name: Lint JavaScript
               run: npm run lint:js
-            - name: Run stylelint
+
+            - name: Lint Styles
               run: npm run lint:style
-            - name: Run npmPkgJsonLint
+
+            - name: Lint package.json
               run: npm run lint:pkg
-            - name: Run markdownlint
+
+            - name: Lint Docs
               run: npm run lint:docs
+
     phpcs:
         name: PHP Coding Standards
         runs-on: ubuntu-latest
+
         steps:
-            - name: Checkout repository
-              uses: actions/checkout@v3
-            - name: Set up PHP version
+            - uses: actions/checkout@v4
+
+            - name: Set up PHP
               uses: shivammathur/setup-php@v2
               with:
-                  php-version: 'latest'
-                  ini-values: memory_limit=1G'
+                  php-version: '8.2'
                   coverage: none
                   tools: composer, cs2pr
-            - name: Log debug information
-              run: |
-                  php --version
-                  composer --version
+
             - name: Install Composer dependencies
-              uses: ramsey/composer-install@v2
+              uses: ramsey/composer-install@v3
               with:
                   custom-cache-suffix: $(date -u "+%Y-%m")
+
             - name: Make Composer packages available globally
               run: echo "${PWD}/vendor/bin" >> $GITHUB_PATH
-            - name: Log PHPCS debug information
-              run: phpcs -i
+
             - name: Run PHPCS checks
               id: phpcs
               run: phpcs -q -n --report=checkstyle . | cs2pr
