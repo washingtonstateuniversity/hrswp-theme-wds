@@ -7,17 +7,17 @@
 			"name": "Adam Turner"
 		}
 	],
-	"require-dev": {
-		"phpcompatibility/phpcompatibility-wp": "^2",
-		"wp-coding-standards/wpcs": "^3.0.0",
-		"sirbrillig/phpcs-variable-analysis": "^2.11.2",
-		"roave/security-advisories": "dev-master"
-	},
-	"prefer-stable": true,
 	"config": {
 		"allow-plugins": {
 			"dealerdirect/phpcodesniffer-composer-installer": true
 		}
+	},
+	"prefer-stable": true,
+	"require-dev": {
+		"phpcompatibility/phpcompatibility-wp": "^2",
+		"wp-coding-standards/wpcs": "^3.1.0",
+		"sirbrillig/phpcs-variable-analysis": "^2.11.2",
+		"roave/security-advisories": "dev-master"
 	},
 	"scripts": {
 		"format": "phpcbf --standard=phpcs.xml.dist --report=summary,source . ",
