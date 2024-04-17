@@ -26,7 +26,7 @@
 		"@wordpress/icons": "^9.46.0",
 		"@wordpress/scripts": "^27.6.0",
 		"classnames": "^2.5.1",
-		"copy-webpack-plugin": "11.0.0",
+		"copy-webpack-plugin": "12.0.2",
 		"cssnano": "^6.0.1",
 		"fast-glob": "3.3.1",
 		"lodash": "^4.17.21",
