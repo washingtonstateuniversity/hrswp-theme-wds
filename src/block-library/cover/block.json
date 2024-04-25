@@ -1,0 +1,15 @@
+{
+	"name": "core/cover",
+	"apiVersion": 3,
+	"styles": [
+		{ "name": "overlay-pattern-wsu-outline", "label": "WSU outline" },
+		{ "name": "overlay-pattern-wsu-filled", "label": "WSU filled" },
+		{ "name": "overlay-pattern-lines", "label": "Lines" }
+	],
+	"extraStyle": [
+		{
+			"source": "file:./block.css",
+			"internal": false
+		}
+	]
+}
