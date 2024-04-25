@@ -135,13 +135,15 @@ add_filter(
 		}
 
 		// Inlines hero banner styles when the pattern is present.
-		if ( 'core/group' === $block['blockName'] && 'banner-hero' === $block['attrs']['className'] ) {
-			$block_style_args = array(
-				'handle' => 'hrswds-banner-hero-extra',
-				'src'    => get_template_directory_uri() . '/build/pattern-library/banner-hero/block.css',
-				'path'   => get_template_directory() . '/build/pattern-library/banner-hero/block.css',
-			);
-			wp_enqueue_block_style( 'core/group', $block_style_args );
+		if ( 'core/group' === $block['blockName'] && isset( $block['attrs']['className'] ) ) {
+			if ( 'banner-hero' === $block['attrs']['className'] ) {
+				$block_style_args = array(
+					'handle' => 'hrswds-banner-hero-extra',
+					'src'    => get_template_directory_uri() . '/build/pattern-library/banner-hero/block.css',
+					'path'   => get_template_directory() . '/build/pattern-library/banner-hero/block.css',
+				);
+				wp_enqueue_block_style( 'core/group', $block_style_args );
+			}
 		}
 
 		return $block_content;
