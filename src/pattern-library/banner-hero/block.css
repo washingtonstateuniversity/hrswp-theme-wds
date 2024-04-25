@@ -17,19 +17,6 @@
 		clip-path: polygon(100% 0, 100% calc(100% - 200px), calc(100% - 200px) 100%, 0 100%, 0 0);
 		min-height: 450px;
 		padding: 0;
-
-		&.has-style-background-pattern-wsu-outline .wp-block-cover__background::after {
-			background-image: var(--wp--custom--background-patterns--wsu-outline);
-			content: "";
-			display: block;
-			background-position: center center;
-			background-repeat: repeat;
-			background-size: 100px;
-			height: 100%;
-			mask-image: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 20%, #00d4ff 300%);
-			opacity: 0.5;
-			width: auto;
-		}
 	}
 
 	.wp-block-cover__inner-container {
