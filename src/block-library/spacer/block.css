@@ -13,7 +13,7 @@
 
 	/* Lines decorator style uses text color for the lines. */
 	&.is-style-decorator-lines {
-		background-image: repeating-linear-gradient(135deg, currentcolor, currentcolor 2px, transparent 2px, transparent 10px);
+		background-image: var(--wp--custom--background-patterns--lines);
 		background-repeat: no-repeat;
 
 		&.has-secondary-color {
