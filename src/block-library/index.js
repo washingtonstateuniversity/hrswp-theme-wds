@@ -8,6 +8,7 @@ import { addFilter } from '@wordpress/hooks';
  * Internal dependencies
  */
 import * as button from './button';
+import * as cover from './cover';
 import * as heading from './heading';
 import * as image from './image';
 import * as list from './list';
@@ -28,6 +29,7 @@ const blocks = [ logoLockup, svgSelector ];
  */
 const blockStyles = [
 	button,
+	cover,
 	heading,
 	image,
 	list,
