@@ -1,0 +1,24 @@
+.wp-block-spacer {
+
+	/* WSU decorator style uses only background color. */
+	&.is-style-decorator-wsu {
+		background-image: var(--wp--custom--background-patterns--wsu-filled);
+		background-position: center center;
+		background-position: 0 0;
+
+		&:not(.has-background) {
+			opacity: 0.5;
+		}
+	}
+
+	/* Lines decorator style uses text color for the lines. */
+	&.is-style-decorator-lines {
+		background-image: var(--wp--custom--background-patterns--lines);
+		background-repeat: no-repeat;
+
+		&.has-secondary-color {
+			opacity: 0.5;
+		}
+	}
+
+}

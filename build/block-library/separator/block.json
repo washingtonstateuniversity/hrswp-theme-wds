@@ -1,10 +1,10 @@
 {
-  "name": "core/table",
+  "name": "core/separator",
   "apiVersion": 3,
   "styles": [
     {
-      "name": "stats",
-      "label": "Stats"
+      "name": "thin",
+      "label": "Thin"
     }
   ],
   "extraStyle": [

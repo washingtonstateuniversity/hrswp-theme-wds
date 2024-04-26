@@ -11,9 +11,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Silence is golden.' );
 }
 
-// Load asset loader and blocks.
+// Load asset loader, block handler, and pattern handler.
 require_once __DIR__ . '/inc/asset-loader.php';
 require_once __DIR__ . '/inc/blocks.php';
+require_once __DIR__ . '/inc/patterns.php';
 
 // Include classes.
 require_once __DIR__ . '/inc/classes/class-svg-icons.php';

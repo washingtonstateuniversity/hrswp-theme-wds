@@ -1,0 +1,81 @@
+.banner-hero {
+	margin-bottom: -4.125rem;
+	position: relative;
+
+	&::after {
+		background: linear-gradient(0deg, #fff, hsla(0, 0%, 100%, 0.6));
+		content: "";
+		display: block;
+		height: 6.87rem;
+		left: 0;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+
+	.wp-block-cover {
+		clip-path: polygon(100% 0, 100% calc(100% - 200px), calc(100% - 200px) 100%, 0 100%, 0 0);
+		min-height: 450px;
+		padding: 0;
+	}
+
+	.wp-block-cover__inner-container {
+		padding: calc(5.125rem + 6.87rem) 14vw;
+
+		.hero-title {
+			font-weight: 900;
+			line-height: 1.15;
+			margin-bottom: 3rem;
+			padding: 0;
+			position: relative;
+			text-shadow: 0 0 8px #000;
+			word-break: break-word;
+
+			&::before {
+				background-color: rgba(0, 0, 0, 0.3);
+				border-left: 8px solid var(--wp--preset--color--primary-light);
+				clip-path: polygon(100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0 0);
+				content: "";
+				height: 100%;
+				left: -3.125rem;
+				position: absolute;
+				right: -3.125rem;
+				top: 1.5rem;
+				width: auto;
+				z-index: -1;
+			}
+		}
+
+		.hero-eyebrow {
+			font-weight: 900;
+			letter-spacing: 0.05rem;
+			text-transform: uppercase;
+		}
+	}
+
+	/* To fix a stacking issue. */
+	+ * {
+		position: relative;
+	}
+
+	@media screen and (width > 1260px) {
+
+		.wp-block-cover {
+			min-height: 760px;
+		}
+
+		.wp-block-cover__inner-container {
+			padding-left: 7vw;
+			padding-right: 7vw;
+
+			.hero-title {
+				line-height: 1;
+
+				&::before {
+					top: 2.946875rem;
+				}
+			}
+		}
+
+	}
+}
