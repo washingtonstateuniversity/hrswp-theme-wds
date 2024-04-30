@@ -2,7 +2,8 @@
 /**
  * Title: Sidebar navigation
  * Slug: hrswds/sidebar-navigation
- * Categories: layout
+ * Categories: sidebars
+ * Viewport width: 400
  *
  * @package HRSWP_ThemeWDS
  */
@@ -13,24 +14,24 @@ namespace HRSWP\Theme\WDS\Patterns\SidebarNavigation;
 <!-- wp:group {"tagName":"aside","metadata":{"name":"Sidebar navigation"},"className":"sidebar-navigation","layout":{"type":"default"}} -->
 <aside class="wp-block-group sidebar-navigation">
 	<!-- wp:heading -->
-	<h2 class="wp-block-heading">Dig deeper</h2>
+	<h2 class="wp-block-heading"><?php echo esc_html_x( 'Dig deeper', 'Sample heading', 'hrswp-theme-wds' ); ?></h2>
 	<!-- /wp:heading -->
 	<!-- wp:list {"className":"is-style-lined"} -->
 	<ul class="is-style-lined">
 		<!-- wp:list-item -->
-		<li><a href="http://workday.wsu.edu/">Workday Self-Service</a></li>
+		<li><a><?php echo esc_html_x( 'Workday Self-Service', 'Sample list item link', 'hrswp-theme-wds' ); ?></a></li>
 		<!-- /wp:list-item -->
 		<!-- wp:list-item -->
-		<li><a href="https://wsu.percipio.com/">Percipio Online Learning</a></li>
+		<li><a><?php echo esc_html_x( 'Percipio Online Learning', 'Sample list item link', 'hrswp-theme-wds' ); ?></a></li>
 		<!-- /wp:list-item -->
 		<!-- wp:list-item -->
-		<li><a href="https://dev.hrswds.test/#">WSU Holiday Schedule</a></li>
+		<li><a><?php echo esc_html_x( 'WSU Holiday Schedule', 'Sample list item link', 'hrswp-theme-wds' ); ?></a></li>
 		<!-- /wp:list-item -->
 		<!-- wp:list-item -->
-		<li><a href="https://dev.hrswds.test/#">Employee Assistance Program</a></li>
+		<li><a><?php echo esc_html_x( 'Employee Assistance Program', 'Sample list item link', 'hrswp-theme-wds' ); ?></a></li>
 		<!-- /wp:list-item -->
 		<!-- wp:list-item -->
-		<li><a href="https://dev.hrswds.test/#">Life Events</a></li>
+		<li><a><?php echo esc_html_x( 'Life Events', 'Sample list item link', 'hrswp-theme-wds' ); ?></a></li>
 		<!-- /wp:list-item -->
 	</ul>
 	<!-- /wp:list -->
