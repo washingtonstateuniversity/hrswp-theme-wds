@@ -29,3 +29,27 @@ add_action(
 		remove_theme_support( 'core-block-patterns' );
 	}
 );
+
+/*
+ * Fires after WordPress has finished loading but before any headers are sent.
+ *
+ * @see https://developer.wordpress.org/reference/hooks/init/
+ */
+add_action(
+	'init',
+	/**
+	 * Registers a new pattern category.
+	 *
+	 * @since 0.8.0
+	 *
+	 * @return void
+	 */
+	function (): void {
+		register_block_pattern_category(
+			'sidebars',
+			array(
+				'label' => __( 'Sidebars', 'hrswp-theme-wds' ),
+			)
+		);
+	}
+);
