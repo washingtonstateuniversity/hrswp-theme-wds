@@ -14,4 +14,40 @@
 		}
 	}
 
+	.sidebar-navigation {
+
+		.wp-block-heading {
+			margin-bottom: var(--wp--preset--spacing--20);
+		}
+
+		@media screen and (width < 991px) {
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		@media screen and (width > 992px) {
+			margin-top: 10.1375rem;
+			flex-basis: calc(30% - var(--wp--style--root--padding-left));
+
+			.wp-block-latest-posts.is-grid li {
+				width: 100%;
+			}
+		}
+
+	}
+
+	/* Adjust the parent element to accommodate the sidebar. */
+	.main-content.has-sidebar {
+		align-items: flex-start;
+		flex-direction: column;
+
+		@media screen and (width > 992px) {
+			flex-direction: row;
+		}
+
+		.main-article {
+			flex-basis: calc(70% - var(--wp--style--block-gap));
+		}
+	}
+
 }
