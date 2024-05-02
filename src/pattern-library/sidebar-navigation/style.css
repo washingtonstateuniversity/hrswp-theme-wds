@@ -2,7 +2,6 @@
 	background-color: var(--wp--preset--color--white);
 	border-top: 8px solid var(--wp--preset--color--primary-light);
 	border-left: 1px solid var(--wp--custom--wsu-color-gray--10);
-	position: relative;
 	padding: 1.75rem;
 	box-shadow: -16px 0 12px -1px rgba(0, 0, 0, 0.05);
 
