@@ -5,4 +5,12 @@
 		padding-top: 0;
 	}
 
+	.main-header {
+		margin: 0;
+	}
+
+	.entry-content {
+		margin-top: 0;
+	}
+
 }

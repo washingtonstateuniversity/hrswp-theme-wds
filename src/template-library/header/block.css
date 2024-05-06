@@ -79,7 +79,7 @@
 
 	&::after {
 		background: linear-gradient(to bottom, #000 0, rgba(0, 0, 0, 0) 100%);
-		bottom: 0;
+		bottom: -5px;
 		content: "";
 		height: 5px;
 		left: 0;
