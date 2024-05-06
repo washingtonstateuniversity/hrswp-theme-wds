@@ -126,4 +126,28 @@
 		line-height: 1.4;
 	}
 
+	&.is-style-action {
+
+		&.has-icon-background-color.has-small-icon-size svg {
+			padding: 0.2em;
+		}
+
+		.wp-element-button {
+			font-weight: 600;
+
+			&:hover,
+			&:focus {
+				color: var(--wp--preset--color--primary-light);
+
+				& svg {
+					background-color: var(--wp--preset--color--primary-light);
+					outline: 2px solid var(--wp--preset--color--primary-light);
+					outline-offset: 2px;
+				}
+
+			}
+		}
+
+	}
+
 }
