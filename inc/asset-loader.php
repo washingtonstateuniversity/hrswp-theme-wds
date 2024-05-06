@@ -42,13 +42,6 @@ add_action(
 			$asset_file['version'],
 			true
 		);
-
-		wp_enqueue_style(
-			'hrswds-global-editor-style',
-			get_template_directory_uri() . '/build/index.css',
-			array(),
-			$asset_file['version'],
-		);
 	}
 );
 
@@ -76,6 +69,7 @@ add_action(
 	 * @return void
 	 */
 	function (): void {
+		global $current_screen;
 		$asset_file = include get_template_directory() . '/build/index.asset.php';
 
 		wp_enqueue_style(
@@ -84,6 +78,15 @@ add_action(
 			array(),
 			$asset_file['version']
 		);
+
+		if ( $current_screen instanceof \WP_Screen && $current_screen->is_block_editor() ) {
+			wp_enqueue_style(
+				'hrswds-global-editor-style',
+				get_template_directory_uri() . '/build/index.css',
+				array(),
+				$asset_file['version'],
+			);
+		}
 	}
 );
 
