@@ -80,7 +80,7 @@ add_action(
 		);
 
 		if ( $current_screen instanceof \WP_Screen && $current_screen->is_block_editor() ) {
-				wp_enqueue_style(
+			wp_enqueue_style(
 				'hrswds-global-editor-style',
 				get_template_directory_uri() . '/build/index.css',
 				array(),
