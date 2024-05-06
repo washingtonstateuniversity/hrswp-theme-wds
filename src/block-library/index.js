@@ -3,6 +3,7 @@
  */
 import { registerBlockStyle, registerBlockType } from '@wordpress/blocks';
 import { addFilter } from '@wordpress/hooks';
+import { dispatch } from '@wordpress/data';
 
 /**
  * Internal dependencies
@@ -21,11 +22,22 @@ import * as table from './table';
 
 /**
  * Blocks to register
+ *
+ * @type {Object[]}
  */
 const blocks = [ logoLockup, svgSelector ];
 
 /**
+ * Blocks to show
+ *
+ * @type {string[]}
+ */
+const showBlocks = [ 'core/button', 'core/buttons' ];
+
+/**
  * Blocks to register styles for
+ *
+ * @type {Object[]}
  */
 const blockStyles = [
 	button,
@@ -41,6 +53,8 @@ const blockStyles = [
 
 /**
  * Blocks to filter
+ *
+ * @type {Object[]}
  */
 const blockFilters = [ spacer ];
 
@@ -92,7 +106,6 @@ const addBlockFilter = ( block ) => {
 
 /**
  * Function to register blocks.
- *
  */
 export const registerBlocks = () => {
 	blocks.forEach( registerBlock );
@@ -110,4 +123,11 @@ export const registerStyles = () => {
  */
 export const addBlockFilters = () => {
 	blockFilters.forEach( addBlockFilter );
+};
+
+/**
+ * Update the provided block types to be visible.
+ */
+export const showEditorBlocks = () => {
+	dispatch( 'core/edit-post' ).showBlockTypes( showBlocks );
 };
