@@ -132,8 +132,9 @@
 			padding: 0.2em;
 		}
 
-		.wp-element-button {
+		& a {
 			font-weight: 600;
+			text-decoration: none;
 
 			&:hover,
 			&:focus {
