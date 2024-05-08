@@ -46,6 +46,7 @@
 		}
 
 		& nav.wp-block-navigation {
+			gap: 0; /* keep */
 
 			@media screen and (width > 1260px) {
 				padding-top: 60px;
@@ -56,13 +57,17 @@
 		.wp-block-navigation__container:not(.quicklinks-menu) {
 			border-top: 1px solid #e5e5e5;
 
-			> .wp-block-navigation-item::after {
-				content: "";
-				position: absolute;
-				height: 1px;
+			> .wp-block-navigation-item {
 				width: 100%;
-				bottom: 0;
-				background-color: #e5e5e5;
+
+				&::after {
+					content: "";
+					position: absolute;
+					height: 1px;
+					width: 100%;
+					bottom: 0;
+					background-color: #e5e5e5;
+				}
 			}
 
 			.wp-block-navigation-item__content {
@@ -71,6 +76,7 @@
 				font-size: 1rem;
 				font-weight: 600;
 				padding: 1.5rem 1.125rem;
+				width: 100%;
 
 				&:hover,
 				&:focus {
@@ -87,6 +93,63 @@
 
 			.current-menu-item > .wp-block-navigation-item__content {
 				border-color: #ca1237;
+			}
+
+			.wp-block-navigation-item.has-child {
+
+				> .wp-block-navigation-item__content {
+					box-sizing: border-box;
+					width: calc(100% - 70px);
+
+					@media screen and (width > 1260px) {
+						width: calc(100% - 50px);
+					}
+				}
+
+				.wp-block-navigation__submenu-container {
+					align-items: normal;
+					background-color: inherit;
+					border: none;
+					color: inherit;
+					list-style-type: none;
+					margin: 0;
+					min-width: 0;
+					padding: 0;
+					transition: max-height 0.3s;
+					visibility: hidden;
+					z-index: 2;
+					width: 0;
+					height: 0;
+					max-height: 0;
+					overflow: hidden;
+
+					.wp-block-navigation-item__content {
+						font-weight: 500;
+						margin: 0;
+						padding: 0.5rem 0.875rem 0.5rem calc((0.6875rem * 1) + 1.125rem);
+					}
+				}
+
+				.wp-block-navigation-submenu {
+					display: flex;
+					position: inherit;
+				}
+
+				/* Show submenus on click. */
+				.wp-block-navigation-submenu__toggle[aria-expanded="true"] {
+
+					~ .wp-block-navigation__submenu-container {
+						height: auto;
+						max-height: 100vh;
+						opacity: 1;
+						width: 100%;
+						visibility: visible;
+					}
+
+					& svg {
+						transform: rotate(180deg);
+					}
+				}
 			}
 		}
 
