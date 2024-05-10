@@ -1,1 +1,12 @@
-.main-navigation {}
+.main-navigation {
+	background: linear-gradient(90deg, transparent, var(--wp--custom--wsu-color-gray--5) 50%);
+	border-bottom: 1px solid var(--wp--custom--wsu-color-gray--10);
+	gap: calc(var(--wp--style--block-gap)*2);
+	margin-top: 0;
+	min-height: 3.2rem;
+	padding: 0 1.75rem;
+
+	.wp-block-navigation {
+		gap: calc(var(--wp--style--block-gap)*2);
+	}
+}
