@@ -20,7 +20,7 @@ namespace HRSWP\Theme\WDS\Patterns\FooterDeeplinks;
 			<?php esc_html_e( 'Support', 'hrswp-theme-wds' ); ?>
 		</h2>
 		<!-- /wp:heading -->
-		<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"},"ariaLabel":"<?php esc_attr_e( 'Support', 'hrswp-theme-wds' ); ?>"} -->
+		<!-- wp:navigation {"overlayMenu":"never","className":"is-style-underline-thick","layout":{"type":"flex","orientation":"vertical"},"ariaLabel":"<?php esc_attr_e( 'Support', 'hrswp-theme-wds' ); ?>"} -->
 			<!-- wp:navigation-link {"label":"News","url":"/news"} /-->
 			<!-- wp:navigation-link {"label":"Contact","url":"/contact"} /-->
 			<!-- wp:navigation-link {"label":"Workday Service Desk","url":"https://support.workday.wsu.edu/"} /-->
@@ -37,7 +37,7 @@ namespace HRSWP\Theme\WDS\Patterns\FooterDeeplinks;
 			<?php esc_html_e( 'WSU Locations', 'hrswp-theme-wds' ); ?>
 		</h2>
 		<!-- /wp:heading -->
-		<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"},"ariaLabel":"<?php esc_attr_e( 'WSU Locations', 'hrswp-theme-wds' ); ?>"} -->
+		<!-- wp:navigation {"overlayMenu":"never","className":"is-style-underline-thick","layout":{"type":"flex","orientation":"vertical"},"ariaLabel":"<?php esc_attr_e( 'WSU Locations', 'hrswp-theme-wds' ); ?>"} -->
 			<!-- wp:navigation-link {"label":"Pullman","url":"https://pullman.wsu.edu/"} /-->
 			<!-- wp:navigation-link {"label":"Spokane","url":"https://spokane.wsu.edu/"} /-->
 			<!-- wp:navigation-link {"label":"Tri-Cities","url":"https://tricities.wsu.edu/"} /-->
@@ -56,7 +56,7 @@ namespace HRSWP\Theme\WDS\Patterns\FooterDeeplinks;
 			<?php esc_html_e( 'Employees', 'hrswp-theme-wds' ); ?>
 		</h2>
 		<!-- /wp:heading -->
-		<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"},"ariaLabel":"<?php esc_attr_e( 'Employees', 'hrswp-theme-wds' ); ?>"} -->
+		<!-- wp:navigation {"overlayMenu":"never","className":"is-style-underline-thick","layout":{"type":"flex","orientation":"vertical"},"ariaLabel":"<?php esc_attr_e( 'Employees', 'hrswp-theme-wds' ); ?>"} -->
 			<!-- wp:navigation-link {"label":"Workday Self-Service","url":"http://workday.wsu.edu/"} /-->
 			<!-- wp:navigation-link {"label":"Percipio Online Learning","url":"https://wsu.percipio.com/"} /-->
 			<!-- wp:navigation-link {"label":"WSU Holiday Schedule","url":"#"} /-->
@@ -73,7 +73,7 @@ namespace HRSWP\Theme\WDS\Patterns\FooterDeeplinks;
 			<?php esc_html_e( 'HR Partners', 'hrswp-theme-wds' ); ?>
 		</h2>
 		<!-- /wp:heading -->
-		<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"},"ariaLabel":"<?php esc_attr_e( 'HR Partners', 'hrswp-theme-wds' ); ?>"} -->
+		<!-- wp:navigation {"overlayMenu":"never","className":"is-style-underline-thick","layout":{"type":"flex","orientation":"vertical"},"ariaLabel":"<?php esc_attr_e( 'HR Partners', 'hrswp-theme-wds' ); ?>"} -->
 			<!-- wp:navigation-link {"label":"Classification and Compensation","url":"#"} /-->
 			<!-- wp:navigation-link {"label":"Recruitment Toolkit","url":"#"} /-->
 		<!-- /wp:navigation -->
@@ -87,7 +87,7 @@ namespace HRSWP\Theme\WDS\Patterns\FooterDeeplinks;
 			<?php esc_html_e( 'WSU Resources', 'hrswp-theme-wds' ); ?>
 		</h2>
 		<!-- /wp:heading -->
-		<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"},"ariaLabel":"<?php esc_attr_e( 'WSU Resources', 'hrswp-theme-wds' ); ?>"} -->
+		<!-- wp:navigation {"overlayMenu":"never","className":"is-style-underline-thick","layout":{"type":"flex","orientation":"vertical"},"ariaLabel":"<?php esc_attr_e( 'WSU Resources', 'hrswp-theme-wds' ); ?>"} -->
 			<!-- wp:navigation-link {"label":"Payroll","url":"https://payroll.wsu.edu/"} /-->
 			<!-- wp:navigation-link {"label":"MyWSU","url":"https://my.wsu.edu/"} /-->
 			<!-- wp:navigation-link {"label":"WSU Insider","url":"https://news.wsu.edu/"} /-->
