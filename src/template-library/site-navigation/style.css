@@ -44,8 +44,11 @@
 				display: none;
 			}
 		}
+	}
 
-		& nav.wp-block-navigation {
+	.sidebar-nav-wrapper {
+
+		> .wp-block-navigation {
 			gap: 0;
 
 			@media screen and (width > 1260px) {
@@ -54,7 +57,7 @@
 
 		}
 
-		.wp-block-navigation__container:not(.quicklinks-menu) {
+		.wp-block-navigation__container {
 			border-top: 1px solid var(--wp--custom--wsu-color-gray--10);
 
 			> .wp-block-navigation-item {
