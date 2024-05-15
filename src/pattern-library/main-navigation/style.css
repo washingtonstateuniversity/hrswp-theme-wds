@@ -1,7 +1,7 @@
 .main-navigation {
 	background: linear-gradient(90deg, transparent, var(--wp--custom--wsu-color-gray--5) 50%);
 	border-bottom: 1px solid var(--wp--custom--wsu-color-gray--10);
-	gap: calc(var(--wp--style--block-gap)*2);
+	gap: calc(var(--wp--style--block-gap) *2);
 	margin-top: 0;
 	min-height: 3.2rem;
 	padding: 0 1.75rem;
@@ -12,6 +12,7 @@
 }
 
 @media (width < 860px) {
+
 	.sidebar-wrapper + .is-layout-flex.main-navigation {
 		display: none;
 	}
@@ -39,15 +40,18 @@
 				height: 6px;
 				left: 0;
 				position: absolute;
-				top: .7em;
+				top: 0.7em;
 				width: 10px;
 			}
 		}
 	}
+
 }
 
 @media (width > 860px) {
+
 	.sidebar-wrapper .is-layout-flex.main-navigation {
 		display: none;
 	}
+
 }
