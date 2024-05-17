@@ -4,12 +4,21 @@
 	@media screen and (width > 1260px) {
 		display: grid;
 		grid-template-areas:
+			"sidebar main-navigation"
 			"sidebar main"
 			"main-footer main-footer";
 		grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
 
+		.sidebar-wrapper {
+			grid-area: sidebar;
+		}
+
 		.main-content {
 			grid-area: main;
+		}
+
+		.main-navigation {
+			grid-area: main-navigation;
 		}
 
 		.main-footer {
