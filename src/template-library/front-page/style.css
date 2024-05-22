@@ -1,0 +1,21 @@
+.home {
+
+	.main-content {
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	.main-header {
+		margin: 0;
+	}
+
+	.entry-content {
+		margin-top: 0;
+	}
+
+	.hero-menu {
+		padding: 0 0 2.5rem;
+		margin-top: 0;
+	}
+
+}
