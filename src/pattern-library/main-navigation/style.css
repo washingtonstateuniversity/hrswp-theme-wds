@@ -11,9 +11,13 @@
 	}
 }
 
+.wp-block-template-part:has(> .main-navigation) {
+	margin-top: 0;
+}
+
 @media (width < 860px) {
 
-	.sidebar-wrapper + .is-layout-flex.main-navigation {
+	.sidebar-wrapper + .wp-block-template-part > .is-layout-flex.main-navigation {
 		display: none;
 	}
 
