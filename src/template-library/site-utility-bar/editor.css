@@ -1,0 +1,11 @@
+.site-utility-bar {
+
+	@media screen and (width > 1260px) {
+		position: absolute !important;
+	}
+
+}
+
+.quicklinks-search-menu {
+	position: fixed !important;
+}
