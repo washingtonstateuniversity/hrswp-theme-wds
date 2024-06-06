@@ -1,18 +1,6 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 2,
-	"customTemplates": [
-		{
-			"name": "blank",
-			"postTypes": [ "page", "post" ],
-			"title": "Blank"
-		},
-		{
-			"name": "404",
-			"postTypes": [ "page" ],
-			"title": "404"
-		}
-	],
 	"settings": {
 		"appearanceTools": true,
 		"border": {
@@ -444,7 +432,7 @@
 					"textTransform": false
 				}
 			},
-            "core/table": {
+			"core/table": {
 				"color": {
 					"gradients": [],
 					"palette": []
@@ -481,7 +469,7 @@
 					"fontWeight": "500"
 				}
 			},
-            "core/post-terms": {
+			"core/post-terms": {
 				"typography": {
 					"fontWeight": "600"
 				},
@@ -506,30 +494,30 @@
 					}
 				}
 			},
-            "core/separator": {
-                "border": {
-                    "width": "0",
-                    "top": {
-                        "color": "var(--wp--custom--wsu-color-gray--15)",
-                        "style": "solid",
-                        "width": "8px"
-                    }
-                },
-                "spacing": {
-                    "margin": {
-                        "top": "var(--wp--preset--spacing--50)",
-                        "bottom": "var(--wp--preset--spacing--50)"
-                    }
-                }
-            },
-            "core/quote": {
+			"core/separator": {
+				"border": {
+					"width": "0",
+					"top": {
+						"color": "var(--wp--custom--wsu-color-gray--15)",
+						"style": "solid",
+						"width": "8px"
+					}
+				},
 				"spacing": {
-                    "padding": {
-                        "right": "4%",
-                        "left": "4%"
-                    }
-                }
-            }
+					"margin": {
+						"top": "var(--wp--preset--spacing--50)",
+						"bottom": "var(--wp--preset--spacing--50)"
+					}
+				}
+			},
+			"core/quote": {
+				"spacing": {
+					"padding": {
+						"right": "4%",
+						"left": "4%"
+					}
+				}
+			}
 		},
 		"color": {
 			"background": "var(--wp--preset--color--base)",
@@ -712,6 +700,23 @@
 			"area": "uncategorized",
 			"name": "sidebar",
 			"title": "Sidebar"
+		}
+	],
+	"customTemplates": [
+		{
+			"name": "blank",
+			"postTypes": [ "page", "post" ],
+			"title": "Blank"
+		},
+		{
+			"name": "404",
+			"postTypes": [ "page" ],
+			"title": "404"
+		},
+		{
+			"name": "page-no-title",
+			"postTypes": [ "page" ],
+			"title": "Page no title"
 		}
 	]
 }
