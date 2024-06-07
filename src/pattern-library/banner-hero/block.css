@@ -22,6 +22,10 @@
 	.wp-block-cover__inner-container {
 		padding: calc(5.125rem + 6.87rem) 14vw;
 
+		.wp-block-column {
+			z-index: 2;
+		}
+
 		.hero-title {
 			font-weight: 900;
 			line-height: 1.15;
