@@ -48,7 +48,16 @@ add_action(
 		register_block_pattern_category(
 			'sidebars',
 			array(
-				'label' => __( 'Sidebars', 'hrswp-theme-wds' ),
+				'label'       => _x( 'Sidebars', 'Block pattern category', 'hrswp-theme-wds' ),
+				'description' => __( 'A collection of sidebar components.', 'hrswp-theme-wds' ),
+			)
+		);
+
+		register_block_pattern_category(
+			'hrswds_page',
+			array(
+				'label'       => _x( 'Pages', 'Block pattern category', 'hrswp-theme-wds' ),
+				'description' => __( 'A collection of full page layouts.', 'hrswp-theme-wds' ),
 			)
 		);
 	}
