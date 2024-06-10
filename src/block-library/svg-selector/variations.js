@@ -10,6 +10,7 @@ import {
 	ArrowRightIcon,
 	ChainIcon,
 	CougarIcon,
+	HealthIcon,
 	LabIcon,
 	MenuIcon,
 	PersonIcon,
@@ -40,6 +41,13 @@ const variations = [
 		attributes: { slug: 'chain' },
 		scope: [ 'block' ],
 		icon: ChainIcon,
+	},
+	{
+		name: 'health',
+		title: __( 'Health' ),
+		attributes: { slug: 'health' },
+		scope: [ 'block' ],
+		icon: HealthIcon,
 	},
 	{
 		name: 'lab',
