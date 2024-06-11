@@ -3,6 +3,7 @@ export * from './chain';
 export * from './cougar';
 export * from './diversity';
 export * from './eco';
+export * from './handshake';
 export * from './health';
 export * from './lab';
 export * from './menu';
