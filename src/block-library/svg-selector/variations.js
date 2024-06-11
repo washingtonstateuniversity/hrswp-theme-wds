@@ -11,6 +11,7 @@ import {
 	AccountIcon,
 	ApprovalIcon,
 	ArrowRightIcon,
+	BadgeIcon,
 	CalendarMonthIcon,
 	CategoryIcon,
 	ChainIcon,
@@ -67,6 +68,13 @@ const variations = [
 		attributes: { slug: 'arrow-right' },
 		scope: [ 'block' ],
 		icon: ArrowRightIcon,
+	},
+	{
+		name: 'badge',
+		title: __( 'Badge' ),
+		attributes: { slug: 'badge' },
+		scope: [ 'block' ],
+		icon: BadgeIcon,
 	},
 	{
 		name: 'calendar-month',

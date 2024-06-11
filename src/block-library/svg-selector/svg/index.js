@@ -2,6 +2,7 @@ export * from './accessibility';
 export * from './account';
 export * from './approval';
 export * from './arrow-right';
+export * from './badge';
 export * from './calendar-month';
 export * from './category';
 export * from './chain';
