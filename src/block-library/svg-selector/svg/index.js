@@ -1,4 +1,5 @@
 export * from './accessibility';
+export * from './approval';
 export * from './arrow-right';
 export * from './calendar-month';
 export * from './category';
