@@ -5,6 +5,7 @@ export * from './cheer';
 export * from './cougar';
 export * from './diversity';
 export * from './eco';
+export * from './event';
 export * from './guide';
 export * from './handshake';
 export * from './health';
