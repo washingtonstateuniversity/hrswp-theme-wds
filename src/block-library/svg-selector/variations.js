@@ -9,6 +9,7 @@ import { __ } from '@wordpress/i18n';
 import {
 	ArrowRightIcon,
 	CalendarMonthIcon,
+	CategoryIcon,
 	ChainIcon,
 	CheerIcon,
 	CougarIcon,
@@ -44,6 +45,13 @@ const variations = [
 		attributes: { slug: 'calendar-month' },
 		scope: [ 'block' ],
 		icon: CalendarMonthIcon,
+	},
+	{
+		name: 'category',
+		title: __( 'Category' ),
+		attributes: { slug: 'category' },
+		scope: [ 'block' ],
+		icon: CategoryIcon,
 	},
 	{
 		name: 'chain',

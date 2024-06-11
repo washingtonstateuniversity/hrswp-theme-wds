@@ -1,5 +1,6 @@
 export * from './arrow-right';
 export * from './calendar-month';
+export * from './category';
 export * from './chain';
 export * from './cheer';
 export * from './cougar';
