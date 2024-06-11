@@ -8,6 +8,7 @@ import { __ } from '@wordpress/i18n';
  */
 import {
 	AccessibilityIcon,
+	AccountIcon,
 	ApprovalIcon,
 	ArrowRightIcon,
 	CalendarMonthIcon,
@@ -41,6 +42,13 @@ const variations = [
 		attributes: { slug: 'accessibility' },
 		scope: [ 'block' ],
 		icon: AccessibilityIcon,
+	},
+	{
+		name: 'account',
+		title: __( 'Account' ),
+		attributes: { slug: 'account' },
+		scope: [ 'block' ],
+		icon: AccountIcon,
 	},
 	{
 		name: 'approval',
