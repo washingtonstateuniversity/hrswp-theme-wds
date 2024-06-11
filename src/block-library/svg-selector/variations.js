@@ -9,6 +9,7 @@ import { __ } from '@wordpress/i18n';
 import {
 	ArrowRightIcon,
 	ChainIcon,
+	CheerIcon,
 	CougarIcon,
 	DiversityIcon,
 	EcoIcon,
@@ -35,18 +36,25 @@ const variations = [
 		icon: ArrowRightIcon,
 	},
 	{
-		name: 'cougar',
-		title: __( 'WSU Cougar head' ),
-		attributes: { slug: 'cougar' },
-		scope: [ 'block' ],
-		icon: CougarIcon,
-	},
-	{
 		name: 'chain',
 		title: __( 'Link' ),
 		attributes: { slug: 'chain' },
 		scope: [ 'block' ],
 		icon: ChainIcon,
+	},
+	{
+		name: 'cheer',
+		title: __( 'Cheer' ),
+		attributes: { slug: 'cheer' },
+		scope: [ 'block' ],
+		icon: CheerIcon,
+	},
+	{
+		name: 'cougar',
+		title: __( 'WSU Cougar head' ),
+		attributes: { slug: 'cougar' },
+		scope: [ 'block' ],
+		icon: CougarIcon,
 	},
 	{
 		name: 'diversity',

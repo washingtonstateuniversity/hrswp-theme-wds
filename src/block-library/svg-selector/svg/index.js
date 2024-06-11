@@ -1,5 +1,6 @@
 export * from './arrow-right';
 export * from './chain';
+export * from './cheer';
 export * from './cougar';
 export * from './diversity';
 export * from './eco';
