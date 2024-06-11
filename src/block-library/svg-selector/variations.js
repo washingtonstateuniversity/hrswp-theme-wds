@@ -29,6 +29,7 @@ import {
 	MonitoringIcon,
 	PersonIcon,
 	RocketIcon,
+	SchoolIcon,
 	SearchIcon,
 	SignpostIcon,
 	StrategyIcon,
@@ -190,6 +191,13 @@ const variations = [
 		attributes: { slug: 'rocket' },
 		scope: [ 'block' ],
 		icon: RocketIcon,
+	},
+	{
+		name: 'school',
+		title: __( 'School' ),
+		attributes: { slug: 'school' },
+		scope: [ 'block' ],
+		icon: SchoolIcon,
 	},
 	{
 		name: 'search',

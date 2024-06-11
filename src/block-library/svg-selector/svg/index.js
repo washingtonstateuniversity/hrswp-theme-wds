@@ -20,6 +20,7 @@ export * from './menu';
 export * from './monitoring';
 export * from './person';
 export * from './rocket';
+export * from './school';
 export * from './search';
 export * from './signpost';
 export * from './strategy';
