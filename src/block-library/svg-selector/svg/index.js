@@ -22,6 +22,7 @@ export * from './person';
 export * from './rocket';
 export * from './school';
 export * from './search';
+export * from './self-improvement';
 export * from './signpost';
 export * from './strategy';
 export * from './trees';

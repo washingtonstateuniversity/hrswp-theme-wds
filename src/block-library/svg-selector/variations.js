@@ -31,6 +31,7 @@ import {
 	RocketIcon,
 	SchoolIcon,
 	SearchIcon,
+	SelfImprovementIcon,
 	SignpostIcon,
 	StrategyIcon,
 	TreesIcon,
@@ -206,6 +207,13 @@ const variations = [
 		attributes: { slug: 'search' },
 		scope: [ 'block' ],
 		icon: SearchIcon,
+	},
+	{
+		name: 'self-improvement',
+		title: __( 'Self improvement' ),
+		attributes: { slug: 'self-improvement' },
+		scope: [ 'block' ],
+		icon: SelfImprovementIcon,
 	},
 	{
 		name: 'signpost',
