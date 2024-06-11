@@ -1,5 +1,6 @@
 export * from './accessibility';
 export * from './account';
+export * from './apartment';
 export * from './approval';
 export * from './arrow-right';
 export * from './badge';
