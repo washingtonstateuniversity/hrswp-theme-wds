@@ -12,5 +12,6 @@ export * from './menu';
 export * from './person';
 export * from './rocket';
 export * from './search';
+export * from './strategy';
 export * from './trees';
 export * from './wrench';

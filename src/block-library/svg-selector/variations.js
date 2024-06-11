@@ -21,6 +21,7 @@ import {
 	PersonIcon,
 	RocketIcon,
 	SearchIcon,
+	StrategyIcon,
 	TreesIcon,
 	WrenchIcon,
 } from './svg';
@@ -118,6 +119,20 @@ const variations = [
 		icon: RocketIcon,
 	},
 	{
+		name: 'search',
+		title: __( 'Search' ),
+		attributes: { slug: 'search' },
+		scope: [ 'block' ],
+		icon: SearchIcon,
+	},
+	{
+		name: 'strategy',
+		title: __( 'Strategy' ),
+		attributes: { slug: 'strategy' },
+		scope: [ 'block' ],
+		icon: StrategyIcon,
+	},
+	{
 		name: 'trees',
 		title: __( 'Trees' ),
 		attributes: { slug: 'trees' },
@@ -130,13 +145,6 @@ const variations = [
 		attributes: { slug: 'wrench' },
 		scope: [ 'block' ],
 		icon: WrenchIcon,
-	},
-	{
-		name: 'search',
-		title: __( 'Search' ),
-		attributes: { slug: 'search' },
-		scope: [ 'block' ],
-		icon: SearchIcon,
 	},
 ];
 
