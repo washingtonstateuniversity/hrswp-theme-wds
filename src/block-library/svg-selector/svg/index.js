@@ -26,6 +26,7 @@ export * from './school';
 export * from './search';
 export * from './self-improvement';
 export * from './signpost';
+export * from './spa';
 export * from './strategy';
 export * from './trees';
 export * from './wrench';

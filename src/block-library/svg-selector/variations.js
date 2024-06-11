@@ -35,6 +35,7 @@ import {
 	SearchIcon,
 	SelfImprovementIcon,
 	SignpostIcon,
+	SpaIcon,
 	StrategyIcon,
 	TreesIcon,
 	WrenchIcon,
@@ -237,6 +238,13 @@ const variations = [
 		attributes: { slug: 'signpost' },
 		scope: [ 'block' ],
 		icon: SignpostIcon,
+	},
+	{
+		name: 'spa',
+		title: __( 'Spa' ),
+		attributes: { slug: 'spa' },
+		scope: [ 'block' ],
+		icon: SpaIcon,
 	},
 	{
 		name: 'strategy',
