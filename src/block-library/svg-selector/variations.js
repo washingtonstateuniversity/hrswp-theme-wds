@@ -25,6 +25,7 @@ import {
 	LabIcon,
 	LearningIcon,
 	MenuIcon,
+	MonitoringIcon,
 	PersonIcon,
 	RocketIcon,
 	SearchIcon,
@@ -159,6 +160,13 @@ const variations = [
 		attributes: { slug: 'menu' },
 		scope: [ 'block' ],
 		icon: MenuIcon,
+	},
+	{
+		name: 'monitoring',
+		title: __( 'Monitoring' ),
+		attributes: { slug: 'monitoring' },
+		scope: [ 'block' ],
+		icon: MonitoringIcon,
 	},
 	{
 		name: 'person',

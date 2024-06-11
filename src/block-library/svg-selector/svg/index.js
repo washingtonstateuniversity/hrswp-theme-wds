@@ -16,6 +16,7 @@ export * from './info';
 export * from './lab';
 export * from './learning';
 export * from './menu';
+export * from './monitoring';
 export * from './person';
 export * from './rocket';
 export * from './search';
