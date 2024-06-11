@@ -7,6 +7,7 @@ export * from './eco';
 export * from './guide';
 export * from './handshake';
 export * from './health';
+export * from './info';
 export * from './lab';
 export * from './learning';
 export * from './menu';
