@@ -12,6 +12,7 @@ import {
 	CougarIcon,
 	DiversityIcon,
 	EcoIcon,
+	GuideIcon,
 	HandshakeIcon,
 	HealthIcon,
 	LabIcon,
@@ -59,6 +60,13 @@ const variations = [
 		attributes: { slug: 'eco' },
 		scope: [ 'block' ],
 		icon: EcoIcon,
+	},
+	{
+		name: 'guide',
+		title: __( 'Guide' ),
+		attributes: { slug: 'guide' },
+		scope: [ 'block' ],
+		icon: GuideIcon,
 	},
 	{
 		name: 'handshake',
