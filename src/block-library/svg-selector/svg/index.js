@@ -21,6 +21,7 @@ export * from './monitoring';
 export * from './person';
 export * from './rocket';
 export * from './search';
+export * from './signpost';
 export * from './strategy';
 export * from './trees';
 export * from './wrench';

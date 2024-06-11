@@ -30,6 +30,7 @@ import {
 	PersonIcon,
 	RocketIcon,
 	SearchIcon,
+	SignpostIcon,
 	StrategyIcon,
 	TreesIcon,
 	WrenchIcon,
@@ -196,6 +197,13 @@ const variations = [
 		attributes: { slug: 'search' },
 		scope: [ 'block' ],
 		icon: SearchIcon,
+	},
+	{
+		name: 'signpost',
+		title: __( 'Signpost' ),
+		attributes: { slug: 'signpost' },
+		scope: [ 'block' ],
+		icon: SignpostIcon,
 	},
 	{
 		name: 'strategy',
