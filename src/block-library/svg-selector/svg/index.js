@@ -26,3 +26,4 @@ export * from './signpost';
 export * from './strategy';
 export * from './trees';
 export * from './wrench';
+export * from './volunteering';

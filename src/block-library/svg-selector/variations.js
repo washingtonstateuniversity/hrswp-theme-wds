@@ -35,6 +35,7 @@ import {
 	StrategyIcon,
 	TreesIcon,
 	WrenchIcon,
+	VolunteeringIcon,
 } from './svg';
 
 const variations = [
@@ -233,6 +234,13 @@ const variations = [
 		attributes: { slug: 'wrench' },
 		scope: [ 'block' ],
 		icon: WrenchIcon,
+	},
+	{
+		name: 'volunteering',
+		title: __( 'Volunteering' ),
+		attributes: { slug: 'volunteering' },
+		scope: [ 'block' ],
+		icon: VolunteeringIcon,
 	},
 ];
 
