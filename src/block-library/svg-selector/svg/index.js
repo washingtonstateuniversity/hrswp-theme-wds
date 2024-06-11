@@ -2,6 +2,7 @@ export * from './arrow-right';
 export * from './chain';
 export * from './cougar';
 export * from './diversity';
+export * from './eco';
 export * from './health';
 export * from './lab';
 export * from './menu';
