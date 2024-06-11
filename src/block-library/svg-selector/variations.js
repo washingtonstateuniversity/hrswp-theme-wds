@@ -15,6 +15,7 @@ import {
 	HandshakeIcon,
 	HealthIcon,
 	LabIcon,
+	LearningIcon,
 	MenuIcon,
 	PersonIcon,
 	RocketIcon,
@@ -79,6 +80,13 @@ const variations = [
 		attributes: { slug: 'lab' },
 		scope: [ 'block' ],
 		icon: LabIcon,
+	},
+	{
+		name: 'learning',
+		title: __( 'Learning' ),
+		attributes: { slug: 'learning' },
+		scope: [ 'block' ],
+		icon: LearningIcon,
 	},
 	{
 		name: 'menu',
