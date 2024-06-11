@@ -7,6 +7,7 @@ import { __ } from '@wordpress/i18n';
  * Internal dependencies
  */
 import {
+	AccessibilityIcon,
 	ArrowRightIcon,
 	CalendarMonthIcon,
 	CategoryIcon,
@@ -32,6 +33,13 @@ import {
 } from './svg';
 
 const variations = [
+	{
+		name: 'accessibility',
+		title: __( 'Accessibility' ),
+		attributes: { slug: 'accessibility' },
+		scope: [ 'block' ],
+		icon: AccessibilityIcon,
+	},
 	{
 		name: 'arrow-right',
 		title: __( 'Arrow right' ),
