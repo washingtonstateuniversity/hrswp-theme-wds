@@ -11,7 +11,7 @@
 namespace HRSWP\Theme\WDS\Patterns\BannerHero;
 
 ?>
-<!-- wp:group {"metadata":{"name":"Hero"},"align":"full","className":"banner-hero","layout":{"type":"default"}} -->
+<!-- wp:group {"metadata":{"name":"<?php echo esc_html_x( 'Hero', 'Name of the hero banner pattern', 'hrswp-theme-wds' ); ?>"},"align":"full","className":"banner-hero","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull banner-hero">
 
 	<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/wsu-employee-recognition.webp","alt":"<?php esc_attr_e( 'Washington State University employee recognition reception program and ribbons.', 'hrswp-theme-wds' ); ?>","isUserOverlayColor":true,"gradient":"hero-banner","contentPosition":"bottom center","className":"is-style-overlay-pattern-wsu-outline","layout":{"type":"default"}} -->

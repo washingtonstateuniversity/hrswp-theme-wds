@@ -10,7 +10,7 @@
 namespace HRSWP\Theme\WDS\Patterns\Hidden404;
 
 ?>
-<!-- wp:group {"tagName":"header","className":"main-header"} -->
+<!-- wp:group {"metadata":{"name":"<?php echo esc_html_x( '404', 'Name of the 404 pattern', 'hrswp-theme-wds' ); ?>"},"tagName":"header","className":"main-header"} -->
 <header class="wp-block-group main-header">
 	<!-- wp:heading {"level":1} -->
 	<h1 class="wp-block-post-title"><?php echo esc_html_x( 'Page Not Found', 'Error code for a webpage that is not found.', 'hrswp-theme-wds' ); ?></h1>

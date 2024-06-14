@@ -10,7 +10,7 @@
 namespace HRSWP\Theme\WDS\Patterns\HiddenMainNavigation;
 
 ?>
-<!-- wp:group {"className":"main-navigation","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"},"fontSize":"small"} -->
+<!-- wp:group {"metadata":{"name":"<?php echo esc_html_x( 'Main navigation', 'Name of the main navigation pattern', 'hrswp-theme-wds' ); ?>"},"className":"main-navigation","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"},"fontSize":"small"} -->
 <div class="wp-block-group main-navigation has-small-font-size">
 	<!-- wp:paragraph {"className":"wp-block-heading"} -->
 	<p class="wp-block-heading"><strong><?php echo esc_html_x( 'Resources for:', 'Content of the main navigation header', 'hrswp-theme-wds' ); ?></strong></p>

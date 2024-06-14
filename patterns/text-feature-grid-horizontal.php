@@ -13,7 +13,7 @@ namespace HRSWP\Theme\WDS\Patterns\TextFeatureGridHorizontal;
 
 ?>
 
-<!-- wp:group {"metadata":{"name":"Feature grid horizontal"},"align":"wide","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php echo esc_html_x( 'Feature grid horizontal', 'Name of the horizontal feature grid pattern', 'hrswp-theme-wds' ); ?>"},"align":"wide","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide">
 	<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 	<div class="wp-block-group">

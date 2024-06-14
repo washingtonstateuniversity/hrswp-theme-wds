@@ -13,7 +13,7 @@ namespace HRSWP\Theme\WDS\Patterns\TextAlternatingImages;
 
 ?>
 
-<!-- wp:group {"metadata":{"name":"Text with alternating images"},"align":"wide","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php echo esc_html_x( 'Text with alternating images', 'Name text with alternating images pattern', 'hrswp-theme-wds' ); ?>"},"align":"wide","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide">
 	<!-- wp:heading {"textAlign":"center","className":"is-style-callout"} -->
 	<h2 class="wp-block-heading has-text-align-center is-style-callout">

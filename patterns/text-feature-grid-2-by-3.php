@@ -13,7 +13,7 @@ namespace HRSWP\Theme\WDS\Patterns\TextFeatureGrid2By3;
 
 ?>
 
-<!-- wp:group {"metadata":{"name":"Feature grid"},"align":"wide","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php echo esc_html_x( 'Feature grid', 'Name of the feature grid two by three pattern', 'hrswp-theme-wds' ); ?>"},"align":"wide","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide">
 	<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 	<div class="wp-block-group">

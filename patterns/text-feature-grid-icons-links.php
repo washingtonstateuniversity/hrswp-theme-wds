@@ -13,7 +13,7 @@ namespace HRSWP\Theme\WDS\Patterns\TextFeatureGridIconsLinks;
 
 ?>
 
-<!-- wp:group {"metadata":{"name":"Feature grid icons links"},"align":"wide","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"<?php echo esc_html_x( 'Feature grid icons links', 'Name of the feature grid with icons pattern', 'hrswp-theme-wds' ); ?>"},"align":"wide","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide">
 	<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 	<div class="wp-block-group">
