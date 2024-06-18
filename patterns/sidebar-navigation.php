@@ -11,7 +11,7 @@
 namespace HRSWP\Theme\WDS\Patterns\SidebarNavigation;
 
 ?>
-<!-- wp:group {"tagName":"aside","metadata":{"name":"Sidebar navigation"},"className":"sidebar-navigation","layout":{"type":"default"}} -->
+<!-- wp:group {"metadata":{"name":"<?php echo esc_html_x( 'Sidebar navigation', 'Name of the sidebar navigation pattern', 'hrswp-theme-wds' ); ?>"},"tagName":"aside","metadata":{"name":"Sidebar navigation"},"className":"sidebar-navigation","layout":{"type":"default"}} -->
 <aside class="wp-block-group sidebar-navigation">
 	<!-- wp:heading -->
 	<h2 class="wp-block-heading"><?php echo esc_html_x( 'Dig deeper', 'Sample heading', 'hrswp-theme-wds' ); ?></h2>
