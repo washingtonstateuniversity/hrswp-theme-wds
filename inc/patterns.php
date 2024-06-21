@@ -51,5 +51,12 @@ add_action(
 				'label' => __( 'Sidebars', 'hrswp-theme-wds' ),
 			)
 		);
+
+		register_block_pattern_category(
+			'call-to-action',
+			array(
+				'label' => __( 'Call to action', 'hrswp-theme-wds' ),
+			)
+		);
 	}
 );
