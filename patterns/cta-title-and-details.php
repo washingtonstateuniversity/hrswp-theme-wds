@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: CTA with title and details
- * Slug: hrswds/text-feature-grid-icons-links
+ * Slug: hrswds/cta-title-and-details
  * Categories: about, call-to-action
  * Viewport width: 1400
  * Description: A heading and 3 columns with text and action links.
