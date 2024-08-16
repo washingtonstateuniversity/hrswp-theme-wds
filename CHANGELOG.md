@@ -17,6 +17,12 @@ Changelog formatting (http://semver.org/):
 ### Security (in case of vulnerabilities.)
 -->
 
+## 0.7.1 (2024-08-16)
+
+### Changed
+
+- Archive project.
+
 ## 0.7.0 (2024-04-16)
 
 ### Added
